@@ -1,0 +1,126 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Collab Plan</title>
+
+<!-- CSS Files -->
+<link href="nouislider.min.css" rel="stylesheet">
+<link type="text/css" href="/pumpn/mag/base.css" rel="stylesheet" />
+<link type="text/css" href="/pumpn/mag/Jit/Examples/css/RGraph.css" rel="stylesheet" />
+
+<!--[if IE]><script language="javascript" type="text/javascript" src="../../Extras/excanvas.js"></script><![endif]-->
+
+<!-- JIT Library File -->
+<script defer="true" language="javascript" type="text/javascript" src="/pumpn/mag/Jit/jit.js"></script>
+
+<!-- Example File -->
+<script defer="true" language="javascript" type="text/javascript" src="/pumpn/mag/collab-plan.js"></script>
+
+
+
+
+
+
+<link rel="stylesheet" type="text/css" href="/pumpn/mag/bootstrap/css/bootstrap.min.css">
+
+
+
+
+
+</head>
+
+<body onload="init(); popup1();">
+<script src="nouislider.min.js"></script>
+<script src="wNumb.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+<script src="/pumpn/mag/bootstrap/js/bootstrap.min.js"></script>
+<script language="javascript" type="text/javascript" src="/pumpn/mag/bootbox.min.js"></script>
+
+<script>
+function popup1(){
+bootbox.dialog({
+  message: '<div id="message1"><h2>Hey hey hey!</h2><br>Haben dich auch schon immer die Kollaborationen verschiedenster deutscher Rapper interessiert? Von den üblichen Kollabos zwischen Farid Bang und Kollegah oder Sido und B-Tight bis hin zu kuriosen Features zwischen Samy Deluxe und Haftbefehl oder Cro und Prinz Pi findest du hier jede einzelne Kollaboration im Deutschrap.<br><br><button onclick="gender1on()">Text genderneutralisieren</button></div><br><h1>Viel Spaß!</h1>',
+  title: "Collab-Plan <p style='margin: 0; font-size: 10px'>(alpha 3)</p>",
+  buttons: {
+    success: {
+      label: "Okay!",
+      className: "btn-success",
+    },
+  }
+});
+};
+
+function gender1on(){
+document.getElementById("message1").innerHTML = '<h2>Hey hey hey!</h2><br>Haben dich auch schon immer die Kollaborationen verschiedenster deutscher Rappenden interessiert? Von den üblichen Kollabos zwischen Farid Bang und Kollegah oder Sido und B-Tight bis hin zu kuriosen Features zwischen Samy Deluxe und Haftbefehl oder Cro und Prinz Pi findest du hier jede einzelne Kollaboration im Deutschrap.<br><br><button onclick="gender1off()">Rückgängig machen</button>';
+};
+
+function gender1off(){
+document.getElementById("message1").innerHTML = '<h2>Hey hey hey!</h2><br>Haben dich auch schon immer die Kollaborationen verschiedenster deutscher Rapper interessiert? Von den üblichen Kollabos zwischen Farid Bang und Kollegah oder Sido und B-Tight bis hin zu kuriosen Features zwischen Samy Deluxe und Haftbefehl oder Cro und Prinz Pi findest du hier jede einzelne Kollaboration im Deutschrap.<br><br><button onclick="gender1on()">Text genderneutralisieren</button>';
+};
+
+function popup2(){
+bootbox.dialog({
+  message: '<div id="message2"><h2>Alles, was du wissen solltest:</h2><br><b>Info:</b><br>Eine <b>Linie</b> signalisiert die Verbindung zweier Rapper zueinander, sind jene direkt verbunden, haben beide auf ein und dem selben veröffentlichten Track einen Part gerappt beziehungsweise eine Hook gesungen.<br><br>Einfacher: Eine gelbe Linie steht für eine direkte Kollaboration des mittleren Rappers mit einem anderen, eine blaue Linie bedeutet, dass diese zwei Rapper miteinander und mit dem Rapper in der Mitte kollaboriert haben.<br><br>Die <b>Kreise</b> symbolisieren die gedachte "Entfernung" zweier Rapper. Steht ein Künstler auf dem innersten Kreis, so hat er mit jenem in der Mitte kollaboriert. Steht er weiter außen, ist er auch weiter "entfernt". Auf dem zweiten Kreis kann beispielsweise nur ein Künstler stehen, der zwar nicht mit jenem in der Mitte kollaboriert hat, allerdings mit einem Künstler, mit dem jener in der Mitte auch kollaboriert hat.<br><br><b>Hilfe:</b><br>Mithilfe eines Mausklicks auf den Namen eines Rappers zentriert man ihn und seine Kollaborationspartner.<br>Zur Übersicht kann man den ganzen Plan entweder per Drag & Drop hin und her bewegen oder aber ihn durch Scrollen vergrößern und verkleinern.<br><br><button onclick="gender2on()">Text genderneutralisieren</button></div><br><h1>Alles klar?</h1>',
+  title: "Collab-Plan <p style='margin: 0; font-size: 10px'>(alpha 3)</p>",
+  buttons: {
+    success: {
+      label: "Alles klar!",
+      className: "btn-success",
+    },
+  }
+});
+};
+
+function gender2on(){
+document.getElementById("message2").innerHTML = '<h2>Alles, was du wissen solltest:</h2><br><b>Info:</b><br>Eine <b>Linie</b> signalisiert die Verbindung zweier Rappenden zueinander, sind jene direkt verbunden, haben beide auf ein und dem selben veröffentlichten Track einen Part gerappt beziehungsweise eine Hook gesungen.<br><br>Einfacher: Eine gelbe Linie steht für eine direkte Kollaboration des mittleren rappenden Menschen mit einem anderen, eine blaue Linie bedeutet, dass diese zwei Rappenden miteinander und mit dem rappenden Menschen in der Mitte kollaboriert haben.<br><br>Die <b>Kreise</b> symbolisieren die gedachte "Entfernung" zweier Rappenden. Steht ein kunstschaffender Mensch auf dem innersten Kreis, so hat er mit jenem in der Mitte kollaboriert. Steht er weiter außen, ist er auch weiter "entfernt". Auf dem zweiten Kreis kann beispielsweise nur ein kunstschaffender Mensch stehen, der zwar nicht mit jenem in der Mitte kollaboriert hat, allerdings mit einem kunstschaffenden Menschen, mit dem jener in der Mitte auch kollaboriert hat.<br><br><b>Hilfe:</b><br>Mithilfe eines Mausklicks auf den Namen eines rappenden Menschen zentriert man ihn und die, die mit ihm kollaborierten.<br>Zur Übersicht kann man den ganzen Plan entweder per Drag & Drop hin und her bewegen oder aber ihn durch Scrollen vergrößern und verkleinern.<br><br><button onclick="gender2off()">Rückgängig machen</button>';
+};
+
+function gender2off(){
+document.getElementById("message2").innerHTML = '<h2>Alles, was du wissen solltest:</h2><br><b>Info:</b><br>Eine <b>Linie</b> signalisiert die Verbindung zweier Rapper zueinander, sind jene direkt verbunden, haben beide auf ein und dem selben veröffentlichten Track einen Part gerappt beziehungsweise eine Hook gesungen.<br><br>Einfacher: Eine gelbe Linie steht für eine direkte Kollaboration des mittleren Rappers mit einem anderen, eine blaue Linie bedeutet, dass diese zwei Rapper miteinander und mit dem Rapper in der Mitte kollaboriert haben.<br><br>Die <b>Kreise</b> symbolisieren die gedachte "Entfernung" zweier Rapper. Steht ein Künstler auf dem innersten Kreis, so hat er mit jenem in der Mitte kollaboriert. Steht er weiter außen, ist er auch weiter "entfernt". Auf dem zweiten Kreis kann beispielsweise nur ein Künstler stehen, der zwar nicht mit jenem in der Mitte kollaboriert hat, allerdings mit einem Künstler, mit dem jener in der Mitte auch kollaboriert hat.<br><br><b>Hilfe:</b><br>Mithilfe eines Mausklicks auf den Namen eines Rappers zentriert man ihn und seine Kollaborationspartner.<br>Zur Übersicht kann man den ganzen Plan entweder per Drag & Drop hin und her bewegen oder aber ihn durch Scrollen vergrößern und verkleinern.<br><br><button onclick="gender2on()">Text genderneutralisieren</button>';
+};
+</script>
+
+<script>
+$(document).ready(function(){
+    $("#about").click(function(){
+        popup1();
+    });
+});
+$(document).ready(function(){
+    $("#help").click(function(){
+        popup2();
+    });
+});
+</script>
+
+<div id="container" style="width:100%;height:100%;position:absolute;">
+
+<div id="center-container" style="width:90%;height:100%;left:0;">
+	<div class="sliders" id="zeitraum"></div>
+	<span id="jahr1"></span>
+	<span id="jahr2"></span>
+	<div id="infovis" style="width:100%;height:100%;">
+	</div>
+</div>
+
+<div id="right-container" style="width: 10%; height: 100%;">
+
+<div id="inner-details"></div>
+
+</div>
+
+<div style="position: absolute; left: 47%;">
+<div style="position: relative; left: -60%;" id="log">
+</div>
+</div>
+
+<div style="position: absolute; left: 10px; top: 10px;" id="about">
+<p style="cursor: pointer;">ABOUT</p>
+</div>
+<div style="position: absolute; left: 10px; top: 45px;" id="help">
+<p style="cursor: pointer;">HELP</p>
+</div>
+</div>
+</body>
+</html>
