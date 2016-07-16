@@ -14,6 +14,7 @@ den zeitraumslider NOCH interaktiver gemacht (krass krass krass), nämlich ände
 die möglichkeit eingebaut, alles glitzern zu lassen
 na spaß, hab ich nicht gmacht
 plis dont het mi nau, sina
+- 12.7.16 - 16.7.16
 
 alpha 4:
 mutterficki endlich...man kann jetzt endlich zeiträume auswählen...1 nices feature (erklärung: im collab-plan geht es um features)
