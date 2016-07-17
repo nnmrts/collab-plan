@@ -1,6 +1,10 @@
 /*
 CHANGELOG:
 
+alpha 5.1:
+yüah yüah yüah...jetzt muss ich nie wieder bilder hochladen für die artists weeeiiil, jetzt ist das automatisiert, durch die grandiose last.fm api :3
+hab dich lieb sina, hier haste dein jaw bild :)
+
 alpha 5:
 oha...wo soll ich anfangen...
 also erstmal, einen preloader erstellt, der angezeigt wird bis die seite fertig geladen ist um so html "glitches" zu vermeiden
@@ -42,7 +46,13 @@ grundcode geschrieben und paar rapper als test schon mal eingefügt (alligatoah,
 - 23.6.16
 */
 
+/*
+API Key: 0abb7713ef6b0a0c0779a17cfa615281
 
+Shared Secret: 2927ae03a14564e100cc7b3929d17a9c
+
+Registered to: nnmrts
+*/
 
 var labelType, useGradients, nativeTextSupport, animate;
 
@@ -71,6 +81,9 @@ var Log = {
 };
 
 function init(){
+	$.get("http://ws.audioscrobbler.com/2.0/?method=artist.getinfo&artist=Maeckes&api_key=0abb7713ef6b0a0c0779a17cfa615281&format=json", function(response) {
+		jsonObj = eval (response);
+	});
 	var modalclass = $("body").hasClass("modal-open");
 	startactive = function(){
 		$("#aboutli").removeClass("active");
@@ -14655,22 +14668,30 @@ function init(){
             
 			
             //Make right column relations list.
-			var html = "<img style='width: 100px;' src='/pumpn/mag/images/" + node.id + ".jpg'></img>";
-            html += "<h4 id='title'>" + node.name + "</h4><b>Kollaborationen:</b>";
-            html += "<ul id='myUL' style='margin-left: -20px;'>";
-            node.eachAdjacency(function(adj){
-                var child = adj.nodeTo;
-                html += "<li>" + child.name + "</li>";
-            });
-            html += "</ul>";
-            $jit.id('inner-details').innerHTML = html;
+			$.getJSON("http://ws.audioscrobbler.com/2.0/?method=artist.getinfo&artist=" + node.id + "&api_key=0abb7713ef6b0a0c0779a17cfa615281&format=json", function(response) {
+				jsonObj = JSON.stringify(response);
+				pos1 = jsonObj.indexOf('/34s/');
+				pos2 = jsonObj.indexOf('","size"');
+				part = jsonObj.slice((pos1 + 4),pos2);
+				imageurl = "https://secure-img2.last.fm/i/u/174s" + part;
+				var html = "<img style='width: 100px;' src='" + imageurl + "'></img>";
+				html += "<h4 id='title'>" + node.name + "</h4><b>Kollaborationen:</b>";
+				html += "<ul id='myUL' style='margin-left: -20px;'>";
+				node.eachAdjacency(function(adj){
+					var child = adj.nodeTo;
+					html += "<li>" + child.name + "</li>";
+				});
+				html += "</ul>";
+				$jit.id('inner-details').innerHTML = html;
+				
+				var mylist = $('#myUL');
+				var listitems = mylist.children('li').get();
+				listitems.sort(function(a, b) {
+				   return $(a).text().toUpperCase().localeCompare($(b).text().toUpperCase());
+				})
+				$.each(listitems, function(idx, itm) { mylist.append(itm); });
+			});
 			
-			var mylist = $('#myUL');
-			var listitems = mylist.children('li').get();
-			listitems.sort(function(a, b) {
-			   return $(a).text().toUpperCase().localeCompare($(b).text().toUpperCase());
-			})
-			$.each(listitems, function(idx, itm) { mylist.append(itm); });
         },
         //Add node click handler and some styles.
         //This method is called only once for each node/label crated.
