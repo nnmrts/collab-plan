@@ -1,6 +1,10 @@
 /*
 CHANGELOG:
 
+alpha 5.2.1
+kleine tweaks für github
+- 18.7.16
+
 alpha 5.2
 cro hinzugefügt, yaaay
 text im preloader dicker gemacht
@@ -88,7 +92,7 @@ var Log = {
 };
 
 function init(){
-	$.get("http://ws.audioscrobbler.com/2.0/?method=artist.getinfo&artist=Maeckes&api_key=0abb7713ef6b0a0c0779a17cfa615281&format=json", function(response) {
+	$.get("https://ws.audioscrobbler.com/2.0/?method=artist.getinfo&artist=Maeckes&api_key=0abb7713ef6b0a0c0779a17cfa615281&format=json", function(response) {
 		jsonObj = eval (response);
 	});
 	var modalclass = $("body").hasClass("modal-open");
@@ -14674,7 +14678,7 @@ function init(){
             
 			
             //Make right column relations list.
-			$.getJSON("http://ws.audioscrobbler.com/2.0/?method=artist.getinfo&artist=" + node.id + "&api_key=0abb7713ef6b0a0c0779a17cfa615281&format=json", function(response) {
+			$.getJSON("https://ws.audioscrobbler.com/2.0/?method=artist.getinfo&artist=" + node.id + "&api_key=0abb7713ef6b0a0c0779a17cfa615281&format=json", function(response) {
 				jsonObj = JSON.stringify(response);
 				pos1 = jsonObj.indexOf('/34s/');
 				pos2 = jsonObj.indexOf('","size"');
