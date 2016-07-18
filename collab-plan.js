@@ -4,6 +4,7 @@ CHANGELOG:
 alpha 5.2
 cro hinzugefügt, yaaay
 text im preloader dicker gemacht
+endlich das ganze verzeichnis hochgeladen
 - 17.7.16 - 18.7.16
 
 alpha 5.1:
