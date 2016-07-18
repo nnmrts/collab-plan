@@ -9340,7 +9340,7 @@
 				},
 			]
 		},
-		/*// CRO
+		// CRO
 		{
 			"id": "Cro",
 			"name": "Cro",
@@ -9991,7 +9991,7 @@
 				},
 			]
 		},
-		// KOLLEGAH
+		/*// KOLLEGAH
 		{
 			"id": "Kollegah",
 			"name": "Kollegah",
@@ -12047,7 +12047,6 @@
 				},
 			]
 		},
-		*/
 		// ALPA GUN
 		{
 			"id": "Alpa Gun",
@@ -12089,5 +12088,5 @@
 					}
 				},
 			]
-		},
+		},*/
 	]

@@ -1,9 +1,15 @@
 /*
 CHANGELOG:
 
+alpha 5.2
+cro hinzugefügt, yaaay
+text im preloader dicker gemacht
+- 17.7.16 - 18.7.16
+
 alpha 5.1:
 yüah yüah yüah...jetzt muss ich nie wieder bilder hochladen für die artists weeeiiil, jetzt ist das automatisiert, durch die grandiose last.fm api :3
 hab dich lieb sina, hier haste dein jaw bild :)
+- 16.7.16 - 17.7.16
 
 alpha 5:
 oha...wo soll ich anfangen...
@@ -39,7 +45,7 @@ alles bissl verschönert
 log bissl verändert
 popup, about und hilfe hinzugefügt und endlich geschafft das rapperbild da rechts über den features anzuzeigen
 das erste mal einen versionsnamen ausgedacht und alpha 2 für richtig empfunden
-- irgendwann zwischen 23.6.16 - 9.7.16
+- 23.6.16 - 9.7.16
 
 alpha 1:
 grundcode geschrieben und paar rapper als test schon mal eingefügt (alligatoah, bartek, edgar wasser, fatoni, k.i.z., kaas, maeckes, sido, tua, weekend)
@@ -2415,31 +2421,31 @@ function init(){
     //RGraph constructor.
 	
 
-	$.get("json1995.js", function(response) {		json1995 = eval ("(" + response + ")");	});	$.get("json1996.js", function(response) {		json1996 = eval ("(" + response + ")");	});	$.get("json1997.js", function(response) {		json1997 = eval ("(" + response + ")");	});	$.get("json1998.js", function(response) {		json1998 = eval ("(" + response + ")");	});	$.get("json1999.js", function(response) {		json1999 = eval ("(" + response + ")");	});	$.get("json2000.js", function(response) {		json2000 = eval ("(" + response + ")");	});	$.get("json2001.js", function(response) {		json2001 = eval ("(" + response + ")");	});	$.get("json2002.js", function(response) {		json2002 = eval ("(" + response + ")");	});	$.get("json2003.js", function(response) {		json2003 = eval ("(" + response + ")");	});	$.get("json2004.js", function(response) {		json2004 = eval ("(" + response + ")");	});
+	$.get("json1995.js", function(response) {		json1995 = eval ("(" + response + ")");	}, "script");	$.get("json1996.js", function(response) {		json1996 = eval ("(" + response + ")");	}, "script");	$.get("json1997.js", function(response) {		json1997 = eval ("(" + response + ")");	}, "script");	$.get("json1998.js", function(response) {		json1998 = eval ("(" + response + ")");	}, "script");	$.get("json1999.js", function(response) {		json1999 = eval ("(" + response + ")");	}, "script");	$.get("json2000.js", function(response) {		json2000 = eval ("(" + response + ")");	}, "script");	$.get("json2001.js", function(response) {		json2001 = eval ("(" + response + ")");	}, "script");	$.get("json2002.js", function(response) {		json2002 = eval ("(" + response + ")");	}, "script");	$.get("json2003.js", function(response) {		json2003 = eval ("(" + response + ")");	}, "script");	$.get("json2004.js", function(response) {		json2004 = eval ("(" + response + ")");	}, "script");
 	
 	$.get("json2005.js", function(response) {
 		json2005 = eval ("(" + response + ")");
-	});
+	}, "script");
 	
 	$.get("json2006.js", function(response) {
 		json2006 = eval ("(" + response + ")");
-	});	
-	$.get("json2007.js", function(response) {		json2007 = eval ("(" + response + ")");	});	
-	$.get("json2008.js", function(response) {		json2008 = eval ("(" + response + ")");	});	
-	$.get("json2009.js", function(response) {		json2009 = eval ("(" + response + ")");	});	
-	$.get("json2010.js", function(response) {		json2010 = eval ("(" + response + ")");	});	
-	$.get("json2011.js", function(response) {		json2011 = eval ("(" + response + ")");	});	
-	$.get("json2012.js", function(response) {		json2012 = eval ("(" + response + ")");	});	
-	$.get("json2013.js", function(response) {		json2013 = eval ("(" + response + ")");	});	
-	$.get("json2014.js", function(response) {		json2014 = eval ("(" + response + ")");	});	
-	$.get("json2015.js", function(response) {		json2015 = eval ("(" + response + ")");	});	
-	$.get("json2016.js", function(response) {		json2016 = eval ("(" + response + ")");	});	
-	$.get("json2017.js", function(response) {		json2017 = eval ("(" + response + ")");	});	
-	$.get("json2018.js", function(response) {		json2018 = eval ("(" + response + ")");	});	
-	$.get("json2019.js", function(response) {		json2019 = eval ("(" + response + ")");	});	
-	$.get("json2020.js", function(response) {		json2020 = eval ("(" + response + ")");	});
+	}, "script");	
+	$.get("json2007.js", function(response) {		json2007 = eval ("(" + response + ")");	}, "script");	
+	$.get("json2008.js", function(response) {		json2008 = eval ("(" + response + ")");	}, "script");	
+	$.get("json2009.js", function(response) {		json2009 = eval ("(" + response + ")");	}, "script");	
+	$.get("json2010.js", function(response) {		json2010 = eval ("(" + response + ")");	}, "script");	
+	$.get("json2011.js", function(response) {		json2011 = eval ("(" + response + ")");	}, "script");	
+	$.get("json2012.js", function(response) {		json2012 = eval ("(" + response + ")");	}, "script");	
+	$.get("json2013.js", function(response) {		json2013 = eval ("(" + response + ")");	}, "script");	
+	$.get("json2014.js", function(response) {		json2014 = eval ("(" + response + ")");	}, "script");	
+	$.get("json2015.js", function(response) {		json2015 = eval ("(" + response + ")");	}, "script");	
+	$.get("json2016.js", function(response) {		json2016 = eval ("(" + response + ")");	}, "script");	
+	$.get("json2017.js", function(response) {		json2017 = eval ("(" + response + ")");	}, "script");	
+	$.get("json2018.js", function(response) {		json2018 = eval ("(" + response + ")");	}, "script");	
+	$.get("json2019.js", function(response) {		json2019 = eval ("(" + response + ")");	}, "script");	
+	$.get("json2020.js", function(response) {		json2020 = eval ("(" + response + ")");	}, "script");
 	
-	$.get("jsonleer.js", function(response) {		jsonleer = eval ("(" + response + ")");	});
+	$.get("jsonleer.js", function(response) {		jsonleer = eval ("(" + response + ")");	}, "script");
 	
 	//{ JSONALL
 	jsonall = [
@@ -11784,7 +11790,7 @@ function init(){
 				},
 			]
 		},
-		/*// CRO
+		// CRO
 		{
 			"id": "Cro",
 			"name": "Cro",
@@ -12435,7 +12441,7 @@ function init(){
 				},
 			]
 		},
-		// KOLLEGAH
+		/*// KOLLEGAH
 		{
 			"id": "Kollegah",
 			"name": "Kollegah",
@@ -14491,7 +14497,6 @@ function init(){
 				},
 			]
 		},
-		*/
 		// ALPA GUN
 		{
 			"id": "Alpa Gun",
@@ -14533,7 +14538,7 @@ function init(){
 					}
 				},
 			]
-		},
+		},*/
 	];
 	//}
 	
