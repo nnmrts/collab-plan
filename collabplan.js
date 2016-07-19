@@ -1,7 +1,13 @@
 /*
 CHANGELOG:
+alpha 5.2.3
+pfad für col1.png in base.css geändert
+geilstes update ever
+- 19.7.16
+
 alpha 5.2.2
 pfad geändert und dateinamen etwas geändert
+- 18.7.16 - 19.7.16
 
 alpha 5.2.1
 kleine tweaks für github
