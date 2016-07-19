@@ -1,5 +1,7 @@
 /*
 CHANGELOG:
+alpha 5.2.2
+pfad geändert und dateinamen etwas geändert
 
 alpha 5.2.1
 kleine tweaks für github
@@ -3112,7 +3114,6 @@ function init(){
 	$.get("json2004.js", function(response) {
 		json2004 = eval ("(" + response + ")");
 	}, "script");
-
 	
 	$.get("json2005.js", function(response) {
 		json2005 = eval ("(" + response + ")");
@@ -3190,7 +3191,6 @@ function init(){
 	$.get("json2020.js", function(response) {
 		json2020 = eval ("(" + response + ")");
 	}, "script");
-
 	
 	$.get("jsonleer.js", function(response) {
 		jsonleer = eval ("(" + response + ")");
@@ -15444,6 +15444,29 @@ function init(){
 				   return $(a).text().toUpperCase().localeCompare($(b).text().toUpperCase());
 				})
 				$.each(listitems, function(idx, itm) { mylist.append(itm); });
+				$.getJSON("http://ws.audioscrobbler.com/2.0/?method=artist.getinfo&artist=" + node.id + "&api_key=0abb7713ef6b0a0c0779a17cfa615281&format=json", function(response) {
+					jsonObj = JSON.stringify(response);
+					pos1 = jsonObj.indexOf('/34s/');
+					pos2 = jsonObj.indexOf('","size"');
+					part = jsonObj.slice((pos1 + 4),pos2);
+					imageurl = "https://secure-img2.last.fm/i/u/174s" + part;
+					var html = "<img style='width: 100px;' src='" + imageurl + "'></img>";
+					html += "<h4 id='title'>" + node.name + "</h4><b>Kollaborationen:</b>";
+					html += "<ul id='myUL' style='margin-left: -20px;'>";
+					node.eachAdjacency(function(adj){
+						var child = adj.nodeTo;
+						html += "<li>" + child.name + "</li>";
+					});
+					html += "</ul>";
+					$jit.id('inner-details').innerHTML = html;
+					
+					var mylist = $('#myUL');
+					var listitems = mylist.children('li').get();
+					listitems.sort(function(a, b) {
+					   return $(a).text().toUpperCase().localeCompare($(b).text().toUpperCase());
+					})
+					$.each(listitems, function(idx, itm) { mylist.append(itm); });
+				});
 			});
 			
         },

@@ -7,4 +7,4 @@ shortlink: http://bit.ly/collab-plan
 
 <hr>
 
-current version: alpha 5.2.1
+current version: alpha 5.2
