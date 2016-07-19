@@ -62,7 +62,7 @@ a {
 
 #right-container {
     right:0;
-    background-image:url('/pumpn/mag/images/col1.png');
+    background-image:url('images/col1.png');
     background-position:center left;
     border-right:1px solid #ddd;
 }
