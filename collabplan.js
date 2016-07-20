@@ -1,5 +1,10 @@
 /*
 CHANGELOG:
+alpha 5.3
+endliiiiich sind die features auf der rechten seite auch dynamisch, wenn man den slider bewegt, nice
+es läuft halt jetzt nur bissl langsamer, da muss ich noch schauen, wie ich das mach...vielleicht auch einfach mal die jit library minifien
+- 19.7.16 - 20.7.16
+
 alpha 5.2.3
 pfad für col1.png in base.css geändert
 geilstes update ever
@@ -188,7 +193,8 @@ function init(){
 	function leftValue ( handle ) {
 		return handle.parentElement.style.left;
 	}
-	
+	jahr1 = zeitraum.noUiSlider.get()[0];
+	jahr2 = zeitraum.noUiSlider.get()[1];
 	var lowerValue = document.getElementById('jahr1'),
 	lowerOffset = document.getElementById('lower-offset'),
 	upperValue = document.getElementById('jahr2'),
@@ -207,2870 +213,794 @@ function init(){
 	(function($){$.concat||$.extend({concat:function(b,c){var a=[];for(var x in arguments)if(typeof a=='object')a=a.concat(arguments[x]);return a}});})(jQuery);
 	
 	index = 0;
-	
+	jahr1 = 2005;
+	jahr2 = 2016;
 	zeitraum.noUiSlider.on('slide', function(){
 		jahr1 = zeitraum.noUiSlider.get()[0];
 		jahr2 = zeitraum.noUiSlider.get()[1];
+		
 		if (jahr1 == 1995) {
-			if (jahr2 == 1995) {
-				json = json1995;
-				rgraph.loadJSON(json, index);
-				rgraph.refresh();
-				jsontext = JSON.stringify(json);
-				console.log(jsontext);
-				json = jsonleer;
+			if (jahr2 == 1995) {				json = json1995;
 			}
-			else if (jahr2 == 1996) {
-				json = $.concat(json1995, json1996 );
-				rgraph.loadJSON(json, index);
-				rgraph.refresh();
-				jsontext = JSON.stringify(json);
-				console.log(jsontext);
-				json = jsonleer;
+			else if (jahr2 == 1996) {				json = $.concat(json1995, json1996 );
 			}
-			else if (jahr2 == 1997) {
-				json = $.concat(json1995, json1996, json1997 );
-				rgraph.loadJSON(json, index);
-				rgraph.refresh();
-				jsontext = JSON.stringify(json);
-				console.log(jsontext);
-				json = jsonleer;
+			else if (jahr2 == 1997) {				json = $.concat(json1995, json1996, json1997 );
 			}
-			else if (jahr2 == 1998) {
-				json = $.concat(json1995, json1996, json1997, json1998 );
-				rgraph.loadJSON(json, index);
-				rgraph.refresh();
-				jsontext = JSON.stringify(json);
-				console.log(jsontext);
-				json = jsonleer;
+			else if (jahr2 == 1998) {				json = $.concat(json1995, json1996, json1997, json1998 );
 			}
-			else if (jahr2 == 1999) {
-				json = $.concat(json1995, json1996, json1997, json1998, json1999 );
-				rgraph.loadJSON(json, index);
-				rgraph.refresh();
-				jsontext = JSON.stringify(json);
-				console.log(jsontext);
-				json = jsonleer;
+			else if (jahr2 == 1999) {				json = $.concat(json1995, json1996, json1997, json1998, json1999 );
 			}
-			else if (jahr2 == 2000) {
-				json = $.concat(json1995, json1996, json1997, json1998, json1999, json2000 );
-				rgraph.loadJSON(json, index);
-				rgraph.refresh();
-				jsontext = JSON.stringify(json);
-				console.log(jsontext);
-				json = jsonleer;
+			else if (jahr2 == 2000) {				json = $.concat(json1995, json1996, json1997, json1998, json1999, json2000 );
 			}
-			else if (jahr2 == 2001) {
-				json = $.concat(json1995, json1996, json1997, json1998, json1999, json2000, json2001 );
-				rgraph.loadJSON(json, index);
-				rgraph.refresh();
-				jsontext = JSON.stringify(json);
-				console.log(jsontext);
-				json = jsonleer;
+			else if (jahr2 == 2001) {				json = $.concat(json1995, json1996, json1997, json1998, json1999, json2000, json2001 );
 			}
-			else if (jahr2 == 2002) {
-				json = $.concat(json1995, json1996, json1997, json1998, json1999, json2000, json2001, json2002 );
-				rgraph.loadJSON(json, index);
-				rgraph.refresh();
-				jsontext = JSON.stringify(json);
-				console.log(jsontext);
-				json = jsonleer;
+			else if (jahr2 == 2002) {				json = $.concat(json1995, json1996, json1997, json1998, json1999, json2000, json2001, json2002 );
 			}
-			else if (jahr2 == 2003) {
-				json = $.concat(json1995, json1996, json1997, json1998, json1999, json2000, json2001, json2002, json2003 );
-				rgraph.loadJSON(json, index);
-				rgraph.refresh();
-				jsontext = JSON.stringify(json);
-				console.log(jsontext);
-				json = jsonleer;
+			else if (jahr2 == 2003) {				json = $.concat(json1995, json1996, json1997, json1998, json1999, json2000, json2001, json2002, json2003 );
 			}
-			else if (jahr2 == 2004) {
-				json = $.concat(json1995, json1996, json1997, json1998, json1999, json2000, json2001, json2002, json2003, json2004 );
-				rgraph.loadJSON(json, index);
-				rgraph.refresh();
-				jsontext = JSON.stringify(json);
-				console.log(jsontext);
-				json = jsonleer;
+			else if (jahr2 == 2004) {				json = $.concat(json1995, json1996, json1997, json1998, json1999, json2000, json2001, json2002, json2003, json2004 );
 			}
-			else if (jahr2 == 2005) {
-				json = $.concat(json1995, json1996, json1997, json1998, json1999, json2000, json2001, json2002, json2003, json2004, json2005 );
-				rgraph.loadJSON(json, index);
-				rgraph.refresh();
-				jsontext = JSON.stringify(json);
-				console.log(jsontext);
-				json = jsonleer;
+			else if (jahr2 == 2005) {				json = $.concat(json1995, json1996, json1997, json1998, json1999, json2000, json2001, json2002, json2003, json2004, json2005 );
 			}
-			else if (jahr2 == 2006) {
-				json = $.concat(json1995, json1996, json1997, json1998, json1999, json2000, json2001, json2002, json2003, json2004, json2005, json2006 );
-				rgraph.loadJSON(json, index);
-				rgraph.refresh();
-				jsontext = JSON.stringify(json);
-				console.log(jsontext);
-				json = jsonleer;
+			else if (jahr2 == 2006) {				json = $.concat(json1995, json1996, json1997, json1998, json1999, json2000, json2001, json2002, json2003, json2004, json2005, json2006 );
 			}
-			else if (jahr2 == 2007) {
-				json = $.concat(json1995, json1996, json1997, json1998, json1999, json2000, json2001, json2002, json2003, json2004, json2005, json2006, json2007 );
-				rgraph.loadJSON(json, index);
-				rgraph.refresh();
-				jsontext = JSON.stringify(json);
-				console.log(jsontext);
-				json = jsonleer;
+			else if (jahr2 == 2007) {				json = $.concat(json1995, json1996, json1997, json1998, json1999, json2000, json2001, json2002, json2003, json2004, json2005, json2006, json2007 );
 			}
-			else if (jahr2 == 2008) {
-				json = $.concat(json1995, json1996, json1997, json1998, json1999, json2000, json2001, json2002, json2003, json2004, json2005, json2006, json2007, json2008 );
-				rgraph.loadJSON(json, index);
-				rgraph.refresh();
-				jsontext = JSON.stringify(json);
-				console.log(jsontext);
-				json = jsonleer;
+			else if (jahr2 == 2008) {				json = $.concat(json1995, json1996, json1997, json1998, json1999, json2000, json2001, json2002, json2003, json2004, json2005, json2006, json2007, json2008 );
 			}
-			else if (jahr2 == 2009) {
-				json = $.concat(json1995, json1996, json1997, json1998, json1999, json2000, json2001, json2002, json2003, json2004, json2005, json2006, json2007, json2008, json2009 );
-				rgraph.loadJSON(json, index);
-				rgraph.refresh();
-				jsontext = JSON.stringify(json);
-				console.log(jsontext);
-				json = jsonleer;
+			else if (jahr2 == 2009) {				json = $.concat(json1995, json1996, json1997, json1998, json1999, json2000, json2001, json2002, json2003, json2004, json2005, json2006, json2007, json2008, json2009 );
 			}
-			else if (jahr2 == 2010) {
-				json = $.concat(json1995, json1996, json1997, json1998, json1999, json2000, json2001, json2002, json2003, json2004, json2005, json2006, json2007, json2008, json2009, json2010 );
-				rgraph.loadJSON(json, index);
-				rgraph.refresh();
-				jsontext = JSON.stringify(json);
-				console.log(jsontext);
-				json = jsonleer;
+			else if (jahr2 == 2010) {				json = $.concat(json1995, json1996, json1997, json1998, json1999, json2000, json2001, json2002, json2003, json2004, json2005, json2006, json2007, json2008, json2009, json2010 );
 			}
-			else if (jahr2 == 2011) {
-				json = $.concat(json1995, json1996, json1997, json1998, json1999, json2000, json2001, json2002, json2003, json2004, json2005, json2006, json2007, json2008, json2009, json2010, json2011 );
-				rgraph.loadJSON(json, index);
-				rgraph.refresh();
-				jsontext = JSON.stringify(json);
-				console.log(jsontext);
-				json = jsonleer;
+			else if (jahr2 == 2011) {				json = $.concat(json1995, json1996, json1997, json1998, json1999, json2000, json2001, json2002, json2003, json2004, json2005, json2006, json2007, json2008, json2009, json2010, json2011 );
 			}
-			else if (jahr2 == 2012) {
-				json = $.concat(json1995, json1996, json1997, json1998, json1999, json2000, json2001, json2002, json2003, json2004, json2005, json2006, json2007, json2008, json2009, json2010, json2011, json2012 );
-				rgraph.loadJSON(json, index);
-				rgraph.refresh();
-				jsontext = JSON.stringify(json);
-				console.log(jsontext);
-				json = jsonleer;
+			else if (jahr2 == 2012) {				json = $.concat(json1995, json1996, json1997, json1998, json1999, json2000, json2001, json2002, json2003, json2004, json2005, json2006, json2007, json2008, json2009, json2010, json2011, json2012 );
 			}
-			else if (jahr2 == 2013) {
-				json = $.concat(json1995, json1996, json1997, json1998, json1999, json2000, json2001, json2002, json2003, json2004, json2005, json2006, json2007, json2008, json2009, json2010, json2011, json2012, json2013 );
-				rgraph.loadJSON(json, index);
-				rgraph.refresh();
-				jsontext = JSON.stringify(json);
-				console.log(jsontext);
-				json = jsonleer;
+			else if (jahr2 == 2013) {				json = $.concat(json1995, json1996, json1997, json1998, json1999, json2000, json2001, json2002, json2003, json2004, json2005, json2006, json2007, json2008, json2009, json2010, json2011, json2012, json2013 );
 			}
-			else if (jahr2 == 2014) {
-				json = $.concat(json1995, json1996, json1997, json1998, json1999, json2000, json2001, json2002, json2003, json2004, json2005, json2006, json2007, json2008, json2009, json2010, json2011, json2012, json2013, json2014 );
-				rgraph.loadJSON(json, index);
-				rgraph.refresh();
-				jsontext = JSON.stringify(json);
-				console.log(jsontext);
-				json = jsonleer;
+			else if (jahr2 == 2014) {				json = $.concat(json1995, json1996, json1997, json1998, json1999, json2000, json2001, json2002, json2003, json2004, json2005, json2006, json2007, json2008, json2009, json2010, json2011, json2012, json2013, json2014 );
 			}
-			else if (jahr2 == 2015) {
-				json = $.concat(json1995, json1996, json1997, json1998, json1999, json2000, json2001, json2002, json2003, json2004, json2005, json2006, json2007, json2008, json2009, json2010, json2011, json2012, json2013, json2014, json2015 );
-				rgraph.loadJSON(json, index);
-				rgraph.refresh();
-				jsontext = JSON.stringify(json);
-				console.log(jsontext);
-				json = jsonleer;
+			else if (jahr2 == 2015) {				json = $.concat(json1995, json1996, json1997, json1998, json1999, json2000, json2001, json2002, json2003, json2004, json2005, json2006, json2007, json2008, json2009, json2010, json2011, json2012, json2013, json2014, json2015 );
 			}
-			else if (jahr2 == 2016) {
-				json = $.concat(json1995, json1996, json1997, json1998, json1999, json2000, json2001, json2002, json2003, json2004, json2005, json2006, json2007, json2008, json2009, json2010, json2011, json2012, json2013, json2014, json2015, json2016 );
-				rgraph.loadJSON(json, index);
-				rgraph.refresh();
-				jsontext = JSON.stringify(json);
-				console.log(jsontext);
-				json = jsonleer;
+			else if (jahr2 == 2016) {				json = $.concat(json1995, json1996, json1997, json1998, json1999, json2000, json2001, json2002, json2003, json2004, json2005, json2006, json2007, json2008, json2009, json2010, json2011, json2012, json2013, json2014, json2015, json2016 );
 			}
-			else if (jahr2 == 2017) {
-				json = $.concat(json1995, json1996, json1997, json1998, json1999, json2000, json2001, json2002, json2003, json2004, json2005, json2006, json2007, json2008, json2009, json2010, json2011, json2012, json2013, json2014, json2015, json2016, json2017 );
-				rgraph.loadJSON(json, index);
-				rgraph.refresh();
-				jsontext = JSON.stringify(json);
-				console.log(jsontext);
-				json = jsonleer;
+			else if (jahr2 == 2017) {				json = $.concat(json1995, json1996, json1997, json1998, json1999, json2000, json2001, json2002, json2003, json2004, json2005, json2006, json2007, json2008, json2009, json2010, json2011, json2012, json2013, json2014, json2015, json2016, json2017 );
 			}
-			else if (jahr2 == 2018) {
-				json = $.concat(json1995, json1996, json1997, json1998, json1999, json2000, json2001, json2002, json2003, json2004, json2005, json2006, json2007, json2008, json2009, json2010, json2011, json2012, json2013, json2014, json2015, json2016, json2017, json2018 );
-				rgraph.loadJSON(json, index);
-				rgraph.refresh();
-				jsontext = JSON.stringify(json);
-				console.log(jsontext);
-				json = jsonleer;
+			else if (jahr2 == 2018) {				json = $.concat(json1995, json1996, json1997, json1998, json1999, json2000, json2001, json2002, json2003, json2004, json2005, json2006, json2007, json2008, json2009, json2010, json2011, json2012, json2013, json2014, json2015, json2016, json2017, json2018 );
 			}
-			else if (jahr2 == 2019) {
-				json = $.concat(json1995, json1996, json1997, json1998, json1999, json2000, json2001, json2002, json2003, json2004, json2005, json2006, json2007, json2008, json2009, json2010, json2011, json2012, json2013, json2014, json2015, json2016, json2017, json2018, json2019 );
-				rgraph.loadJSON(json, index);
-				rgraph.refresh();
-				jsontext = JSON.stringify(json);
-				console.log(jsontext);
-				json = jsonleer;
+			else if (jahr2 == 2019) {				json = $.concat(json1995, json1996, json1997, json1998, json1999, json2000, json2001, json2002, json2003, json2004, json2005, json2006, json2007, json2008, json2009, json2010, json2011, json2012, json2013, json2014, json2015, json2016, json2017, json2018, json2019 );
 			}
-			else if (jahr2 == 2020) {
-				json = $.concat(json1995, json1996, json1997, json1998, json1999, json2000, json2001, json2002, json2003, json2004, json2005, json2006, json2007, json2008, json2009, json2010, json2011, json2012, json2013, json2014, json2015, json2016, json2017, json2018, json2019, json2020 );
-				rgraph.loadJSON(json, index);
-				rgraph.refresh();
-				jsontext = JSON.stringify(json);
-				console.log(jsontext);
-				json = jsonleer;
+			else if (jahr2 == 2020) {				json = $.concat(json1995, json1996, json1997, json1998, json1999, json2000, json2001, json2002, json2003, json2004, json2005, json2006, json2007, json2008, json2009, json2010, json2011, json2012, json2013, json2014, json2015, json2016, json2017, json2018, json2019, json2020 );
 			}
 		}
 		else if (jahr1 == 1996) {
 			if (jahr2 == 1996) {
 				json = json1996;
-				rgraph.loadJSON(json, index);
-				rgraph.refresh();
-				jsontext = JSON.stringify(json);
-				console.log(jsontext);
-				json = jsonleer;
 			}
-			else if (jahr2 == 1997) {
-				json = $.concat(json1996, json1997 );
-				rgraph.loadJSON(json, index);
-				rgraph.refresh();
-				jsontext = JSON.stringify(json);
-				console.log(jsontext);
-				json = jsonleer;
+			else if (jahr2 == 1997) {				json = $.concat(json1996, json1997 );
 			}
-			else if (jahr2 == 1998) {
-				json = $.concat(json1996, json1997, json1998 );
-				rgraph.loadJSON(json, index);
-				rgraph.refresh();
-				jsontext = JSON.stringify(json);
-				console.log(jsontext);
-				json = jsonleer;
+			else if (jahr2 == 1998) {				json = $.concat(json1996, json1997, json1998 );
 			}
-			else if (jahr2 == 1999) {
-				json = $.concat(json1996, json1997, json1998, json1999 );
-				rgraph.loadJSON(json, index);
-				rgraph.refresh();
-				jsontext = JSON.stringify(json);
-				console.log(jsontext);
-				json = jsonleer;
+			else if (jahr2 == 1999) {				json = $.concat(json1996, json1997, json1998, json1999 );
 			}
-			else if (jahr2 == 2000) {
-				json = $.concat(json1996, json1997, json1998, json1999, json2000 );
-				rgraph.loadJSON(json, index);
-				rgraph.refresh();
-				jsontext = JSON.stringify(json);
-				console.log(jsontext);
-				json = jsonleer;
+			else if (jahr2 == 2000) {				json = $.concat(json1996, json1997, json1998, json1999, json2000 );
 			}
-			else if (jahr2 == 2001) {
-				json = $.concat(json1996, json1997, json1998, json1999, json2000, json2001 );
-				rgraph.loadJSON(json, index);
-				rgraph.refresh();
-				jsontext = JSON.stringify(json);
-				console.log(jsontext);
-				json = jsonleer;
+			else if (jahr2 == 2001) {				json = $.concat(json1996, json1997, json1998, json1999, json2000, json2001 );
 			}
-			else if (jahr2 == 2002) {
-				json = $.concat(json1996, json1997, json1998, json1999, json2000, json2001, json2002 );
-				rgraph.loadJSON(json, index);
-				rgraph.refresh();
-				jsontext = JSON.stringify(json);
-				console.log(jsontext);
-				json = jsonleer;
+			else if (jahr2 == 2002) {				json = $.concat(json1996, json1997, json1998, json1999, json2000, json2001, json2002 );
 			}
-			else if (jahr2 == 2003) {
-				json = $.concat(json1996, json1997, json1998, json1999, json2000, json2001, json2002, json2003 );
-				rgraph.loadJSON(json, index);
-				rgraph.refresh();
-				jsontext = JSON.stringify(json);
-				console.log(jsontext);
-				json = jsonleer;
+			else if (jahr2 == 2003) {				json = $.concat(json1996, json1997, json1998, json1999, json2000, json2001, json2002, json2003 );
 			}
-			else if (jahr2 == 2004) {
-				json = $.concat(json1996, json1997, json1998, json1999, json2000, json2001, json2002, json2003, json2004 );
-				rgraph.loadJSON(json, index);
-				rgraph.refresh();
-				jsontext = JSON.stringify(json);
-				console.log(jsontext);
-				json = jsonleer;
+			else if (jahr2 == 2004) {				json = $.concat(json1996, json1997, json1998, json1999, json2000, json2001, json2002, json2003, json2004 );
 			}
-			else if (jahr2 == 2005) {
-				json = $.concat(json1996, json1997, json1998, json1999, json2000, json2001, json2002, json2003, json2004, json2005 );
-				rgraph.loadJSON(json, index);
-				rgraph.refresh();
-				jsontext = JSON.stringify(json);
-				console.log(jsontext);
-				json = jsonleer;
+			else if (jahr2 == 2005) {				json = $.concat(json1996, json1997, json1998, json1999, json2000, json2001, json2002, json2003, json2004, json2005 );
 			}
-			else if (jahr2 == 2006) {
-				json = $.concat(json1996, json1997, json1998, json1999, json2000, json2001, json2002, json2003, json2004, json2005, json2006 );
-				rgraph.loadJSON(json, index);
-				rgraph.refresh();
-				jsontext = JSON.stringify(json);
-				console.log(jsontext);
-				json = jsonleer;
+			else if (jahr2 == 2006) {				json = $.concat(json1996, json1997, json1998, json1999, json2000, json2001, json2002, json2003, json2004, json2005, json2006 );
 			}
-			else if (jahr2 == 2007) {
-				json = $.concat(json1996, json1997, json1998, json1999, json2000, json2001, json2002, json2003, json2004, json2005, json2006, json2007 );
-				rgraph.loadJSON(json, index);
-				rgraph.refresh();
-				jsontext = JSON.stringify(json);
-				console.log(jsontext);
-				json = jsonleer;
+			else if (jahr2 == 2007) {				json = $.concat(json1996, json1997, json1998, json1999, json2000, json2001, json2002, json2003, json2004, json2005, json2006, json2007 );
 			}
-			else if (jahr2 == 2008) {
-				json = $.concat(json1996, json1997, json1998, json1999, json2000, json2001, json2002, json2003, json2004, json2005, json2006, json2007, json2008 );
-				rgraph.loadJSON(json, index);
-				rgraph.refresh();
-				jsontext = JSON.stringify(json);
-				console.log(jsontext);
-				json = jsonleer;
+			else if (jahr2 == 2008) {				json = $.concat(json1996, json1997, json1998, json1999, json2000, json2001, json2002, json2003, json2004, json2005, json2006, json2007, json2008 );
 			}
-			else if (jahr2 == 2009) {
-				json = $.concat(json1996, json1997, json1998, json1999, json2000, json2001, json2002, json2003, json2004, json2005, json2006, json2007, json2008, json2009 );
-				rgraph.loadJSON(json, index);
-				rgraph.refresh();
-				jsontext = JSON.stringify(json);
-				console.log(jsontext);
-				json = jsonleer;
+			else if (jahr2 == 2009) {				json = $.concat(json1996, json1997, json1998, json1999, json2000, json2001, json2002, json2003, json2004, json2005, json2006, json2007, json2008, json2009 );
 			}
-			else if (jahr2 == 2010) {
-				json = $.concat(json1996, json1997, json1998, json1999, json2000, json2001, json2002, json2003, json2004, json2005, json2006, json2007, json2008, json2009, json2010 );
-				rgraph.loadJSON(json, index);
-				rgraph.refresh();
-				jsontext = JSON.stringify(json);
-				console.log(jsontext);
-				json = jsonleer;
+			else if (jahr2 == 2010) {				json = $.concat(json1996, json1997, json1998, json1999, json2000, json2001, json2002, json2003, json2004, json2005, json2006, json2007, json2008, json2009, json2010 );
 			}
-			else if (jahr2 == 2011) {
-				json = $.concat(json1996, json1997, json1998, json1999, json2000, json2001, json2002, json2003, json2004, json2005, json2006, json2007, json2008, json2009, json2010, json2011 );
-				rgraph.loadJSON(json, index);
-				rgraph.refresh();
-				jsontext = JSON.stringify(json);
-				console.log(jsontext);
-				json = jsonleer;
+			else if (jahr2 == 2011) {				json = $.concat(json1996, json1997, json1998, json1999, json2000, json2001, json2002, json2003, json2004, json2005, json2006, json2007, json2008, json2009, json2010, json2011 );
 			}
-			else if (jahr2 == 2012) {
-				json = $.concat(json1996, json1997, json1998, json1999, json2000, json2001, json2002, json2003, json2004, json2005, json2006, json2007, json2008, json2009, json2010, json2011, json2012 );
-				rgraph.loadJSON(json, index);
-				rgraph.refresh();
-				jsontext = JSON.stringify(json);
-				console.log(jsontext);
-				json = jsonleer;
+			else if (jahr2 == 2012) {				json = $.concat(json1996, json1997, json1998, json1999, json2000, json2001, json2002, json2003, json2004, json2005, json2006, json2007, json2008, json2009, json2010, json2011, json2012 );
 			}
-			else if (jahr2 == 2013) {
-				json = $.concat(json1996, json1997, json1998, json1999, json2000, json2001, json2002, json2003, json2004, json2005, json2006, json2007, json2008, json2009, json2010, json2011, json2012, json2013 );
-				rgraph.loadJSON(json, index);
-				rgraph.refresh();
-				jsontext = JSON.stringify(json);
-				console.log(jsontext);
-				json = jsonleer;
+			else if (jahr2 == 2013) {				json = $.concat(json1996, json1997, json1998, json1999, json2000, json2001, json2002, json2003, json2004, json2005, json2006, json2007, json2008, json2009, json2010, json2011, json2012, json2013 );
 			}
-			else if (jahr2 == 2014) {
-				json = $.concat(json1996, json1997, json1998, json1999, json2000, json2001, json2002, json2003, json2004, json2005, json2006, json2007, json2008, json2009, json2010, json2011, json2012, json2013, json2014 );
-				rgraph.loadJSON(json, index);
-				rgraph.refresh();
-				jsontext = JSON.stringify(json);
-				console.log(jsontext);
-				json = jsonleer;
+			else if (jahr2 == 2014) {				json = $.concat(json1996, json1997, json1998, json1999, json2000, json2001, json2002, json2003, json2004, json2005, json2006, json2007, json2008, json2009, json2010, json2011, json2012, json2013, json2014 );
 			}
-			else if (jahr2 == 2015) {
-				json = $.concat(json1996, json1997, json1998, json1999, json2000, json2001, json2002, json2003, json2004, json2005, json2006, json2007, json2008, json2009, json2010, json2011, json2012, json2013, json2014, json2015 );
-				rgraph.loadJSON(json, index);
-				rgraph.refresh();
-				jsontext = JSON.stringify(json);
-				console.log(jsontext);
-				json = jsonleer;
+			else if (jahr2 == 2015) {				json = $.concat(json1996, json1997, json1998, json1999, json2000, json2001, json2002, json2003, json2004, json2005, json2006, json2007, json2008, json2009, json2010, json2011, json2012, json2013, json2014, json2015 );
 			}
-			else if (jahr2 == 2016) {
-				json = $.concat(json1996, json1997, json1998, json1999, json2000, json2001, json2002, json2003, json2004, json2005, json2006, json2007, json2008, json2009, json2010, json2011, json2012, json2013, json2014, json2015, json2016 );
-				rgraph.loadJSON(json, index);
-				rgraph.refresh();
-				jsontext = JSON.stringify(json);
-				console.log(jsontext);
-				json = jsonleer;
+			else if (jahr2 == 2016) {				json = $.concat(json1996, json1997, json1998, json1999, json2000, json2001, json2002, json2003, json2004, json2005, json2006, json2007, json2008, json2009, json2010, json2011, json2012, json2013, json2014, json2015, json2016 );
 			}
-			else if (jahr2 == 2017) {
-				json = $.concat(json1996, json1997, json1998, json1999, json2000, json2001, json2002, json2003, json2004, json2005, json2006, json2007, json2008, json2009, json2010, json2011, json2012, json2013, json2014, json2015, json2016, json2017 );
-				rgraph.loadJSON(json, index);
-				rgraph.refresh();
-				jsontext = JSON.stringify(json);
-				console.log(jsontext);
-				json = jsonleer;
+			else if (jahr2 == 2017) {				json = $.concat(json1996, json1997, json1998, json1999, json2000, json2001, json2002, json2003, json2004, json2005, json2006, json2007, json2008, json2009, json2010, json2011, json2012, json2013, json2014, json2015, json2016, json2017 );
 			}
-			else if (jahr2 == 2018) {
-				json = $.concat(json1996, json1997, json1998, json1999, json2000, json2001, json2002, json2003, json2004, json2005, json2006, json2007, json2008, json2009, json2010, json2011, json2012, json2013, json2014, json2015, json2016, json2017, json2018 );
-				rgraph.loadJSON(json, index);
-				rgraph.refresh();
-				jsontext = JSON.stringify(json);
-				console.log(jsontext);
-				json = jsonleer;
+			else if (jahr2 == 2018) {				json = $.concat(json1996, json1997, json1998, json1999, json2000, json2001, json2002, json2003, json2004, json2005, json2006, json2007, json2008, json2009, json2010, json2011, json2012, json2013, json2014, json2015, json2016, json2017, json2018 );
 			}
-			else if (jahr2 == 2019) {
-				json = $.concat(json1996, json1997, json1998, json1999, json2000, json2001, json2002, json2003, json2004, json2005, json2006, json2007, json2008, json2009, json2010, json2011, json2012, json2013, json2014, json2015, json2016, json2017, json2018, json2019 );
-				rgraph.loadJSON(json, index);
-				rgraph.refresh();
-				jsontext = JSON.stringify(json);
-				console.log(jsontext);
-				json = jsonleer;
+			else if (jahr2 == 2019) {				json = $.concat(json1996, json1997, json1998, json1999, json2000, json2001, json2002, json2003, json2004, json2005, json2006, json2007, json2008, json2009, json2010, json2011, json2012, json2013, json2014, json2015, json2016, json2017, json2018, json2019 );
 			}
-			else if (jahr2 == 2020) {
-				json = $.concat(json1996, json1997, json1998, json1999, json2000, json2001, json2002, json2003, json2004, json2005, json2006, json2007, json2008, json2009, json2010, json2011, json2012, json2013, json2014, json2015, json2016, json2017, json2018, json2019, json2020 );
-				rgraph.loadJSON(json, index);
-				rgraph.refresh();
-				jsontext = JSON.stringify(json);
-				console.log(jsontext);
-				json = jsonleer;
+			else if (jahr2 == 2020) {				json = $.concat(json1996, json1997, json1998, json1999, json2000, json2001, json2002, json2003, json2004, json2005, json2006, json2007, json2008, json2009, json2010, json2011, json2012, json2013, json2014, json2015, json2016, json2017, json2018, json2019, json2020 );
 			}
 		}
 		else if (jahr1 == 1997) {
-			if (jahr2 == 1997) {
-				json = json1997;
-				rgraph.loadJSON(json, index);
-				rgraph.refresh();
-				jsontext = JSON.stringify(json);
-				console.log(jsontext);
-				json = jsonleer;
+			if (jahr2 == 1997) {				json = json1997;
 			}
-			else if (jahr2 == 1998) {
-				json = $.concat(json1997, json1998 );
-				rgraph.loadJSON(json, index);
-				rgraph.refresh();
-				jsontext = JSON.stringify(json);
-				console.log(jsontext);
-				json = jsonleer;
+			else if (jahr2 == 1998) {				json = $.concat(json1997, json1998 );
 			}
-			else if (jahr2 == 1999) {
-				json = $.concat(json1997, json1998, json1999 );
-				rgraph.loadJSON(json, index);
-				rgraph.refresh();
-				jsontext = JSON.stringify(json);
-				console.log(jsontext);
-				json = jsonleer;
+			else if (jahr2 == 1999) {				json = $.concat(json1997, json1998, json1999 );
 			}
-			else if (jahr2 == 2000) {
-				json = $.concat(json1997, json1998, json1999, json2000 );
-				rgraph.loadJSON(json, index);
-				rgraph.refresh();
-				jsontext = JSON.stringify(json);
-				console.log(jsontext);
-				json = jsonleer;
+			else if (jahr2 == 2000) {				json = $.concat(json1997, json1998, json1999, json2000 );
 			}
-			else if (jahr2 == 2001) {
-				json = $.concat(json1997, json1998, json1999, json2000, json2001 );
-				rgraph.loadJSON(json, index);
-				rgraph.refresh();
-				jsontext = JSON.stringify(json);
-				console.log(jsontext);
-				json = jsonleer;
+			else if (jahr2 == 2001) {				json = $.concat(json1997, json1998, json1999, json2000, json2001 );
 			}
-			else if (jahr2 == 2002) {
-				json = $.concat(json1997, json1998, json1999, json2000, json2001, json2002 );
-				rgraph.loadJSON(json, index);
-				rgraph.refresh();
-				jsontext = JSON.stringify(json);
-				console.log(jsontext);
-				json = jsonleer;
+			else if (jahr2 == 2002) {				json = $.concat(json1997, json1998, json1999, json2000, json2001, json2002 );
 			}
-			else if (jahr2 == 2003) {
-				json = $.concat(json1997, json1998, json1999, json2000, json2001, json2002, json2003 );
-				rgraph.loadJSON(json, index);
-				rgraph.refresh();
-				jsontext = JSON.stringify(json);
-				console.log(jsontext);
-				json = jsonleer;
+			else if (jahr2 == 2003) {				json = $.concat(json1997, json1998, json1999, json2000, json2001, json2002, json2003 );
 			}
-			else if (jahr2 == 2004) {
-				json = $.concat(json1997, json1998, json1999, json2000, json2001, json2002, json2003, json2004 );
-				rgraph.loadJSON(json, index);
-				rgraph.refresh();
-				jsontext = JSON.stringify(json);
-				console.log(jsontext);
-				json = jsonleer;
+			else if (jahr2 == 2004) {				json = $.concat(json1997, json1998, json1999, json2000, json2001, json2002, json2003, json2004 );
 			}
-			else if (jahr2 == 2005) {
-				json = $.concat(json1997, json1998, json1999, json2000, json2001, json2002, json2003, json2004, json2005 );
-				rgraph.loadJSON(json, index);
-				rgraph.refresh();
-				jsontext = JSON.stringify(json);
-				console.log(jsontext);
-				json = jsonleer;
+			else if (jahr2 == 2005) {				json = $.concat(json1997, json1998, json1999, json2000, json2001, json2002, json2003, json2004, json2005 );
 			}
-			else if (jahr2 == 2006) {
-				json = $.concat(json1997, json1998, json1999, json2000, json2001, json2002, json2003, json2004, json2005, json2006 );
-				rgraph.loadJSON(json, index);
-				rgraph.refresh();
-				jsontext = JSON.stringify(json);
-				console.log(jsontext);
-				json = jsonleer;
+			else if (jahr2 == 2006) {				json = $.concat(json1997, json1998, json1999, json2000, json2001, json2002, json2003, json2004, json2005, json2006 );
 			}
-			else if (jahr2 == 2007) {
-				json = $.concat(json1997, json1998, json1999, json2000, json2001, json2002, json2003, json2004, json2005, json2006, json2007 );
-				rgraph.loadJSON(json, index);
-				rgraph.refresh();
-				jsontext = JSON.stringify(json);
-				console.log(jsontext);
-				json = jsonleer;
+			else if (jahr2 == 2007) {				json = $.concat(json1997, json1998, json1999, json2000, json2001, json2002, json2003, json2004, json2005, json2006, json2007 );
 			}
-			else if (jahr2 == 2008) {
-				json = $.concat( json1997, json1998, json1999, json2000, json2001, json2002, json2003, json2004, json2005, json2006, json2007, json2008 );
-				rgraph.loadJSON(json, index);
-				rgraph.refresh();
-				jsontext = JSON.stringify(json);
-				console.log(jsontext);
-				json = jsonleer;
+			else if (jahr2 == 2008) {				json = $.concat( json1997, json1998, json1999, json2000, json2001, json2002, json2003, json2004, json2005, json2006, json2007, json2008 );
 			}
-			else if (jahr2 == 2009) {
-				json = $.concat(json1997, json1998, json1999, json2000, json2001, json2002, json2003, json2004, json2005, json2006, json2007, json2008, json2009 );
-				rgraph.loadJSON(json, index);
-				rgraph.refresh();
-				jsontext = JSON.stringify(json);
-				console.log(jsontext);
-				json = jsonleer;
+			else if (jahr2 == 2009) {				json = $.concat(json1997, json1998, json1999, json2000, json2001, json2002, json2003, json2004, json2005, json2006, json2007, json2008, json2009 );
 			}
-			else if (jahr2 == 2010) {
-				json = $.concat(json1997, json1998, json1999, json2000, json2001, json2002, json2003, json2004, json2005, json2006, json2007, json2008, json2009, json2010 );
-				rgraph.loadJSON(json, index);
-				rgraph.refresh();
-				jsontext = JSON.stringify(json);
-				console.log(jsontext);
-				json = jsonleer;
+			else if (jahr2 == 2010) {				json = $.concat(json1997, json1998, json1999, json2000, json2001, json2002, json2003, json2004, json2005, json2006, json2007, json2008, json2009, json2010 );
 			}
-			else if (jahr2 == 2011) {
-				json = $.concat(json1997, json1998, json1999, json2000, json2001, json2002, json2003, json2004, json2005, json2006, json2007, json2008, json2009, json2010, json2011 );
-				rgraph.loadJSON(json, index);
-				rgraph.refresh();
-				jsontext = JSON.stringify(json);
-				console.log(jsontext);
-				json = jsonleer;
+			else if (jahr2 == 2011) {				json = $.concat(json1997, json1998, json1999, json2000, json2001, json2002, json2003, json2004, json2005, json2006, json2007, json2008, json2009, json2010, json2011 );
 			}
-			else if (jahr2 == 2012) {
-				json = $.concat(json1997, json1998, json1999, json2000, json2001, json2002, json2003, json2004, json2005, json2006, json2007, json2008, json2009, json2010, json2011, json2012 );
-				rgraph.loadJSON(json, index);
-				rgraph.refresh();
-				jsontext = JSON.stringify(json);
-				console.log(jsontext);
-				json = jsonleer;
+			else if (jahr2 == 2012) {				json = $.concat(json1997, json1998, json1999, json2000, json2001, json2002, json2003, json2004, json2005, json2006, json2007, json2008, json2009, json2010, json2011, json2012 );
 			}
-			else if (jahr2 == 2013) {
-				json = $.concat(json1997, json1998, json1999, json2000, json2001, json2002, json2003, json2004, json2005, json2006, json2007, json2008, json2009, json2010, json2011, json2012, json2013 );
-				rgraph.loadJSON(json, index);
-				rgraph.refresh();
-				jsontext = JSON.stringify(json);
-				console.log(jsontext);
-				json = jsonleer;
+			else if (jahr2 == 2013) {				json = $.concat(json1997, json1998, json1999, json2000, json2001, json2002, json2003, json2004, json2005, json2006, json2007, json2008, json2009, json2010, json2011, json2012, json2013 );
 			}
-			else if (jahr2 == 2014) {
-				json = $.concat(json1997, json1998, json1999, json2000, json2001, json2002, json2003, json2004, json2005, json2006, json2007, json2008, json2009, json2010, json2011, json2012, json2013, json2014 );
-				rgraph.loadJSON(json, index);
-				rgraph.refresh();
-				jsontext = JSON.stringify(json);
-				console.log(jsontext);
-				json = jsonleer;
+			else if (jahr2 == 2014) {				json = $.concat(json1997, json1998, json1999, json2000, json2001, json2002, json2003, json2004, json2005, json2006, json2007, json2008, json2009, json2010, json2011, json2012, json2013, json2014 );
 			}
-			else if (jahr2 == 2015) {
-				json = $.concat(json1997, json1998, json1999, json2000, json2001, json2002, json2003, json2004, json2005, json2006, json2007, json2008, json2009, json2010, json2011, json2012, json2013, json2014, json2015 );
-				rgraph.loadJSON(json, index);
-				rgraph.refresh();
-				jsontext = JSON.stringify(json);
-				console.log(jsontext);
-				json = jsonleer;
+			else if (jahr2 == 2015) {				json = $.concat(json1997, json1998, json1999, json2000, json2001, json2002, json2003, json2004, json2005, json2006, json2007, json2008, json2009, json2010, json2011, json2012, json2013, json2014, json2015 );
 			}
-			else if (jahr2 == 2016) {
-				json = $.concat(json1997, json1998, json1999, json2000, json2001, json2002, json2003, json2004, json2005, json2006, json2007, json2008, json2009, json2010, json2011, json2012, json2013, json2014, json2015, json2016 );
-				rgraph.loadJSON(json, index);
-				rgraph.refresh();
-				jsontext = JSON.stringify(json);
-				console.log(jsontext);
-				json = jsonleer;
+			else if (jahr2 == 2016) {				json = $.concat(json1997, json1998, json1999, json2000, json2001, json2002, json2003, json2004, json2005, json2006, json2007, json2008, json2009, json2010, json2011, json2012, json2013, json2014, json2015, json2016 );
 			}
-			else if (jahr2 == 2017) {
-				json = $.concat(json1997, json1998, json1999, json2000, json2001, json2002, json2003, json2004, json2005, json2006, json2007, json2008, json2009, json2010, json2011, json2012, json2013, json2014, json2015, json2016, json2017 );
-				rgraph.loadJSON(json, index);
-				rgraph.refresh();
-				jsontext = JSON.stringify(json);
-				console.log(jsontext);
-				json = jsonleer;
+			else if (jahr2 == 2017) {				json = $.concat(json1997, json1998, json1999, json2000, json2001, json2002, json2003, json2004, json2005, json2006, json2007, json2008, json2009, json2010, json2011, json2012, json2013, json2014, json2015, json2016, json2017 );
 			}
-			else if (jahr2 == 2018) {
-				json = $.concat(json1997, json1998, json1999, json2000, json2001, json2002, json2003, json2004, json2005, json2006, json2007, json2008, json2009, json2010, json2011, json2012, json2013, json2014, json2015, json2016, json2017, json2018 );
-				rgraph.loadJSON(json, index);
-				rgraph.refresh();
-				jsontext = JSON.stringify(json);
-				console.log(jsontext);
-				json = jsonleer;
+			else if (jahr2 == 2018) {				json = $.concat(json1997, json1998, json1999, json2000, json2001, json2002, json2003, json2004, json2005, json2006, json2007, json2008, json2009, json2010, json2011, json2012, json2013, json2014, json2015, json2016, json2017, json2018 );
 			}
-			else if (jahr2 == 2019) {
-				json = $.concat(json1997, json1998, json1999, json2000, json2001, json2002, json2003, json2004, json2005, json2006, json2007, json2008, json2009, json2010, json2011, json2012, json2013, json2014, json2015, json2016, json2017, json2018, json2019 );
-				rgraph.loadJSON(json, index);
-				rgraph.refresh();
-				jsontext = JSON.stringify(json);
-				console.log(jsontext);
-				json = jsonleer;
+			else if (jahr2 == 2019) {				json = $.concat(json1997, json1998, json1999, json2000, json2001, json2002, json2003, json2004, json2005, json2006, json2007, json2008, json2009, json2010, json2011, json2012, json2013, json2014, json2015, json2016, json2017, json2018, json2019 );
 			}
-			else if (jahr2 == 2020) {
-				json = $.concat(json1997, json1998, json1999, json2000, json2001, json2002, json2003, json2004, json2005, json2006, json2007, json2008, json2009, json2010, json2011, json2012, json2013, json2014, json2015, json2016, json2017, json2018, json2019, json2020 );
-				rgraph.loadJSON(json, index);
-				rgraph.refresh();
-				jsontext = JSON.stringify(json);
-				console.log(jsontext);
-				json = jsonleer;
+			else if (jahr2 == 2020) {				json = $.concat(json1997, json1998, json1999, json2000, json2001, json2002, json2003, json2004, json2005, json2006, json2007, json2008, json2009, json2010, json2011, json2012, json2013, json2014, json2015, json2016, json2017, json2018, json2019, json2020 );
 			}
 		}
 		else if (jahr1 == 1998) {
-			if (jahr2 == 1998) {
-				json = json1998;
-				rgraph.loadJSON(json, index);
-				rgraph.refresh();
-				jsontext = JSON.stringify(json);
-				console.log(jsontext);
-				json = jsonleer;
+			if (jahr2 == 1998) {				json = json1998;
 			}
-			else if (jahr2 == 1999) {
-				json = $.concat(json1998, json1999 );
-				rgraph.loadJSON(json, index);
-				rgraph.refresh();
-				jsontext = JSON.stringify(json);
-				console.log(jsontext);
-				json = jsonleer;
+			else if (jahr2 == 1999) {				json = $.concat(json1998, json1999 );
 			}
-			else if (jahr2 == 2000) {
-				json = $.concat(json1998, json1999, json2000 );
-				rgraph.loadJSON(json, index);
-				rgraph.refresh();
-				jsontext = JSON.stringify(json);
-				console.log(jsontext);
-				json = jsonleer;
+			else if (jahr2 == 2000) {				json = $.concat(json1998, json1999, json2000 );
 			}
-			else if (jahr2 == 2001) {
-				json = $.concat(json1998, json1999, json2000, json2001 );
-				rgraph.loadJSON(json, index);
-				rgraph.refresh();
-				jsontext = JSON.stringify(json);
-				console.log(jsontext);
-				json = jsonleer;
+			else if (jahr2 == 2001) {				json = $.concat(json1998, json1999, json2000, json2001 );
 			}
-			else if (jahr2 == 2002) {
-				json = $.concat(json1998, json1999, json2000, json2001, json2002 );
-				rgraph.loadJSON(json, index);
-				rgraph.refresh();
-				jsontext = JSON.stringify(json);
-				console.log(jsontext);
-				json = jsonleer;
+			else if (jahr2 == 2002) {				json = $.concat(json1998, json1999, json2000, json2001, json2002 );
 			}
-			else if (jahr2 == 2003) {
-				json = $.concat(json1998, json1999, json2000, json2001, json2002, json2003 );
-				rgraph.loadJSON(json, index);
-				rgraph.refresh();
-				jsontext = JSON.stringify(json);
-				console.log(jsontext);
-				json = jsonleer;
+			else if (jahr2 == 2003) {				json = $.concat(json1998, json1999, json2000, json2001, json2002, json2003 );
 			}
-			else if (jahr2 == 2004) {
-				json = $.concat(json1998, json1999, json2000, json2001, json2002, json2003, json2004 );
-				rgraph.loadJSON(json, index);
-				rgraph.refresh();
-				jsontext = JSON.stringify(json);
-				console.log(jsontext);
-				json = jsonleer;
+			else if (jahr2 == 2004) {				json = $.concat(json1998, json1999, json2000, json2001, json2002, json2003, json2004 );
 			}
-			else if (jahr2 == 2005) {
-				json = $.concat(json1998, json1999, json2000, json2001, json2002, json2003, json2004, json2005 );
-				rgraph.loadJSON(json, index);
-				rgraph.refresh();
-				jsontext = JSON.stringify(json);
-				console.log(jsontext);
-				json = jsonleer;
+			else if (jahr2 == 2005) {				json = $.concat(json1998, json1999, json2000, json2001, json2002, json2003, json2004, json2005 );
 			}
-			else if (jahr2 == 2006) {
-				json = $.concat(json1998, json1999, json2000, json2001, json2002, json2003, json2004, json2005, json2006 );
-				rgraph.loadJSON(json, index);
-				rgraph.refresh();
-				jsontext = JSON.stringify(json);
-				console.log(jsontext);
-				json = jsonleer;
+			else if (jahr2 == 2006) {				json = $.concat(json1998, json1999, json2000, json2001, json2002, json2003, json2004, json2005, json2006 );
 			}
-			else if (jahr2 == 2007) {
-				json = $.concat(json1998, json1999, json2000, json2001, json2002, json2003, json2004, json2005, json2006, json2007 );
-				rgraph.loadJSON(json, index);
-				rgraph.refresh();
-				jsontext = JSON.stringify(json);
-				console.log(jsontext);
-				json = jsonleer;
+			else if (jahr2 == 2007) {				json = $.concat(json1998, json1999, json2000, json2001, json2002, json2003, json2004, json2005, json2006, json2007 );
 			}
-			else if (jahr2 == 2008) {
-				json = $.concat(json1998, json1999, json2000, json2001, json2002, json2003, json2004, json2005, json2006, json2007, json2008 );
-				rgraph.loadJSON(json, index);
-				rgraph.refresh();
-				jsontext = JSON.stringify(json);
-				console.log(jsontext);
-				json = jsonleer;
+			else if (jahr2 == 2008) {				json = $.concat(json1998, json1999, json2000, json2001, json2002, json2003, json2004, json2005, json2006, json2007, json2008 );
 			}
-			else if (jahr2 == 2009) {
-				json = $.concat(json1998, json1999, json2000, json2001, json2002, json2003, json2004, json2005, json2006, json2007, json2008, json2009 );
-				rgraph.loadJSON(json, index);
-				rgraph.refresh();
-				jsontext = JSON.stringify(json);
-				console.log(jsontext);
-				json = jsonleer;
+			else if (jahr2 == 2009) {				json = $.concat(json1998, json1999, json2000, json2001, json2002, json2003, json2004, json2005, json2006, json2007, json2008, json2009 );
 			}
-			else if (jahr2 == 2010) {
-				json = $.concat(json1998, json1999, json2000, json2001, json2002, json2003, json2004, json2005, json2006, json2007, json2008, json2009, json2010 );
-				rgraph.loadJSON(json, index);
-				rgraph.refresh();
-				jsontext = JSON.stringify(json);
-				console.log(jsontext);
-				json = jsonleer;
+			else if (jahr2 == 2010) {				json = $.concat(json1998, json1999, json2000, json2001, json2002, json2003, json2004, json2005, json2006, json2007, json2008, json2009, json2010 );
 			}
-			else if (jahr2 == 2011) {
-				json = $.concat(json1998, json1999, json2000, json2001, json2002, json2003, json2004, json2005, json2006, json2007, json2008, json2009, json2010, json2011 );
-				rgraph.loadJSON(json, index);
-				rgraph.refresh();
-				jsontext = JSON.stringify(json);
-				console.log(jsontext);
-				json = jsonleer;
+			else if (jahr2 == 2011) {				json = $.concat(json1998, json1999, json2000, json2001, json2002, json2003, json2004, json2005, json2006, json2007, json2008, json2009, json2010, json2011 );
 			}
-			else if (jahr2 == 2012) {
-				json = $.concat(json1998, json1999, json2000, json2001, json2002, json2003, json2004, json2005, json2006, json2007, json2008, json2009, json2010, json2011, json2012 );
-				rgraph.loadJSON(json, index);
-				rgraph.refresh();
-				jsontext = JSON.stringify(json);
-				console.log(jsontext);
-				json = jsonleer;
+			else if (jahr2 == 2012) {				json = $.concat(json1998, json1999, json2000, json2001, json2002, json2003, json2004, json2005, json2006, json2007, json2008, json2009, json2010, json2011, json2012 );
 			}
-			else if (jahr2 == 2013) {
-				json = $.concat(json1998, json1999, json2000, json2001, json2002, json2003, json2004, json2005, json2006, json2007, json2008, json2009, json2010, json2011, json2012, json2013 );
-				rgraph.loadJSON(json, index);
-				rgraph.refresh();
-				jsontext = JSON.stringify(json);
-				console.log(jsontext);
-				json = jsonleer;
+			else if (jahr2 == 2013) {				json = $.concat(json1998, json1999, json2000, json2001, json2002, json2003, json2004, json2005, json2006, json2007, json2008, json2009, json2010, json2011, json2012, json2013 );
 			}
-			else if (jahr2 == 2014) {
-				json = $.concat(json1998, json1999, json2000, json2001, json2002, json2003, json2004, json2005, json2006, json2007, json2008, json2009, json2010, json2011, json2012, json2013, json2014 );
-				rgraph.loadJSON(json, index);
-				rgraph.refresh();
-				jsontext = JSON.stringify(json);
-				console.log(jsontext);
-				json = jsonleer;
+			else if (jahr2 == 2014) {				json = $.concat(json1998, json1999, json2000, json2001, json2002, json2003, json2004, json2005, json2006, json2007, json2008, json2009, json2010, json2011, json2012, json2013, json2014 );
 			}
-			else if (jahr2 == 2015) {
-				json = $.concat(json1998, json1999, json2000, json2001, json2002, json2003, json2004, json2005, json2006, json2007, json2008, json2009, json2010, json2011, json2012, json2013, json2014, json2015 );
-				rgraph.loadJSON(json, index);
-				rgraph.refresh();
-				jsontext = JSON.stringify(json);
-				console.log(jsontext);
-				json = jsonleer;
+			else if (jahr2 == 2015) {				json = $.concat(json1998, json1999, json2000, json2001, json2002, json2003, json2004, json2005, json2006, json2007, json2008, json2009, json2010, json2011, json2012, json2013, json2014, json2015 );
 			}
-			else if (jahr2 == 2016) {
-				json = $.concat(json1998, json1999, json2000, json2001, json2002, json2003, json2004, json2005, json2006, json2007, json2008, json2009, json2010, json2011, json2012, json2013, json2014, json2015, json2016 );
-				rgraph.loadJSON(json, index);
-				rgraph.refresh();
-				jsontext = JSON.stringify(json);
-				console.log(jsontext);
-				json = jsonleer;
+			else if (jahr2 == 2016) {				json = $.concat(json1998, json1999, json2000, json2001, json2002, json2003, json2004, json2005, json2006, json2007, json2008, json2009, json2010, json2011, json2012, json2013, json2014, json2015, json2016 );
 			}
-			else if (jahr2 == 2017) {
-				json = $.concat(json1998, json1999, json2000, json2001, json2002, json2003, json2004, json2005, json2006, json2007, json2008, json2009, json2010, json2011, json2012, json2013, json2014, json2015, json2016, json2017 );
-				rgraph.loadJSON(json, index);
-				rgraph.refresh();
-				jsontext = JSON.stringify(json);
-				console.log(jsontext);
-				json = jsonleer;
+			else if (jahr2 == 2017) {				json = $.concat(json1998, json1999, json2000, json2001, json2002, json2003, json2004, json2005, json2006, json2007, json2008, json2009, json2010, json2011, json2012, json2013, json2014, json2015, json2016, json2017 );
 			}
-			else if (jahr2 == 2018) {
-				json = $.concat(json1998, json1999, json2000, json2001, json2002, json2003, json2004, json2005, json2006, json2007, json2008, json2009, json2010, json2011, json2012, json2013, json2014, json2015, json2016, json2017, json2018 );
-				rgraph.loadJSON(json, index);
-				rgraph.refresh();
-				jsontext = JSON.stringify(json);
-				console.log(jsontext);
-				json = jsonleer;
+			else if (jahr2 == 2018) {				json = $.concat(json1998, json1999, json2000, json2001, json2002, json2003, json2004, json2005, json2006, json2007, json2008, json2009, json2010, json2011, json2012, json2013, json2014, json2015, json2016, json2017, json2018 );
 			}
-			else if (jahr2 == 2019) {
-				json = $.concat(json1998, json1999, json2000, json2001, json2002, json2003, json2004, json2005, json2006, json2007, json2008, json2009, json2010, json2011, json2012, json2013, json2014, json2015, json2016, json2017, json2018, json2019 );
-				rgraph.loadJSON(json, index);
-				rgraph.refresh();
-				jsontext = JSON.stringify(json);
-				console.log(jsontext);
-				json = jsonleer;
+			else if (jahr2 == 2019) {				json = $.concat(json1998, json1999, json2000, json2001, json2002, json2003, json2004, json2005, json2006, json2007, json2008, json2009, json2010, json2011, json2012, json2013, json2014, json2015, json2016, json2017, json2018, json2019 );
 			}
-			else if (jahr2 == 2020) {
-				json = $.concat(json1998, json1999, json2000, json2001, json2002, json2003, json2004, json2005, json2006, json2007, json2008, json2009, json2010, json2011, json2012, json2013, json2014, json2015, json2016, json2017, json2018, json2019, json2020 );
-				rgraph.loadJSON(json, index);
-				rgraph.refresh();
-				jsontext = JSON.stringify(json);
-				console.log(jsontext);
-				json = jsonleer;
+			else if (jahr2 == 2020) {				json = $.concat(json1998, json1999, json2000, json2001, json2002, json2003, json2004, json2005, json2006, json2007, json2008, json2009, json2010, json2011, json2012, json2013, json2014, json2015, json2016, json2017, json2018, json2019, json2020 );
 			}
 		}
 		else if (jahr1 == 1999) {
-			if (jahr2 == 1999) {
-				json = json1999;
-				rgraph.loadJSON(json, index);
-				rgraph.refresh();
-				jsontext = JSON.stringify(json);
-				console.log(jsontext);
-				json = jsonleer;
+			if (jahr2 == 1999) {				json = json1999;
 			}
-			else if (jahr2 == 2000) {
-				json = $.concat(json1999, json2000 );
-				rgraph.loadJSON(json, index);
-				rgraph.refresh();
-				jsontext = JSON.stringify(json);
-				console.log(jsontext);
-				json = jsonleer;
+			else if (jahr2 == 2000) {				json = $.concat(json1999, json2000 );
 			}
-			else if (jahr2 == 2001) {
-				json = $.concat(json1999, json2000, json2001 );
-				rgraph.loadJSON(json, index);
-				rgraph.refresh();
-				jsontext = JSON.stringify(json);
-				console.log(jsontext);
-				json = jsonleer;
+			else if (jahr2 == 2001) {				json = $.concat(json1999, json2000, json2001 );
 			}
-			else if (jahr2 == 2002) {
-				json = $.concat(json1999, json2000, json2001, json2002 );
-				rgraph.loadJSON(json, index);
-				rgraph.refresh();
-				jsontext = JSON.stringify(json);
-				console.log(jsontext);
-				json = jsonleer;
+			else if (jahr2 == 2002) {				json = $.concat(json1999, json2000, json2001, json2002 );
 			}
-			else if (jahr2 == 2003) {
-				json = $.concat(json1999, json2000, json2001, json2002, json2003 );
-				rgraph.loadJSON(json, index);
-				rgraph.refresh();
-				jsontext = JSON.stringify(json);
-				console.log(jsontext);
-				json = jsonleer;
+			else if (jahr2 == 2003) {				json = $.concat(json1999, json2000, json2001, json2002, json2003 );
 			}
-			else if (jahr2 == 2004) {
-				json = $.concat(json1999, json2000, json2001, json2002, json2003, json2004 );
-				rgraph.loadJSON(json, index);
-				rgraph.refresh();
-				jsontext = JSON.stringify(json);
-				console.log(jsontext);
-				json = jsonleer;
+			else if (jahr2 == 2004) {				json = $.concat(json1999, json2000, json2001, json2002, json2003, json2004 );
 			}
-			else if (jahr2 == 2005) {
-				json = $.concat(json1999, json2000, json2001, json2002, json2003, json2004, json2005 );
-				rgraph.loadJSON(json, index);
-				rgraph.refresh();
-				jsontext = JSON.stringify(json);
-				console.log(jsontext);
-				json = jsonleer;
+			else if (jahr2 == 2005) {				json = $.concat(json1999, json2000, json2001, json2002, json2003, json2004, json2005 );
 			}
-			else if (jahr2 == 2006) {
-				json = $.concat(json1999, json2000, json2001, json2002, json2003, json2004, json2005, json2006 );
-				rgraph.loadJSON(json, index);
-				rgraph.refresh();
-				jsontext = JSON.stringify(json);
-				console.log(jsontext);
-				json = jsonleer;
+			else if (jahr2 == 2006) {				json = $.concat(json1999, json2000, json2001, json2002, json2003, json2004, json2005, json2006 );
 			}
-			else if (jahr2 == 2007) {
-				json = $.concat(json1999, json2000, json2001, json2002, json2003, json2004, json2005, json2006, json2007 );
-				rgraph.loadJSON(json, index);
-				rgraph.refresh();
-				jsontext = JSON.stringify(json);
-				console.log(jsontext);
-				json = jsonleer;
+			else if (jahr2 == 2007) {				json = $.concat(json1999, json2000, json2001, json2002, json2003, json2004, json2005, json2006, json2007 );
 			}
-			else if (jahr2 == 2008) {
-				json = $.concat(json1999, json2000, json2001, json2002, json2003, json2004, json2005, json2006, json2007, json2008 );
-				rgraph.loadJSON(json, index);
-				rgraph.refresh();
-				jsontext = JSON.stringify(json);
-				console.log(jsontext);
-				json = jsonleer;
+			else if (jahr2 == 2008) {				json = $.concat(json1999, json2000, json2001, json2002, json2003, json2004, json2005, json2006, json2007, json2008 );
 			}
-			else if (jahr2 == 2009) {
-				json = $.concat(json1999, json2000, json2001, json2002, json2003, json2004, json2005, json2006, json2007, json2008, json2009 );
-				rgraph.loadJSON(json, index);
-				rgraph.refresh();
-				jsontext = JSON.stringify(json);
-				console.log(jsontext);
-				json = jsonleer;
+			else if (jahr2 == 2009) {				json = $.concat(json1999, json2000, json2001, json2002, json2003, json2004, json2005, json2006, json2007, json2008, json2009 );
 			}
-			else if (jahr2 == 2010) {
-				json = $.concat(json1999, json2000, json2001, json2002, json2003, json2004, json2005, json2006, json2007, json2008, json2009, json2010 );
-				rgraph.loadJSON(json, index);
-				rgraph.refresh();
-				jsontext = JSON.stringify(json);
-				console.log(jsontext);
-				json = jsonleer;
+			else if (jahr2 == 2010) {				json = $.concat(json1999, json2000, json2001, json2002, json2003, json2004, json2005, json2006, json2007, json2008, json2009, json2010 );
 			}
-			else if (jahr2 == 2011) {
-				json = $.concat(json1999, json2000, json2001, json2002, json2003, json2004, json2005, json2006, json2007, json2008, json2009, json2010, json2011 );
-				rgraph.loadJSON(json, index);
-				rgraph.refresh();
-				jsontext = JSON.stringify(json);
-				console.log(jsontext);
-				json = jsonleer;
+			else if (jahr2 == 2011) {				json = $.concat(json1999, json2000, json2001, json2002, json2003, json2004, json2005, json2006, json2007, json2008, json2009, json2010, json2011 );
 			}
-			else if (jahr2 == 2012) {
-				json = $.concat(json1999, json2000, json2001, json2002, json2003, json2004, json2005, json2006, json2007, json2008, json2009, json2010, json2011, json2012 );
-				rgraph.loadJSON(json, index);
-				rgraph.refresh();
-				jsontext = JSON.stringify(json);
-				console.log(jsontext);
-				json = jsonleer;
+			else if (jahr2 == 2012) {				json = $.concat(json1999, json2000, json2001, json2002, json2003, json2004, json2005, json2006, json2007, json2008, json2009, json2010, json2011, json2012 );
 			}
-			else if (jahr2 == 2013) {
-				json = $.concat(json1999, json2000, json2001, json2002, json2003, json2004, json2005, json2006, json2007, json2008, json2009, json2010, json2011, json2012, json2013 );
-				rgraph.loadJSON(json, index);
-				rgraph.refresh();
-				jsontext = JSON.stringify(json);
-				console.log(jsontext);
-				json = jsonleer;
+			else if (jahr2 == 2013) {				json = $.concat(json1999, json2000, json2001, json2002, json2003, json2004, json2005, json2006, json2007, json2008, json2009, json2010, json2011, json2012, json2013 );
 			}
-			else if (jahr2 == 2014) {
-				json = $.concat(json1999, json2000, json2001, json2002, json2003, json2004, json2005, json2006, json2007, json2008, json2009, json2010, json2011, json2012, json2013, json2014 );
-				rgraph.loadJSON(json, index);
-				rgraph.refresh();
-				jsontext = JSON.stringify(json);
-				console.log(jsontext);
-				json = jsonleer;
+			else if (jahr2 == 2014) {				json = $.concat(json1999, json2000, json2001, json2002, json2003, json2004, json2005, json2006, json2007, json2008, json2009, json2010, json2011, json2012, json2013, json2014 );
 			}
-			else if (jahr2 == 2015) {
-				json = $.concat(json1999, json2000, json2001, json2002, json2003, json2004, json2005, json2006, json2007, json2008, json2009, json2010, json2011, json2012, json2013, json2014, json2015 );
-				rgraph.loadJSON(json, index);
-				rgraph.refresh();
-				jsontext = JSON.stringify(json);
-				console.log(jsontext);
-				json = jsonleer;
+			else if (jahr2 == 2015) {				json = $.concat(json1999, json2000, json2001, json2002, json2003, json2004, json2005, json2006, json2007, json2008, json2009, json2010, json2011, json2012, json2013, json2014, json2015 );
 			}
-			else if (jahr2 == 2016) {
-				json = $.concat(json1999, json2000, json2001, json2002, json2003, json2004, json2005, json2006, json2007, json2008, json2009, json2010, json2011, json2012, json2013, json2014, json2015, json2016 );
-				rgraph.loadJSON(json, index);
-				rgraph.refresh();
-				jsontext = JSON.stringify(json);
-				console.log(jsontext);
-				json = jsonleer;
+			else if (jahr2 == 2016) {				json = $.concat(json1999, json2000, json2001, json2002, json2003, json2004, json2005, json2006, json2007, json2008, json2009, json2010, json2011, json2012, json2013, json2014, json2015, json2016 );
 			}
-			else if (jahr2 == 2017) {
-				json = $.concat(json1999, json2000, json2001, json2002, json2003, json2004, json2005, json2006, json2007, json2008, json2009, json2010, json2011, json2012, json2013, json2014, json2015, json2016, json2017 );
-				rgraph.loadJSON(json, index);
-				rgraph.refresh();
-				jsontext = JSON.stringify(json);
-				console.log(jsontext);
-				json = jsonleer;
+			else if (jahr2 == 2017) {				json = $.concat(json1999, json2000, json2001, json2002, json2003, json2004, json2005, json2006, json2007, json2008, json2009, json2010, json2011, json2012, json2013, json2014, json2015, json2016, json2017 );
 			}
-			else if (jahr2 == 2018) {
-				json = $.concat(json1999, json2000, json2001, json2002, json2003, json2004, json2005, json2006, json2007, json2008, json2009, json2010, json2011, json2012, json2013, json2014, json2015, json2016, json2017, json2018 );
-				rgraph.loadJSON(json, index);
-				rgraph.refresh();
-				jsontext = JSON.stringify(json);
-				console.log(jsontext);
-				json = jsonleer;
+			else if (jahr2 == 2018) {				json = $.concat(json1999, json2000, json2001, json2002, json2003, json2004, json2005, json2006, json2007, json2008, json2009, json2010, json2011, json2012, json2013, json2014, json2015, json2016, json2017, json2018 );
 			}
-			else if (jahr2 == 2019) {
-				json = $.concat(json1999, json2000, json2001, json2002, json2003, json2004, json2005, json2006, json2007, json2008, json2009, json2010, json2011, json2012, json2013, json2014, json2015, json2016, json2017, json2018, json2019 );
-				rgraph.loadJSON(json, index);
-				rgraph.refresh();
-				jsontext = JSON.stringify(json);
-				console.log(jsontext);
-				json = jsonleer;
+			else if (jahr2 == 2019) {				json = $.concat(json1999, json2000, json2001, json2002, json2003, json2004, json2005, json2006, json2007, json2008, json2009, json2010, json2011, json2012, json2013, json2014, json2015, json2016, json2017, json2018, json2019 );
 			}
-			else if (jahr2 == 2020) {
-				json = $.concat(json1999, json2000, json2001, json2002, json2003, json2004, json2005, json2006, json2007, json2008, json2009, json2010, json2011, json2012, json2013, json2014, json2015, json2016, json2017, json2018, json2019, json2020 );
-				rgraph.loadJSON(json, index);
-				rgraph.refresh();
-				jsontext = JSON.stringify(json);
-				console.log(jsontext);
-				json = jsonleer;
+			else if (jahr2 == 2020) {				json = $.concat(json1999, json2000, json2001, json2002, json2003, json2004, json2005, json2006, json2007, json2008, json2009, json2010, json2011, json2012, json2013, json2014, json2015, json2016, json2017, json2018, json2019, json2020 );
 			}
 		}
 		else if (jahr1 == 2000) {
-			if (jahr2 == 2000) {
-				json = json2000;
-				rgraph.loadJSON(json, index);
-				rgraph.refresh();
-				jsontext = JSON.stringify(json);
-				console.log(jsontext);
-				json = jsonleer;
+			if (jahr2 == 2000) {				json = json2000;
 			}
-			else if (jahr2 == 2001) {
-				json = $.concat(json2000, json2001 );
-				rgraph.loadJSON(json, index);
-				rgraph.refresh();
-				jsontext = JSON.stringify(json);
-				console.log(jsontext);
-				json = jsonleer;
+			else if (jahr2 == 2001) {				json = $.concat(json2000, json2001 );
 			}
-			else if (jahr2 == 2002) {
-				json = $.concat(json2000, json2001, json2002 );
-				rgraph.loadJSON(json, index);
-				rgraph.refresh();
-				jsontext = JSON.stringify(json);
-				console.log(jsontext);
-				json = jsonleer;
+			else if (jahr2 == 2002) {				json = $.concat(json2000, json2001, json2002 );
 			}
-			else if (jahr2 == 2003) {
-				json = $.concat(json2000, json2001, json2002, json2003 );
-				rgraph.loadJSON(json, index);
-				rgraph.refresh();
-				jsontext = JSON.stringify(json);
-				console.log(jsontext);
-				json = jsonleer;
+			else if (jahr2 == 2003) {				json = $.concat(json2000, json2001, json2002, json2003 );
 			}
-			else if (jahr2 == 2004) {
-				json = $.concat(json2000, json2001, json2002, json2003, json2004 );
-				rgraph.loadJSON(json, index);
-				rgraph.refresh();
-				jsontext = JSON.stringify(json);
-				console.log(jsontext);
-				json = jsonleer;
+			else if (jahr2 == 2004) {				json = $.concat(json2000, json2001, json2002, json2003, json2004 );
 			}
-			else if (jahr2 == 2005) {
-				json = $.concat(json2000, json2001, json2002, json2003, json2004, json2005 );
-				rgraph.loadJSON(json, index);
-				rgraph.refresh();
-				jsontext = JSON.stringify(json);
-				console.log(jsontext);
-				json = jsonleer;
+			else if (jahr2 == 2005) {				json = $.concat(json2000, json2001, json2002, json2003, json2004, json2005 );
 			}
-			else if (jahr2 == 2006) {
-				json = $.concat(json2000, json2001, json2002, json2003, json2004, json2005, json2006 );
-				rgraph.loadJSON(json, index);
-				rgraph.refresh();
-				jsontext = JSON.stringify(json);
-				console.log(jsontext);
-				json = jsonleer;
+			else if (jahr2 == 2006) {				json = $.concat(json2000, json2001, json2002, json2003, json2004, json2005, json2006 );
 			}
-			else if (jahr2 == 2007) {
-				json = $.concat(json2000, json2001, json2002, json2003, json2004, json2005, json2006, json2007 );
-				rgraph.loadJSON(json, index);
-				rgraph.refresh();
-				jsontext = JSON.stringify(json);
-				console.log(jsontext);
-				json = jsonleer;
+			else if (jahr2 == 2007) {				json = $.concat(json2000, json2001, json2002, json2003, json2004, json2005, json2006, json2007 );
 			}
-			else if (jahr2 == 2008) {
-				json = $.concat(json2000, json2001, json2002, json2003, json2004, json2005, json2006, json2007, json2008 );
-				rgraph.loadJSON(json, index);
-				rgraph.refresh();
-				jsontext = JSON.stringify(json);
-				console.log(jsontext);
-				json = jsonleer;
+			else if (jahr2 == 2008) {				json = $.concat(json2000, json2001, json2002, json2003, json2004, json2005, json2006, json2007, json2008 );
 			}
-			else if (jahr2 == 2009) {
-				json = $.concat(json2000, json2001, json2002, json2003, json2004, json2005, json2006, json2007, json2008, json2009 );
-				rgraph.loadJSON(json, index);
-				rgraph.refresh();
-				jsontext = JSON.stringify(json);
-				console.log(jsontext);
-				json = jsonleer;
+			else if (jahr2 == 2009) {				json = $.concat(json2000, json2001, json2002, json2003, json2004, json2005, json2006, json2007, json2008, json2009 );
 			}
-			else if (jahr2 == 2010) {
-				json = $.concat(json2000, json2001, json2002, json2003, json2004, json2005, json2006, json2007, json2008, json2009, json2010 );
-				rgraph.loadJSON(json, index);
-				rgraph.refresh();
-				jsontext = JSON.stringify(json);
-				console.log(jsontext);
-				json = jsonleer;
+			else if (jahr2 == 2010) {				json = $.concat(json2000, json2001, json2002, json2003, json2004, json2005, json2006, json2007, json2008, json2009, json2010 );
 			}
-			else if (jahr2 == 2011) {
-				json = $.concat(json2000, json2001, json2002, json2003, json2004, json2005, json2006, json2007, json2008, json2009, json2010, json2011 );
-				rgraph.loadJSON(json, index);
-				rgraph.refresh();
-				jsontext = JSON.stringify(json);
-				console.log(jsontext);
-				json = jsonleer;
+			else if (jahr2 == 2011) {				json = $.concat(json2000, json2001, json2002, json2003, json2004, json2005, json2006, json2007, json2008, json2009, json2010, json2011 );
 			}
-			else if (jahr2 == 2012) {
-				json = $.concat(json2000, json2001, json2002, json2003, json2004, json2005, json2006, json2007, json2008, json2009, json2010, json2011, json2012 );
-				rgraph.loadJSON(json, index);
-				rgraph.refresh();
-				jsontext = JSON.stringify(json);
-				console.log(jsontext);
-				json = jsonleer;
+			else if (jahr2 == 2012) {				json = $.concat(json2000, json2001, json2002, json2003, json2004, json2005, json2006, json2007, json2008, json2009, json2010, json2011, json2012 );
 			}
-			else if (jahr2 == 2013) {
-				json = $.concat(json2000, json2001, json2002, json2003, json2004, json2005, json2006, json2007, json2008, json2009, json2010, json2011, json2012, json2013 );
-				rgraph.loadJSON(json, index);
-				rgraph.refresh();
-				jsontext = JSON.stringify(json);
-				console.log(jsontext);
-				json = jsonleer;
+			else if (jahr2 == 2013) {				json = $.concat(json2000, json2001, json2002, json2003, json2004, json2005, json2006, json2007, json2008, json2009, json2010, json2011, json2012, json2013 );
 			}
-			else if (jahr2 == 2014) {
-				json = $.concat(json2000, json2001, json2002, json2003, json2004, json2005, json2006, json2007, json2008, json2009, json2010, json2011, json2012, json2013, json2014 );
-				rgraph.loadJSON(json, index);
-				rgraph.refresh();
-				jsontext = JSON.stringify(json);
-				console.log(jsontext);
-				json = jsonleer;
+			else if (jahr2 == 2014) {				json = $.concat(json2000, json2001, json2002, json2003, json2004, json2005, json2006, json2007, json2008, json2009, json2010, json2011, json2012, json2013, json2014 );
 			}
-			else if (jahr2 == 2015) {
-				json = $.concat(json2000, json2001, json2002, json2003, json2004, json2005, json2006, json2007, json2008, json2009, json2010, json2011, json2012, json2013, json2014, json2015 );
-				rgraph.loadJSON(json, index);
-				rgraph.refresh();
-				jsontext = JSON.stringify(json);
-				console.log(jsontext);
-				json = jsonleer;
+			else if (jahr2 == 2015) {				json = $.concat(json2000, json2001, json2002, json2003, json2004, json2005, json2006, json2007, json2008, json2009, json2010, json2011, json2012, json2013, json2014, json2015 );
 			}
-			else if (jahr2 == 2016) {
-				json = $.concat(json2000, json2001, json2002, json2003, json2004, json2005, json2006, json2007, json2008, json2009, json2010, json2011, json2012, json2013, json2014, json2015, json2016 );
-				rgraph.loadJSON(json, index);
-				rgraph.refresh();
-				jsontext = JSON.stringify(json);
-				console.log(jsontext);
-				json = jsonleer;
+			else if (jahr2 == 2016) {				json = $.concat(json2000, json2001, json2002, json2003, json2004, json2005, json2006, json2007, json2008, json2009, json2010, json2011, json2012, json2013, json2014, json2015, json2016 );
 			}
-			else if (jahr2 == 2017) {
-				json = $.concat(json2000, json2001, json2002, json2003, json2004, json2005, json2006, json2007, json2008, json2009, json2010, json2011, json2012, json2013, json2014, json2015, json2016, json2017 );
-				rgraph.loadJSON(json, index);
-				rgraph.refresh();
-				jsontext = JSON.stringify(json);
-				console.log(jsontext);
-				json = jsonleer;
+			else if (jahr2 == 2017) {				json = $.concat(json2000, json2001, json2002, json2003, json2004, json2005, json2006, json2007, json2008, json2009, json2010, json2011, json2012, json2013, json2014, json2015, json2016, json2017 );
 			}
-			else if (jahr2 == 2018) {
-				json = $.concat(json2000, json2001, json2002, json2003, json2004, json2005, json2006, json2007, json2008, json2009, json2010, json2011, json2012, json2013, json2014, json2015, json2016, json2017, json2018 );
-				rgraph.loadJSON(json, index);
-				rgraph.refresh();
-				jsontext = JSON.stringify(json);
-				console.log(jsontext);
-				json = jsonleer;
+			else if (jahr2 == 2018) {				json = $.concat(json2000, json2001, json2002, json2003, json2004, json2005, json2006, json2007, json2008, json2009, json2010, json2011, json2012, json2013, json2014, json2015, json2016, json2017, json2018 );
 			}
-			else if (jahr2 == 2019) {
-				json = $.concat(json2000, json2001, json2002, json2003, json2004, json2005, json2006, json2007, json2008, json2009, json2010, json2011, json2012, json2013, json2014, json2015, json2016, json2017, json2018, json2019 );
-				rgraph.loadJSON(json, index);
-				rgraph.refresh();
-				jsontext = JSON.stringify(json);
-				console.log(jsontext);
-				json = jsonleer;
+			else if (jahr2 == 2019) {				json = $.concat(json2000, json2001, json2002, json2003, json2004, json2005, json2006, json2007, json2008, json2009, json2010, json2011, json2012, json2013, json2014, json2015, json2016, json2017, json2018, json2019 );
 			}
-			else if (jahr2 == 2020) {
-				json = $.concat(json2000, json2001, json2002, json2003, json2004, json2005, json2006, json2007, json2008, json2009, json2010, json2011, json2012, json2013, json2014, json2015, json2016, json2017, json2018, json2019, json2020 );
-				rgraph.loadJSON(json, index);
-				rgraph.refresh();
-				jsontext = JSON.stringify(json);
-				console.log(jsontext);
-				json = jsonleer;
+			else if (jahr2 == 2020) {				json = $.concat(json2000, json2001, json2002, json2003, json2004, json2005, json2006, json2007, json2008, json2009, json2010, json2011, json2012, json2013, json2014, json2015, json2016, json2017, json2018, json2019, json2020 );
 			}
 		}
 		else if (jahr1 == 2001) {
 			if (jahr2 == 2001) {
 				json = json2001;
-				rgraph.loadJSON(json, index);
-				rgraph.refresh();
-				jsontext = JSON.stringify(json);
-				console.log(jsontext);
-				json = jsonleer;
 			}
-			else if (jahr2 == 2002) {
-				json = $.concat(json2001, json2002 );
-				rgraph.loadJSON(json, index);
-				rgraph.refresh();
-				jsontext = JSON.stringify(json);
-				console.log(jsontext);
-				json = jsonleer;
+			else if (jahr2 == 2002) {				json = $.concat(json2001, json2002 );
 			}
-			else if (jahr2 == 2003) {
-				json = $.concat(json2001, json2002, json2003 );
-				rgraph.loadJSON(json, index);
-				rgraph.refresh();
-				jsontext = JSON.stringify(json);
-				console.log(jsontext);
-				json = jsonleer;
+			else if (jahr2 == 2003) {				json = $.concat(json2001, json2002, json2003 );
 			}
-			else if (jahr2 == 2004) {
-				json = $.concat(json2001, json2002, json2003, json2004 );
-				rgraph.loadJSON(json, index);
-				rgraph.refresh();
-				jsontext = JSON.stringify(json);
-				console.log(jsontext);
-				json = jsonleer;
+			else if (jahr2 == 2004) {				json = $.concat(json2001, json2002, json2003, json2004 );
 			}
-			else if (jahr2 == 2005) {
-				json = $.concat(json2001, json2002, json2003, json2004, json2005 );
-				rgraph.loadJSON(json, index);
-				rgraph.refresh();
-				jsontext = JSON.stringify(json);
-				console.log(jsontext);
-				json = jsonleer;
+			else if (jahr2 == 2005) {				json = $.concat(json2001, json2002, json2003, json2004, json2005 );
 			}
-			else if (jahr2 == 2006) {
-				json = $.concat(json2001, json2002, json2003, json2004, json2005, json2006 );
-				rgraph.loadJSON(json, index);
-				rgraph.refresh();
-				jsontext = JSON.stringify(json);
-				console.log(jsontext);
-				json = jsonleer;
+			else if (jahr2 == 2006) {				json = $.concat(json2001, json2002, json2003, json2004, json2005, json2006 );
 			}
-			else if (jahr2 == 2007) {
-				json = $.concat(json2001, json2002, json2003, json2004, json2005, json2006, json2007 );
-				rgraph.loadJSON(json, index);
-				rgraph.refresh();
-				jsontext = JSON.stringify(json);
-				console.log(jsontext);
-				json = jsonleer;
+			else if (jahr2 == 2007) {				json = $.concat(json2001, json2002, json2003, json2004, json2005, json2006, json2007 );
 			}
-			else if (jahr2 == 2008) {
-				json = $.concat(json2001, json2002, json2003, json2004, json2005, json2006, json2007, json2008 );
-				rgraph.loadJSON(json, index);
-				rgraph.refresh();
-				jsontext = JSON.stringify(json);
-				console.log(jsontext);
-				json = jsonleer;
+			else if (jahr2 == 2008) {				json = $.concat(json2001, json2002, json2003, json2004, json2005, json2006, json2007, json2008 );
 			}
-			else if (jahr2 == 2009) {
-				json = $.concat(json2001, json2002, json2003, json2004, json2005, json2006, json2007, json2008, json2009 );
-				rgraph.loadJSON(json, index);
-				rgraph.refresh();
-				jsontext = JSON.stringify(json);
-				console.log(jsontext);
-				json = jsonleer;
+			else if (jahr2 == 2009) {				json = $.concat(json2001, json2002, json2003, json2004, json2005, json2006, json2007, json2008, json2009 );
 			}
-			else if (jahr2 == 2010) {
-				json = $.concat(json2001, json2002, json2003, json2004, json2005, json2006, json2007, json2008, json2009, json2010 );
-				rgraph.loadJSON(json, index);
-				rgraph.refresh();
-				jsontext = JSON.stringify(json);
-				console.log(jsontext);
-				json = jsonleer;
+			else if (jahr2 == 2010) {				json = $.concat(json2001, json2002, json2003, json2004, json2005, json2006, json2007, json2008, json2009, json2010 );
 			}
-			else if (jahr2 == 2011) {
-				json = $.concat(json2001, json2002, json2003, json2004, json2005, json2006, json2007, json2008, json2009, json2010, json2011 );
-				rgraph.loadJSON(json, index);
-				rgraph.refresh();
-				jsontext = JSON.stringify(json);
-				console.log(jsontext);
-				json = jsonleer;
+			else if (jahr2 == 2011) {				json = $.concat(json2001, json2002, json2003, json2004, json2005, json2006, json2007, json2008, json2009, json2010, json2011 );
 			}
-			else if (jahr2 == 2012) {
-				json = $.concat(json2001, json2002, json2003, json2004, json2005, json2006, json2007, json2008, json2009, json2010, json2011, json2012 );
-				rgraph.loadJSON(json, index);
-				rgraph.refresh();
-				jsontext = JSON.stringify(json);
-				console.log(jsontext);
-				json = jsonleer;
+			else if (jahr2 == 2012) {				json = $.concat(json2001, json2002, json2003, json2004, json2005, json2006, json2007, json2008, json2009, json2010, json2011, json2012 );
 			}
-			else if (jahr2 == 2013) {
-				json = $.concat(json2001, json2002, json2003, json2004, json2005, json2006, json2007, json2008, json2009, json2010, json2011, json2012, json2013 );
-				rgraph.loadJSON(json, index);
-				rgraph.refresh();
-				jsontext = JSON.stringify(json);
-				console.log(jsontext);
-				json = jsonleer;
+			else if (jahr2 == 2013) {				json = $.concat(json2001, json2002, json2003, json2004, json2005, json2006, json2007, json2008, json2009, json2010, json2011, json2012, json2013 );
 			}
-			else if (jahr2 == 2014) {
-				json = $.concat(json2001, json2002, json2003, json2004, json2005, json2006, json2007, json2008, json2009, json2010, json2011, json2012, json2013, json2014 );
-				rgraph.loadJSON(json, index);
-				rgraph.refresh();
-				jsontext = JSON.stringify(json);
-				console.log(jsontext);
-				json = jsonleer;
+			else if (jahr2 == 2014) {				json = $.concat(json2001, json2002, json2003, json2004, json2005, json2006, json2007, json2008, json2009, json2010, json2011, json2012, json2013, json2014 );
 			}
-			else if (jahr2 == 2015) {
-				json = $.concat(json2001, json2002, json2003, json2004, json2005, json2006, json2007, json2008, json2009, json2010, json2011, json2012, json2013, json2014, json2015 );
-				rgraph.loadJSON(json, index);
-				rgraph.refresh();
-				jsontext = JSON.stringify(json);
-				console.log(jsontext);
-				json = jsonleer;
+			else if (jahr2 == 2015) {				json = $.concat(json2001, json2002, json2003, json2004, json2005, json2006, json2007, json2008, json2009, json2010, json2011, json2012, json2013, json2014, json2015 );
 			}
-			else if (jahr2 == 2016) {
-				json = $.concat(json2001, json2002, json2003, json2004, json2005, json2006, json2007, json2008, json2009, json2010, json2011, json2012, json2013, json2014, json2015, json2016 );
-				rgraph.loadJSON(json, index);
-				rgraph.refresh();
-				jsontext = JSON.stringify(json);
-				console.log(jsontext);
-				json = jsonleer;
+			else if (jahr2 == 2016) {				json = $.concat(json2001, json2002, json2003, json2004, json2005, json2006, json2007, json2008, json2009, json2010, json2011, json2012, json2013, json2014, json2015, json2016 );
 			}
-			else if (jahr2 == 2017) {
-				json = $.concat(json2001, json2002, json2003, json2004, json2005, json2006, json2007, json2008, json2009, json2010, json2011, json2012, json2013, json2014, json2015, json2016, json2017 );
-				rgraph.loadJSON(json, index);
-				rgraph.refresh();
-				jsontext = JSON.stringify(json);
-				console.log(jsontext);
-				json = jsonleer;
+			else if (jahr2 == 2017) {				json = $.concat(json2001, json2002, json2003, json2004, json2005, json2006, json2007, json2008, json2009, json2010, json2011, json2012, json2013, json2014, json2015, json2016, json2017 );
 			}
-			else if (jahr2 == 2018) {
-				json = $.concat(json2001, json2002, json2003, json2004, json2005, json2006, json2007, json2008, json2009, json2010, json2011, json2012, json2013, json2014, json2015, json2016, json2017, json2018 );
-				rgraph.loadJSON(json, index);
-				rgraph.refresh();
-				jsontext = JSON.stringify(json);
-				console.log(jsontext);
-				json = jsonleer;
+			else if (jahr2 == 2018) {				json = $.concat(json2001, json2002, json2003, json2004, json2005, json2006, json2007, json2008, json2009, json2010, json2011, json2012, json2013, json2014, json2015, json2016, json2017, json2018 );
 			}
-			else if (jahr2 == 2019) {
-				json = $.concat(json2001, json2002, json2003, json2004, json2005, json2006, json2007, json2008, json2009, json2010, json2011, json2012, json2013, json2014, json2015, json2016, json2017, json2018, json2019 );
-				rgraph.loadJSON(json, index);
-				rgraph.refresh();
-				jsontext = JSON.stringify(json);
-				console.log(jsontext);
-				json = jsonleer;
+			else if (jahr2 == 2019) {				json = $.concat(json2001, json2002, json2003, json2004, json2005, json2006, json2007, json2008, json2009, json2010, json2011, json2012, json2013, json2014, json2015, json2016, json2017, json2018, json2019 );
 			}
-			else if (jahr2 == 2020) {
-				json = $.concat(json2001, json2002, json2003, json2004, json2005, json2006, json2007, json2008, json2009, json2010, json2011, json2012, json2013, json2014, json2015, json2016, json2017, json2018, json2019, json2020 );
-				rgraph.loadJSON(json, index);
-				rgraph.refresh();
-				jsontext = JSON.stringify(json);
-				console.log(jsontext);
-				json = jsonleer;
+			else if (jahr2 == 2020) {				json = $.concat(json2001, json2002, json2003, json2004, json2005, json2006, json2007, json2008, json2009, json2010, json2011, json2012, json2013, json2014, json2015, json2016, json2017, json2018, json2019, json2020 );
 			}
 		}
 		else if (jahr1 == 2002) {
 			if (jahr2 == 2002) {
 				json = json2002;
-				rgraph.loadJSON(json, index);
-				rgraph.refresh();
-				jsontext = JSON.stringify(json);
-				console.log(jsontext);
-				json = jsonleer;
 			}
-			else if (jahr2 == 2003) {
-				json = $.concat(json2002, json2003 );
-				rgraph.loadJSON(json, index);
-				rgraph.refresh();
-				jsontext = JSON.stringify(json);
-				console.log(jsontext);
-				json = jsonleer;
+			else if (jahr2 == 2003) {				json = $.concat(json2002, json2003 );
 			}
-			else if (jahr2 == 2004) {
-				json = $.concat(json2002, json2003, json2004 );
-				rgraph.loadJSON(json, index);
-				rgraph.refresh();
-				jsontext = JSON.stringify(json);
-				console.log(jsontext);
-				json = jsonleer;
+			else if (jahr2 == 2004) {				json = $.concat(json2002, json2003, json2004 );
 			}
-			else if (jahr2 == 2005) {
-				json = $.concat(json2002, json2003, json2004, json2005 );
-				rgraph.loadJSON(json, index);
-				rgraph.refresh();
-				jsontext = JSON.stringify(json);
-				console.log(jsontext);
-				json = jsonleer;
+			else if (jahr2 == 2005) {				json = $.concat(json2002, json2003, json2004, json2005 );
 			}
-			else if (jahr2 == 2006) {
-				json = $.concat(json2002, json2003, json2004, json2005, json2006 );
-				rgraph.loadJSON(json, index);
-				rgraph.refresh();
-				jsontext = JSON.stringify(json);
-				console.log(jsontext);
-				json = jsonleer;
+			else if (jahr2 == 2006) {				json = $.concat(json2002, json2003, json2004, json2005, json2006 );
 			}
-			else if (jahr2 == 2007) {
-				json = $.concat(json2002, json2003, json2004, json2005, json2006, json2007 );
-				rgraph.loadJSON(json, index);
-				rgraph.refresh();
-				jsontext = JSON.stringify(json);
-				console.log(jsontext);
-				json = jsonleer;
+			else if (jahr2 == 2007) {				json = $.concat(json2002, json2003, json2004, json2005, json2006, json2007 );
 			}
-			else if (jahr2 == 2008) {
-				json = $.concat(json2002, json2003, json2004, json2005, json2006, json2007, json2008 );
-				rgraph.loadJSON(json, index);
-				rgraph.refresh();
-				jsontext = JSON.stringify(json);
-				console.log(jsontext);
-				json = jsonleer;
+			else if (jahr2 == 2008) {				json = $.concat(json2002, json2003, json2004, json2005, json2006, json2007, json2008 );
 			}
-			else if (jahr2 == 2009) {
-				json = $.concat(json2002, json2003, json2004, json2005, json2006, json2007, json2008, json2009 );
-				rgraph.loadJSON(json, index);
-				rgraph.refresh();
-				jsontext = JSON.stringify(json);
-				console.log(jsontext);
-				json = jsonleer;
+			else if (jahr2 == 2009) {				json = $.concat(json2002, json2003, json2004, json2005, json2006, json2007, json2008, json2009 );
 			}
-			else if (jahr2 == 2010) {
-				json = $.concat(json2002, json2003, json2004, json2005, json2006, json2007, json2008, json2009, json2010 );
-				rgraph.loadJSON(json, index);
-				rgraph.refresh();
-				jsontext = JSON.stringify(json);
-				console.log(jsontext);
-				json = jsonleer;
+			else if (jahr2 == 2010) {				json = $.concat(json2002, json2003, json2004, json2005, json2006, json2007, json2008, json2009, json2010 );
 			}
-			else if (jahr2 == 2011) {
-				json = $.concat(json2002, json2003, json2004, json2005, json2006, json2007, json2008, json2009, json2010, json2011 );
-				rgraph.loadJSON(json, index);
-				rgraph.refresh();
-				jsontext = JSON.stringify(json);
-				console.log(jsontext);
-				json = jsonleer;
+			else if (jahr2 == 2011) {				json = $.concat(json2002, json2003, json2004, json2005, json2006, json2007, json2008, json2009, json2010, json2011 );
 			}
-			else if (jahr2 == 2012) {
-				json = $.concat(json2002, json2003, json2004, json2005, json2006, json2007, json2008, json2009, json2010, json2011, json2012 );
-				rgraph.loadJSON(json, index);
-				rgraph.refresh();
-				jsontext = JSON.stringify(json);
-				console.log(jsontext);
-				json = jsonleer;
+			else if (jahr2 == 2012) {				json = $.concat(json2002, json2003, json2004, json2005, json2006, json2007, json2008, json2009, json2010, json2011, json2012 );
 			}
-			else if (jahr2 == 2013) {
-				json = $.concat(json2002, json2003, json2004, json2005, json2006, json2007, json2008, json2009, json2010, json2011, json2012, json2013 );
-				rgraph.loadJSON(json, index);
-				rgraph.refresh();
-				jsontext = JSON.stringify(json);
-				console.log(jsontext);
-				json = jsonleer;
+			else if (jahr2 == 2013) {				json = $.concat(json2002, json2003, json2004, json2005, json2006, json2007, json2008, json2009, json2010, json2011, json2012, json2013 );
 			}
-			else if (jahr2 == 2014) {
-				json = $.concat(json2002, json2003, json2004, json2005, json2006, json2007, json2008, json2009, json2010, json2011, json2012, json2013, json2014 );
-				rgraph.loadJSON(json, index);
-				rgraph.refresh();
-				jsontext = JSON.stringify(json);
-				console.log(jsontext);
-				json = jsonleer;
+			else if (jahr2 == 2014) {				json = $.concat(json2002, json2003, json2004, json2005, json2006, json2007, json2008, json2009, json2010, json2011, json2012, json2013, json2014 );
 			}
-			else if (jahr2 == 2015) {
-				json = $.concat(json2002, json2003, json2004, json2005, json2006, json2007, json2008, json2009, json2010, json2011, json2012, json2013, json2014, json2015 );
-				rgraph.loadJSON(json, index);
-				rgraph.refresh();
-				jsontext = JSON.stringify(json);
-				console.log(jsontext);
-				json = jsonleer;
+			else if (jahr2 == 2015) {				json = $.concat(json2002, json2003, json2004, json2005, json2006, json2007, json2008, json2009, json2010, json2011, json2012, json2013, json2014, json2015 );
 			}
-			else if (jahr2 == 2016) {
-				json = $.concat(json2002, json2003, json2004, json2005, json2006, json2007, json2008, json2009, json2010, json2011, json2012, json2013, json2014, json2015, json2016 );
-				rgraph.loadJSON(json, index);
-				rgraph.refresh();
-				jsontext = JSON.stringify(json);
-				console.log(jsontext);
-				json = jsonleer;
+			else if (jahr2 == 2016) {				json = $.concat(json2002, json2003, json2004, json2005, json2006, json2007, json2008, json2009, json2010, json2011, json2012, json2013, json2014, json2015, json2016 );
 			}
-			else if (jahr2 == 2017) {
-				json = $.concat(json2002, json2003, json2004, json2005, json2006, json2007, json2008, json2009, json2010, json2011, json2012, json2013, json2014, json2015, json2016, json2017 );
-				rgraph.loadJSON(json, index);
-				rgraph.refresh();
-				jsontext = JSON.stringify(json);
-				console.log(jsontext);
-				json = jsonleer;
+			else if (jahr2 == 2017) {				json = $.concat(json2002, json2003, json2004, json2005, json2006, json2007, json2008, json2009, json2010, json2011, json2012, json2013, json2014, json2015, json2016, json2017 );
 			}
-			else if (jahr2 == 2018) {
-				json = $.concat(json2002, json2003, json2004, json2005, json2006, json2007, json2008, json2009, json2010, json2011, json2012, json2013, json2014, json2015, json2016, json2017, json2018 );
-				rgraph.loadJSON(json, index);
-				rgraph.refresh();
-				jsontext = JSON.stringify(json);
-				console.log(jsontext);
-				json = jsonleer;
+			else if (jahr2 == 2018) {				json = $.concat(json2002, json2003, json2004, json2005, json2006, json2007, json2008, json2009, json2010, json2011, json2012, json2013, json2014, json2015, json2016, json2017, json2018 );
 			}
-			else if (jahr2 == 2019) {
-				json = $.concat(json2002, json2003, json2004, json2005, json2006, json2007, json2008, json2009, json2010, json2011, json2012, json2013, json2014, json2015, json2016, json2017, json2018, json2019 );
-				rgraph.loadJSON(json, index);
-				rgraph.refresh();
-				jsontext = JSON.stringify(json);
-				console.log(jsontext);
-				json = jsonleer;
+			else if (jahr2 == 2019) {				json = $.concat(json2002, json2003, json2004, json2005, json2006, json2007, json2008, json2009, json2010, json2011, json2012, json2013, json2014, json2015, json2016, json2017, json2018, json2019 );
 			}
-			else if (jahr2 == 2020) {
-				json = $.concat(json2002, json2003, json2004, json2005, json2006, json2007, json2008, json2009, json2010, json2011, json2012, json2013, json2014, json2015, json2016, json2017, json2018, json2019, json2020 );
-				rgraph.loadJSON(json, index);
-				rgraph.refresh();
-				jsontext = JSON.stringify(json);
-				console.log(jsontext);
-				json = jsonleer;
+			else if (jahr2 == 2020) {				json = $.concat(json2002, json2003, json2004, json2005, json2006, json2007, json2008, json2009, json2010, json2011, json2012, json2013, json2014, json2015, json2016, json2017, json2018, json2019, json2020 );
 			}
 		}
 		else if (jahr1 == 2003) {
 			if (jahr2 == 2003) {
 				json = json2003;
-				rgraph.loadJSON(json, index);
-				rgraph.refresh();
-				jsontext = JSON.stringify(json);
-				console.log(jsontext);
-				json = jsonleer;
 			}
-			else if (jahr2 == 2004) {
-				json = $.concat(json2003, json2004 );
-				rgraph.loadJSON(json, index);
-				rgraph.refresh();
-				jsontext = JSON.stringify(json);
-				console.log(jsontext);
-				json = jsonleer;
+			else if (jahr2 == 2004) {				json = $.concat(json2003, json2004 );
 			}
-			else if (jahr2 == 2005) {
-				json = $.concat(json2003, json2004, json2005 );
-				rgraph.loadJSON(json, index);
-				rgraph.refresh();
-				jsontext = JSON.stringify(json);
-				console.log(jsontext);
-				json = jsonleer;
+			else if (jahr2 == 2005) {				json = $.concat(json2003, json2004, json2005 );
 			}
-			else if (jahr2 == 2006) {
-				json = $.concat(json2003, json2004, json2005, json2006 );
-				rgraph.loadJSON(json, index);
-				rgraph.refresh();
-				jsontext = JSON.stringify(json);
-				console.log(jsontext);
-				json = jsonleer;
+			else if (jahr2 == 2006) {				json = $.concat(json2003, json2004, json2005, json2006 );
 			}
-			else if (jahr2 == 2007) {
-				json = $.concat(json2003, json2004, json2005, json2006, json2007 );
-				rgraph.loadJSON(json, index);
-				rgraph.refresh();
-				jsontext = JSON.stringify(json);
-				console.log(jsontext);
-				json = jsonleer;
+			else if (jahr2 == 2007) {				json = $.concat(json2003, json2004, json2005, json2006, json2007 );
 			}
-			else if (jahr2 == 2008) {
-				json = $.concat(json2003, json2004, json2005, json2006, json2007, json2008 );
-				rgraph.loadJSON(json, index);
-				rgraph.refresh();
-				jsontext = JSON.stringify(json);
-				console.log(jsontext);
-				json = jsonleer;
+			else if (jahr2 == 2008) {				json = $.concat(json2003, json2004, json2005, json2006, json2007, json2008 );
 			}
-			else if (jahr2 == 2009) {
-				json = $.concat(json2003, json2004, json2005, json2006, json2007, json2008, json2009 );
-				rgraph.loadJSON(json, index);
-				rgraph.refresh();
-				jsontext = JSON.stringify(json);
-				console.log(jsontext);
-				json = jsonleer;
+			else if (jahr2 == 2009) {				json = $.concat(json2003, json2004, json2005, json2006, json2007, json2008, json2009 );
 			}
-			else if (jahr2 == 2010) {
-				json = $.concat(json2003, json2004, json2005, json2006, json2007, json2008, json2009, json2010 );
-				rgraph.loadJSON(json, index);
-				rgraph.refresh();
-				jsontext = JSON.stringify(json);
-				console.log(jsontext);
-				json = jsonleer;
+			else if (jahr2 == 2010) {				json = $.concat(json2003, json2004, json2005, json2006, json2007, json2008, json2009, json2010 );
 			}
-			else if (jahr2 == 2011) {
-				json = $.concat(json2003, json2004, json2005, json2006, json2007, json2008, json2009, json2010, json2011 );
-				rgraph.loadJSON(json, index);
-				rgraph.refresh();
-				jsontext = JSON.stringify(json);
-				console.log(jsontext);
-				json = jsonleer;
+			else if (jahr2 == 2011) {				json = $.concat(json2003, json2004, json2005, json2006, json2007, json2008, json2009, json2010, json2011 );
 			}
-			else if (jahr2 == 2012) {
-				json = $.concat(json2003, json2004, json2005, json2006, json2007, json2008, json2009, json2010, json2011, json2012 );
-				rgraph.loadJSON(json, index);
-				rgraph.refresh();
-				jsontext = JSON.stringify(json);
-				console.log(jsontext);
-				json = jsonleer;
+			else if (jahr2 == 2012) {				json = $.concat(json2003, json2004, json2005, json2006, json2007, json2008, json2009, json2010, json2011, json2012 );
 			}
-			else if (jahr2 == 2013) {
-				json = $.concat(json2003, json2004, json2005, json2006, json2007, json2008, json2009, json2010, json2011, json2012, json2013 );
-				rgraph.loadJSON(json, index);
-				rgraph.refresh();
-				jsontext = JSON.stringify(json);
-				console.log(jsontext);
-				json = jsonleer;
+			else if (jahr2 == 2013) {				json = $.concat(json2003, json2004, json2005, json2006, json2007, json2008, json2009, json2010, json2011, json2012, json2013 );
 			}
-			else if (jahr2 == 2014) {
-				json = $.concat(json2003, json2004, json2005, json2006, json2007, json2008, json2009, json2010, json2011, json2012, json2013, json2014 );
-				rgraph.loadJSON(json, index);
-				rgraph.refresh();
-				jsontext = JSON.stringify(json);
-				console.log(jsontext);
-				json = jsonleer;
+			else if (jahr2 == 2014) {				json = $.concat(json2003, json2004, json2005, json2006, json2007, json2008, json2009, json2010, json2011, json2012, json2013, json2014 );
 			}
-			else if (jahr2 == 2015) {
-				json = $.concat(json2003, json2004, json2005, json2006, json2007, json2008, json2009, json2010, json2011, json2012, json2013, json2014, json2015 );
-				rgraph.loadJSON(json, index);
-				rgraph.refresh();
-				jsontext = JSON.stringify(json);
-				console.log(jsontext);
-				json = jsonleer;
+			else if (jahr2 == 2015) {				json = $.concat(json2003, json2004, json2005, json2006, json2007, json2008, json2009, json2010, json2011, json2012, json2013, json2014, json2015 );
 			}
-			else if (jahr2 == 2016) {
-				json = $.concat(json2003, json2004, json2005, json2006, json2007, json2008, json2009, json2010, json2011, json2012, json2013, json2014, json2015, json2016 );
-				rgraph.loadJSON(json, index);
-				rgraph.refresh();
-				jsontext = JSON.stringify(json);
-				console.log(jsontext);
-				json = jsonleer;
+			else if (jahr2 == 2016) {				json = $.concat(json2003, json2004, json2005, json2006, json2007, json2008, json2009, json2010, json2011, json2012, json2013, json2014, json2015, json2016 );
 			}
-			else if (jahr2 == 2017) {
-				json = $.concat(json2003, json2004, json2005, json2006, json2007, json2008, json2009, json2010, json2011, json2012, json2013, json2014, json2015, json2016, json2017 );
-				rgraph.loadJSON(json, index);
-				rgraph.refresh();
-				jsontext = JSON.stringify(json);
-				console.log(jsontext);
-				json = jsonleer;
+			else if (jahr2 == 2017) {				json = $.concat(json2003, json2004, json2005, json2006, json2007, json2008, json2009, json2010, json2011, json2012, json2013, json2014, json2015, json2016, json2017 );
 			}
-			else if (jahr2 == 2018) {
-				json = $.concat(json2003, json2004, json2005, json2006, json2007, json2008, json2009, json2010, json2011, json2012, json2013, json2014, json2015, json2016, json2017, json2018 );
-				rgraph.loadJSON(json, index);
-				rgraph.refresh();
-				jsontext = JSON.stringify(json);
-				console.log(jsontext);
-				json = jsonleer;
+			else if (jahr2 == 2018) {				json = $.concat(json2003, json2004, json2005, json2006, json2007, json2008, json2009, json2010, json2011, json2012, json2013, json2014, json2015, json2016, json2017, json2018 );
 			}
-			else if (jahr2 == 2019) {
-				json = $.concat(json2003, json2004, json2005, json2006, json2007, json2008, json2009, json2010, json2011, json2012, json2013, json2014, json2015, json2016, json2017, json2018, json2019 );
-				rgraph.loadJSON(json, index);
-				rgraph.refresh();
-				jsontext = JSON.stringify(json);
-				console.log(jsontext);
-				json = jsonleer;
+			else if (jahr2 == 2019) {				json = $.concat(json2003, json2004, json2005, json2006, json2007, json2008, json2009, json2010, json2011, json2012, json2013, json2014, json2015, json2016, json2017, json2018, json2019 );
 			}
-			else if (jahr2 == 2020) {
-				json = $.concat(json2003, json2004, json2005, json2006, json2007, json2008, json2009, json2010, json2011, json2012, json2013, json2014, json2015, json2016, json2017, json2018, json2019, json2020 );
-				rgraph.loadJSON(json, index);
-				rgraph.refresh();
-				jsontext = JSON.stringify(json);
-				console.log(jsontext);
-				json = jsonleer;
+			else if (jahr2 == 2020) {				json = $.concat(json2003, json2004, json2005, json2006, json2007, json2008, json2009, json2010, json2011, json2012, json2013, json2014, json2015, json2016, json2017, json2018, json2019, json2020 );
 			}
 		}
 		else if (jahr1 == 2004) {
 			if (jahr2 == 2004) {
 				json = json2004;
-				rgraph.loadJSON(json, index);
-				rgraph.refresh();
-				jsontext = JSON.stringify(json);
-				console.log(jsontext);
-				json = jsonleer;
 			}
-			else if (jahr2 == 2005) {
-				json = $.concat(json2004, json2005 );
-				rgraph.loadJSON(json, index);
-				rgraph.refresh();
-				jsontext = JSON.stringify(json);
-				console.log(jsontext);
-				json = jsonleer;
+			else if (jahr2 == 2005) {				json = $.concat(json2004, json2005 );
 			}
-			else if (jahr2 == 2006) {
-				json = $.concat(json2004, json2005, json2006 );
-				rgraph.loadJSON(json, index);
-				rgraph.refresh();
-				jsontext = JSON.stringify(json);
-				console.log(jsontext);
-				json = jsonleer;
+			else if (jahr2 == 2006) {				json = $.concat(json2004, json2005, json2006 );
 			}
-			else if (jahr2 == 2007) {
-				json = $.concat(json2004, json2005, json2006, json2007 );
-				rgraph.loadJSON(json, index);
-				rgraph.refresh();
-				jsontext = JSON.stringify(json);
-				console.log(jsontext);
-				json = jsonleer;
+			else if (jahr2 == 2007) {				json = $.concat(json2004, json2005, json2006, json2007 );
 			}
-			else if (jahr2 == 2008) {
-				json = $.concat(json2004, json2005, json2006, json2007, json2008 );
-				rgraph.loadJSON(json, index);
-				rgraph.refresh();
-				jsontext = JSON.stringify(json);
-				console.log(jsontext);
-				json = jsonleer;
+			else if (jahr2 == 2008) {				json = $.concat(json2004, json2005, json2006, json2007, json2008 );
 			}
-			else if (jahr2 == 2009) {
-				json = $.concat(json2004, json2005, json2006, json2007, json2008, json2009 );
-				rgraph.loadJSON(json, index);
-				rgraph.refresh();
-				jsontext = JSON.stringify(json);
-				console.log(jsontext);
-				json = jsonleer;
+			else if (jahr2 == 2009) {				json = $.concat(json2004, json2005, json2006, json2007, json2008, json2009 );
 			}
-			else if (jahr2 == 2010) {
-				json = $.concat(json2004, json2005, json2006, json2007, json2008, json2009, json2010 );
-				rgraph.loadJSON(json, index);
-				rgraph.refresh();
-				jsontext = JSON.stringify(json);
-				console.log(jsontext);
-				json = jsonleer;
+			else if (jahr2 == 2010) {				json = $.concat(json2004, json2005, json2006, json2007, json2008, json2009, json2010 );
 			}
-			else if (jahr2 == 2011) {
-				json = $.concat(json2004, json2005, json2006, json2007, json2008, json2009, json2010, json2011 );
-				rgraph.loadJSON(json, index);
-				rgraph.refresh();
-				jsontext = JSON.stringify(json);
-				console.log(jsontext);
-				json = jsonleer;
+			else if (jahr2 == 2011) {				json = $.concat(json2004, json2005, json2006, json2007, json2008, json2009, json2010, json2011 );
 			}
-			else if (jahr2 == 2012) {
-				json = $.concat(json2004, json2005, json2006, json2007, json2008, json2009, json2010, json2011, json2012 );
-				rgraph.loadJSON(json, index);
-				rgraph.refresh();
-				jsontext = JSON.stringify(json);
-				console.log(jsontext);
-				json = jsonleer;
+			else if (jahr2 == 2012) {				json = $.concat(json2004, json2005, json2006, json2007, json2008, json2009, json2010, json2011, json2012 );
 			}
-			else if (jahr2 == 2013) {
-				json = $.concat(json2004, json2005, json2006, json2007, json2008, json2009, json2010, json2011, json2012, json2013 );
-				rgraph.loadJSON(json, index);
-				rgraph.refresh();
-				jsontext = JSON.stringify(json);
-				console.log(jsontext);
-				json = jsonleer;
+			else if (jahr2 == 2013) {				json = $.concat(json2004, json2005, json2006, json2007, json2008, json2009, json2010, json2011, json2012, json2013 );
 			}
-			else if (jahr2 == 2014) {
-				json = $.concat(json2004, json2005, json2006, json2007, json2008, json2009, json2010, json2011, json2012, json2013, json2014 );
-				rgraph.loadJSON(json, index);
-				rgraph.refresh();
-				jsontext = JSON.stringify(json);
-				console.log(jsontext);
-				json = jsonleer;
+			else if (jahr2 == 2014) {				json = $.concat(json2004, json2005, json2006, json2007, json2008, json2009, json2010, json2011, json2012, json2013, json2014 );
 			}
-			else if (jahr2 == 2015) {
-				json = $.concat(json2004, json2005, json2006, json2007, json2008, json2009, json2010, json2011, json2012, json2013, json2014, json2015 );
-				rgraph.loadJSON(json, index);
-				rgraph.refresh();
-				jsontext = JSON.stringify(json);
-				console.log(jsontext);
-				json = jsonleer;
+			else if (jahr2 == 2015) {				json = $.concat(json2004, json2005, json2006, json2007, json2008, json2009, json2010, json2011, json2012, json2013, json2014, json2015 );
 			}
-			else if (jahr2 == 2016) {
-				json = $.concat(json2004, json2005, json2006, json2007, json2008, json2009, json2010, json2011, json2012, json2013, json2014, json2015, json2016 );
-				rgraph.loadJSON(json, index);
-				rgraph.refresh();
-				jsontext = JSON.stringify(json);
-				console.log(jsontext);
-				json = jsonleer;
+			else if (jahr2 == 2016) {				json = $.concat(json2004, json2005, json2006, json2007, json2008, json2009, json2010, json2011, json2012, json2013, json2014, json2015, json2016 );
 			}
-			else if (jahr2 == 2017) {
-				json = $.concat(json2004, json2005, json2006, json2007, json2008, json2009, json2010, json2011, json2012, json2013, json2014, json2015, json2016, json2017 );
-				rgraph.loadJSON(json, index);
-				rgraph.refresh();
-				jsontext = JSON.stringify(json);
-				console.log(jsontext);
-				json = jsonleer;
+			else if (jahr2 == 2017) {				json = $.concat(json2004, json2005, json2006, json2007, json2008, json2009, json2010, json2011, json2012, json2013, json2014, json2015, json2016, json2017 );
 			}
-			else if (jahr2 == 2018) {
-				json = $.concat(json2004, json2005, json2006, json2007, json2008, json2009, json2010, json2011, json2012, json2013, json2014, json2015, json2016, json2017, json2018 );
-				rgraph.loadJSON(json, index);
-				rgraph.refresh();
-				jsontext = JSON.stringify(json);
-				console.log(jsontext);
-				json = jsonleer;
+			else if (jahr2 == 2018) {				json = $.concat(json2004, json2005, json2006, json2007, json2008, json2009, json2010, json2011, json2012, json2013, json2014, json2015, json2016, json2017, json2018 );
 			}
-			else if (jahr2 == 2019) {
-				json = $.concat(json2004, json2005, json2006, json2007, json2008, json2009, json2010, json2011, json2012, json2013, json2014, json2015, json2016, json2017, json2018, json2019 );
-				rgraph.loadJSON(json, index);
-				rgraph.refresh();
-				jsontext = JSON.stringify(json);
-				console.log(jsontext);
-				json = jsonleer;
+			else if (jahr2 == 2019) {				json = $.concat(json2004, json2005, json2006, json2007, json2008, json2009, json2010, json2011, json2012, json2013, json2014, json2015, json2016, json2017, json2018, json2019 );
 			}
-			else if (jahr2 == 2020) {
-				json = $.concat(json2004, json2005, json2006, json2007, json2008, json2009, json2010, json2011, json2012, json2013, json2014, json2015, json2016, json2017, json2018, json2019, json2020 );
-				rgraph.loadJSON(json, index);
-				rgraph.refresh();
-				jsontext = JSON.stringify(json);
-				console.log(jsontext);
-				json = jsonleer;
+			else if (jahr2 == 2020) {				json = $.concat(json2004, json2005, json2006, json2007, json2008, json2009, json2010, json2011, json2012, json2013, json2014, json2015, json2016, json2017, json2018, json2019, json2020 );
 			}
 		}
 		else if (jahr1 == 2005) {
 			if (jahr2 == 2005) {
 				json = json2005;
-				rgraph.loadJSON(json, index);
-				rgraph.refresh();
-				jsontext = JSON.stringify(json);
-				console.log(jsontext);
-				json = jsonleer;
 			}
-			else if (jahr2 == 2006) {
-				json = $.concat(json2005, json2006 );
-				rgraph.loadJSON(json, index);
-				rgraph.refresh();
-				jsontext = JSON.stringify(json);
-				console.log(jsontext);
-				json = jsonleer;
+			else if (jahr2 == 2006) {				json = $.concat(json2005, json2006 );
 			}
-			else if (jahr2 == 2007) {
-				json = $.concat(json2005, json2006, json2007 );
-				rgraph.loadJSON(json, index);
-				rgraph.refresh();
-				jsontext = JSON.stringify(json);
-				console.log(jsontext);
-				json = jsonleer;
+			else if (jahr2 == 2007) {				json = $.concat(json2005, json2006, json2007 );
 			}
-			else if (jahr2 == 2008) {
-				json = $.concat(json2005, json2006, json2007, json2008 );
-				rgraph.loadJSON(json, index);
-				rgraph.refresh();
-				jsontext = JSON.stringify(json);
-				console.log(jsontext);
-				json = jsonleer;
+			else if (jahr2 == 2008) {				json = $.concat(json2005, json2006, json2007, json2008 );
 			}
-			else if (jahr2 == 2009) {
-				json = $.concat(json2005, json2006, json2007, json2008, json2009 );
-				rgraph.loadJSON(json, index);
-				rgraph.refresh();
-				jsontext = JSON.stringify(json);
-				console.log(jsontext);
-				json = jsonleer;
+			else if (jahr2 == 2009) {				json = $.concat(json2005, json2006, json2007, json2008, json2009 );
 			}
-			else if (jahr2 == 2010) {
-				json = $.concat(json2005, json2006, json2007, json2008, json2009, json2010 );
-				rgraph.loadJSON(json, index);
-				rgraph.refresh();
-				jsontext = JSON.stringify(json);
-				console.log(jsontext);
-				json = jsonleer;
+			else if (jahr2 == 2010) {				json = $.concat(json2005, json2006, json2007, json2008, json2009, json2010 );
 			}
-			else if (jahr2 == 2011) {
-				json = $.concat(json2005, json2006, json2007, json2008, json2009, json2010, json2011 );
-				rgraph.loadJSON(json, index);
-				rgraph.refresh();
-				jsontext = JSON.stringify(json);
-				console.log(jsontext);
-				json = jsonleer;
+			else if (jahr2 == 2011) {				json = $.concat(json2005, json2006, json2007, json2008, json2009, json2010, json2011 );
 			}
-			else if (jahr2 == 2012) {
-				json = $.concat(json2005, json2006, json2007, json2008, json2009, json2010, json2011, json2012 );
-				rgraph.loadJSON(json, index);
-				rgraph.refresh();
-				jsontext = JSON.stringify(json);
-				console.log(jsontext);
-				json = jsonleer;
+			else if (jahr2 == 2012) {				json = $.concat(json2005, json2006, json2007, json2008, json2009, json2010, json2011, json2012 );
 			}
-			else if (jahr2 == 2013) {
-				json = $.concat(json2005, json2006, json2007, json2008, json2009, json2010, json2011, json2012, json2013 );
-				rgraph.loadJSON(json, index);
-				rgraph.refresh();
-				jsontext = JSON.stringify(json);
-				console.log(jsontext);
-				json = jsonleer;
+			else if (jahr2 == 2013) {				json = $.concat(json2005, json2006, json2007, json2008, json2009, json2010, json2011, json2012, json2013 );
 			}
-			else if (jahr2 == 2014) {
-				json = $.concat(json2005, json2006, json2007, json2008, json2009, json2010, json2011, json2012, json2013, json2014 );
-				rgraph.loadJSON(json, index);
-				rgraph.refresh();
-				jsontext = JSON.stringify(json);
-				console.log(jsontext);
-				json = jsonleer;
+			else if (jahr2 == 2014) {				json = $.concat(json2005, json2006, json2007, json2008, json2009, json2010, json2011, json2012, json2013, json2014 );
 			}
-			else if (jahr2 == 2015) {
-				json = $.concat(json2005, json2006, json2007, json2008, json2009, json2010, json2011, json2012, json2013, json2014, json2015 );
-				rgraph.loadJSON(json, index);
-				rgraph.refresh();
-				jsontext = JSON.stringify(json);
-				console.log(jsontext);
-				json = jsonleer;
+			else if (jahr2 == 2015) {				json = $.concat(json2005, json2006, json2007, json2008, json2009, json2010, json2011, json2012, json2013, json2014, json2015 );
 			}
-			else if (jahr2 == 2016) {
-				json = $.concat(json2005, json2006, json2007, json2008, json2009, json2010, json2011, json2012, json2013, json2014, json2015, json2016 );
-				rgraph.loadJSON(json, index);
-				rgraph.refresh();
-				jsontext = JSON.stringify(json);
-				console.log(jsontext);
-				json = jsonleer;
+			else if (jahr2 == 2016) {				json = $.concat(json2005, json2006, json2007, json2008, json2009, json2010, json2011, json2012, json2013, json2014, json2015, json2016 );
 			}
-			else if (jahr2 == 2017) {
-				json = $.concat(json2005, json2006, json2007, json2008, json2009, json2010, json2011, json2012, json2013, json2014, json2015, json2016, json2017 );
-				rgraph.loadJSON(json, index);
-				rgraph.refresh();
-				jsontext = JSON.stringify(json);
-				console.log(jsontext);
-				json = jsonleer;
+			else if (jahr2 == 2017) {				json = $.concat(json2005, json2006, json2007, json2008, json2009, json2010, json2011, json2012, json2013, json2014, json2015, json2016, json2017 );
 			}
-			else if (jahr2 == 2018) {
-				json = $.concat(json2005, json2006, json2007, json2008, json2009, json2010, json2011, json2012, json2013, json2014, json2015, json2016, json2017, json2018 );
-				rgraph.loadJSON(json, index);
-				rgraph.refresh();
-				jsontext = JSON.stringify(json);
-				console.log(jsontext);
-				json = jsonleer;
+			else if (jahr2 == 2018) {				json = $.concat(json2005, json2006, json2007, json2008, json2009, json2010, json2011, json2012, json2013, json2014, json2015, json2016, json2017, json2018 );
 			}
-			else if (jahr2 == 2019) {
-				json = $.concat(json2005, json2006, json2007, json2008, json2009, json2010, json2011, json2012, json2013, json2014, json2015, json2016, json2017, json2018, json2019 );
-				rgraph.loadJSON(json, index);
-				rgraph.refresh();
-				jsontext = JSON.stringify(json);
-				console.log(jsontext);
-				json = jsonleer;
+			else if (jahr2 == 2019) {				json = $.concat(json2005, json2006, json2007, json2008, json2009, json2010, json2011, json2012, json2013, json2014, json2015, json2016, json2017, json2018, json2019 );
 			}
-			else if (jahr2 == 2020) {
-				json = $.concat(json2005, json2006, json2007, json2008, json2009, json2010, json2011, json2012, json2013, json2014, json2015, json2016, json2017, json2018, json2019, json2020 );
-				rgraph.loadJSON(json, index);
-				rgraph.refresh();
-				jsontext = JSON.stringify(json);
-				console.log(jsontext);
-				json = jsonleer;
+			else if (jahr2 == 2020) {				json = $.concat(json2005, json2006, json2007, json2008, json2009, json2010, json2011, json2012, json2013, json2014, json2015, json2016, json2017, json2018, json2019, json2020 );
 			}
 		}
 		else if (jahr1 == 2006) {
 			if (jahr2 == 2006) {
 				json = json2006;
-				rgraph.loadJSON(json, index);
-				rgraph.refresh();
-				jsontext = JSON.stringify(json);
-				console.log(jsontext);
-				json = jsonleer;
 			}
-			else if (jahr2 == 2007) {
-				json = $.concat(json2006, json2007 );
-				rgraph.loadJSON(json, index);
-				rgraph.refresh();
-				jsontext = JSON.stringify(json);
-				console.log(jsontext);
-				json = jsonleer;
+			else if (jahr2 == 2007) {				json = $.concat(json2006, json2007 );
 			}
-			else if (jahr2 == 2008) {
-				json = $.concat(json2006, json2007, json2008 );
-				rgraph.loadJSON(json, index);
-				rgraph.refresh();
-				jsontext = JSON.stringify(json);
-				console.log(jsontext);
-				json = jsonleer;
+			else if (jahr2 == 2008) {				json = $.concat(json2006, json2007, json2008 );
 			}
-			else if (jahr2 == 2009) {
-				json = $.concat(json2006, json2007, json2008, json2009 );
-				rgraph.loadJSON(json, index);
-				rgraph.refresh();
-				jsontext = JSON.stringify(json);
-				console.log(jsontext);
-				json = jsonleer;
+			else if (jahr2 == 2009) {				json = $.concat(json2006, json2007, json2008, json2009 );
 			}
-			else if (jahr2 == 2010) {
-				json = $.concat(json2006, json2007, json2008, json2009, json2010 );
-				rgraph.loadJSON(json, index);
-				rgraph.refresh();
-				jsontext = JSON.stringify(json);
-				console.log(jsontext);
-				json = jsonleer;
+			else if (jahr2 == 2010) {				json = $.concat(json2006, json2007, json2008, json2009, json2010 );
 			}
-			else if (jahr2 == 2011) {
-				json = $.concat(json2006, json2007, json2008, json2009, json2010, json2011 );
-				rgraph.loadJSON(json, index);
-				rgraph.refresh();
-				jsontext = JSON.stringify(json);
-				console.log(jsontext);
-				json = jsonleer;
+			else if (jahr2 == 2011) {				json = $.concat(json2006, json2007, json2008, json2009, json2010, json2011 );
 			}
-			else if (jahr2 == 2012) {
-				json = $.concat(json2006, json2007, json2008, json2009, json2010, json2011, json2012 );
-				rgraph.loadJSON(json, index);
-				rgraph.refresh();
-				jsontext = JSON.stringify(json);
-				console.log(jsontext);
-				json = jsonleer;
+			else if (jahr2 == 2012) {				json = $.concat(json2006, json2007, json2008, json2009, json2010, json2011, json2012 );
 			}
-			else if (jahr2 == 2013) {
-				json = $.concat(json2006, json2007, json2008, json2009, json2010, json2011, json2012, json2013 );
-				rgraph.loadJSON(json, index);
-				rgraph.refresh();
-				jsontext = JSON.stringify(json);
-				console.log(jsontext);
-				json = jsonleer;
+			else if (jahr2 == 2013) {				json = $.concat(json2006, json2007, json2008, json2009, json2010, json2011, json2012, json2013 );
 			}
-			else if (jahr2 == 2014) {
-				json = $.concat(json2006, json2007, json2008, json2009, json2010, json2011, json2012, json2013, json2014 );
-				rgraph.loadJSON(json, index);
-				rgraph.refresh();
-				jsontext = JSON.stringify(json);
-				console.log(jsontext);
-				json = jsonleer;
+			else if (jahr2 == 2014) {				json = $.concat(json2006, json2007, json2008, json2009, json2010, json2011, json2012, json2013, json2014 );
 			}
-			else if (jahr2 == 2015) {
-				json = $.concat(json2006, json2007, json2008, json2009, json2010, json2011, json2012, json2013, json2014, json2015 );
-				rgraph.loadJSON(json, index);
-				rgraph.refresh();
-				jsontext = JSON.stringify(json);
-				console.log(jsontext);
-				json = jsonleer;
+			else if (jahr2 == 2015) {				json = $.concat(json2006, json2007, json2008, json2009, json2010, json2011, json2012, json2013, json2014, json2015 );
 			}
-			else if (jahr2 == 2016) {
-				json = $.concat(json2006, json2007, json2008, json2009, json2010, json2011, json2012, json2013, json2014, json2015, json2016 );
-				rgraph.loadJSON(json, index);
-				rgraph.refresh();
-				jsontext = JSON.stringify(json);
-				console.log(jsontext);
-				json = jsonleer;
+			else if (jahr2 == 2016) {				json = $.concat(json2006, json2007, json2008, json2009, json2010, json2011, json2012, json2013, json2014, json2015, json2016 );
 			}
-			else if (jahr2 == 2017) {
-				json = $.concat(json2006, json2007, json2008, json2009, json2010, json2011, json2012, json2013, json2014, json2015, json2016, json2017 );
-				rgraph.loadJSON(json, index);
-				rgraph.refresh();
-				jsontext = JSON.stringify(json);
-				console.log(jsontext);
-				json = jsonleer;
+			else if (jahr2 == 2017) {				json = $.concat(json2006, json2007, json2008, json2009, json2010, json2011, json2012, json2013, json2014, json2015, json2016, json2017 );
 			}
-			else if (jahr2 == 2018) {
-				json = $.concat(json2006, json2007, json2008, json2009, json2010, json2011, json2012, json2013, json2014, json2015, json2016, json2017, json2018 );
-				rgraph.loadJSON(json, index);
-				rgraph.refresh();
-				jsontext = JSON.stringify(json);
-				console.log(jsontext);
-				json = jsonleer;
+			else if (jahr2 == 2018) {				json = $.concat(json2006, json2007, json2008, json2009, json2010, json2011, json2012, json2013, json2014, json2015, json2016, json2017, json2018 );
 			}
-			else if (jahr2 == 2019) {
-				json = $.concat(json2006, json2007, json2008, json2009, json2010, json2011, json2012, json2013, json2014, json2015, json2016, json2017, json2018, json2019 );
-				rgraph.loadJSON(json, index);
-				rgraph.refresh();
-				jsontext = JSON.stringify(json);
-				console.log(jsontext);
-				json = jsonleer;
+			else if (jahr2 == 2019) {				json = $.concat(json2006, json2007, json2008, json2009, json2010, json2011, json2012, json2013, json2014, json2015, json2016, json2017, json2018, json2019 );
 			}
-			else if (jahr2 == 2020) {
-				json = $.concat(json2006, json2007, json2008, json2009, json2010, json2011, json2012, json2013, json2014, json2015, json2016, json2017, json2018, json2019, json2020 );
-				rgraph.loadJSON(json, index);
-				rgraph.refresh();
-				jsontext = JSON.stringify(json);
-				console.log(jsontext);
-				json = jsonleer;
+			else if (jahr2 == 2020) {				json = $.concat(json2006, json2007, json2008, json2009, json2010, json2011, json2012, json2013, json2014, json2015, json2016, json2017, json2018, json2019, json2020 );
 			}
 		}
 		else if (jahr1 == 2007) {
 			if (jahr2 == 2007) {
 				json = json2007;
-				rgraph.loadJSON(json, index);
-				rgraph.refresh();
-				jsontext = JSON.stringify(json);
-				console.log(jsontext);
-				json = jsonleer;
 			}
-			else if (jahr2 == 2008) {
-				json = $.concat(json2007, json2008 );
-				rgraph.loadJSON(json, index);
-				rgraph.refresh();
-				jsontext = JSON.stringify(json);
-				console.log(jsontext);
-				json = jsonleer;
+			else if (jahr2 == 2008) {				json = $.concat(json2007, json2008 );
 			}
-			else if (jahr2 == 2009) {
-				json = $.concat(json2007, json2008, json2009 );
-				rgraph.loadJSON(json, index);
-				rgraph.refresh();
-				jsontext = JSON.stringify(json);
-				console.log(jsontext);
-				json = jsonleer;
+			else if (jahr2 == 2009) {				json = $.concat(json2007, json2008, json2009 );
 			}
-			else if (jahr2 == 2010) {
-				json = $.concat(json2007, json2008, json2009, json2010 );
-				rgraph.loadJSON(json, index);
-				rgraph.refresh();
-				jsontext = JSON.stringify(json);
-				console.log(jsontext);
-				json = jsonleer;
+			else if (jahr2 == 2010) {				json = $.concat(json2007, json2008, json2009, json2010 );
 			}
-			else if (jahr2 == 2011) {
-				json = $.concat(json2007, json2008, json2009, json2010, json2011 );
-				rgraph.loadJSON(json, index);
-				rgraph.refresh();
-				jsontext = JSON.stringify(json);
-				console.log(jsontext);
-				json = jsonleer;
+			else if (jahr2 == 2011) {				json = $.concat(json2007, json2008, json2009, json2010, json2011 );
 			}
-			else if (jahr2 == 2012) {
-				json = $.concat(json2007, json2008, json2009, json2010, json2011, json2012 );
-				rgraph.loadJSON(json, index);
-				rgraph.refresh();
-				jsontext = JSON.stringify(json);
-				console.log(jsontext);
-				json = jsonleer;
+			else if (jahr2 == 2012) {				json = $.concat(json2007, json2008, json2009, json2010, json2011, json2012 );
 			}
-			else if (jahr2 == 2013) {
-				json = $.concat(json2007, json2008, json2009, json2010, json2011, json2012, json2013 );
-				rgraph.loadJSON(json, index);
-				rgraph.refresh();
-				jsontext = JSON.stringify(json);
-				console.log(jsontext);
-				json = jsonleer;
+			else if (jahr2 == 2013) {				json = $.concat(json2007, json2008, json2009, json2010, json2011, json2012, json2013 );
 			}
-			else if (jahr2 == 2014) {
-				json = $.concat(json2007, json2008, json2009, json2010, json2011, json2012, json2013, json2014 );
-				rgraph.loadJSON(json, index);
-				rgraph.refresh();
-				jsontext = JSON.stringify(json);
-				console.log(jsontext);
-				json = jsonleer;
+			else if (jahr2 == 2014) {				json = $.concat(json2007, json2008, json2009, json2010, json2011, json2012, json2013, json2014 );
 			}
-			else if (jahr2 == 2015) {
-				json = $.concat(json2007, json2008, json2009, json2010, json2011, json2012, json2013, json2014, json2015 );
-				rgraph.loadJSON(json, index);
-				rgraph.refresh();
-				jsontext = JSON.stringify(json);
-				console.log(jsontext);
-				json = jsonleer;
+			else if (jahr2 == 2015) {				json = $.concat(json2007, json2008, json2009, json2010, json2011, json2012, json2013, json2014, json2015 );
 			}
-			else if (jahr2 == 2016) {
-				json = $.concat(json2007, json2008, json2009, json2010, json2011, json2012, json2013, json2014, json2015, json2016 );
-				rgraph.loadJSON(json, index);
-				rgraph.refresh();
-				jsontext = JSON.stringify(json);
-				console.log(jsontext);
-				json = jsonleer;
+			else if (jahr2 == 2016) {				json = $.concat(json2007, json2008, json2009, json2010, json2011, json2012, json2013, json2014, json2015, json2016 );
 			}
-			else if (jahr2 == 2017) {
-				json = $.concat(json2007, json2008, json2009, json2010, json2011, json2012, json2013, json2014, json2015, json2016, json2017 );
-				rgraph.loadJSON(json, index);
-				rgraph.refresh();
-				jsontext = JSON.stringify(json);
-				console.log(jsontext);
-				json = jsonleer;
+			else if (jahr2 == 2017) {				json = $.concat(json2007, json2008, json2009, json2010, json2011, json2012, json2013, json2014, json2015, json2016, json2017 );
 			}
-			else if (jahr2 == 2018) {
-				json = $.concat(json2007, json2008, json2009, json2010, json2011, json2012, json2013, json2014, json2015, json2016, json2017, json2018 );
-				rgraph.loadJSON(json, index);
-				rgraph.refresh();
-				jsontext = JSON.stringify(json);
-				console.log(jsontext);
-				json = jsonleer;
+			else if (jahr2 == 2018) {				json = $.concat(json2007, json2008, json2009, json2010, json2011, json2012, json2013, json2014, json2015, json2016, json2017, json2018 );
 			}
-			else if (jahr2 == 2019) {
-				json = $.concat(json2007, json2008, json2009, json2010, json2011, json2012, json2013, json2014, json2015, json2016, json2017, json2018, json2019 );
-				rgraph.loadJSON(json, index);
-				rgraph.refresh();
-				jsontext = JSON.stringify(json);
-				console.log(jsontext);
-				json = jsonleer;
+			else if (jahr2 == 2019) {				json = $.concat(json2007, json2008, json2009, json2010, json2011, json2012, json2013, json2014, json2015, json2016, json2017, json2018, json2019 );
 			}
-			else if (jahr2 == 2020) {
-				json = $.concat(json2007, json2008, json2009, json2010, json2011, json2012, json2013, json2014, json2015, json2016, json2017, json2018, json2019, json2020 );
-				rgraph.loadJSON(json, index);
-				rgraph.refresh();
-				jsontext = JSON.stringify(json);
-				console.log(jsontext);
-				json = jsonleer;
+			else if (jahr2 == 2020) {				json = $.concat(json2007, json2008, json2009, json2010, json2011, json2012, json2013, json2014, json2015, json2016, json2017, json2018, json2019, json2020 );
 			}
 		}
 		else if (jahr1 == 2008) {
 			if (jahr2 == 2008) {
 				json = json2008;
-				rgraph.loadJSON(json, index);
-				rgraph.refresh();
-				jsontext = JSON.stringify(json);
-				console.log(jsontext);
-				json = jsonleer;
 			}
-			else if (jahr2 == 2009) {
-				json = $.concat(json2008, json2009 );
-				rgraph.loadJSON(json, index);
-				rgraph.refresh();
-				jsontext = JSON.stringify(json);
-				console.log(jsontext);
-				json = jsonleer;
+			else if (jahr2 == 2009) {				json = $.concat(json2008, json2009 );
 			}
-			else if (jahr2 == 2010) {
-				json = $.concat(json2008, json2009, json2010 );
-				rgraph.loadJSON(json, index);
-				rgraph.refresh();
-				jsontext = JSON.stringify(json);
-				console.log(jsontext);
-				json = jsonleer;
+			else if (jahr2 == 2010) {				json = $.concat(json2008, json2009, json2010 );
 			}
-			else if (jahr2 == 2011) {
-				json = $.concat(json2008, json2009, json2010, json2011 );
-				rgraph.loadJSON(json, index);
-				rgraph.refresh();
-				jsontext = JSON.stringify(json);
-				console.log(jsontext);
-				json = jsonleer;
+			else if (jahr2 == 2011) {				json = $.concat(json2008, json2009, json2010, json2011 );
 			}
-			else if (jahr2 == 2012) {
-				json = $.concat(json2008, json2009, json2010, json2011, json2012 );
-				rgraph.loadJSON(json, index);
-				rgraph.refresh();
-				jsontext = JSON.stringify(json);
-				console.log(jsontext);
-				json = jsonleer;
+			else if (jahr2 == 2012) {				json = $.concat(json2008, json2009, json2010, json2011, json2012 );
 			}
-			else if (jahr2 == 2013) {
-				json = $.concat(json2008, json2009, json2010, json2011, json2012, json2013 );
-				rgraph.loadJSON(json, index);
-				rgraph.refresh();
-				jsontext = JSON.stringify(json);
-				console.log(jsontext);
-				json = jsonleer;
+			else if (jahr2 == 2013) {				json = $.concat(json2008, json2009, json2010, json2011, json2012, json2013 );
 			}
-			else if (jahr2 == 2014) {
-				json = $.concat(json2008, json2009, json2010, json2011, json2012, json2013, json2014 );
-				rgraph.loadJSON(json, index);
-				rgraph.refresh();
-				jsontext = JSON.stringify(json);
-				console.log(jsontext);
-				json = jsonleer;
+			else if (jahr2 == 2014) {				json = $.concat(json2008, json2009, json2010, json2011, json2012, json2013, json2014 );
 			}
-			else if (jahr2 == 2015) {
-				json = $.concat(json2008, json2009, json2010, json2011, json2012, json2013, json2014, json2015 );
-				rgraph.loadJSON(json, index);
-				rgraph.refresh();
-				jsontext = JSON.stringify(json);
-				console.log(jsontext);
-				json = jsonleer;
+			else if (jahr2 == 2015) {				json = $.concat(json2008, json2009, json2010, json2011, json2012, json2013, json2014, json2015 );
 			}
-			else if (jahr2 == 2016) {
-				json = $.concat(json2008, json2009, json2010, json2011, json2012, json2013, json2014, json2015, json2016 );
-				rgraph.loadJSON(json, index);
-				rgraph.refresh();
-				jsontext = JSON.stringify(json);
-				console.log(jsontext);
-				json = jsonleer;
+			else if (jahr2 == 2016) {				json = $.concat(json2008, json2009, json2010, json2011, json2012, json2013, json2014, json2015, json2016 );
 			}
-			else if (jahr2 == 2017) {
-				json = $.concat(json2008, json2009, json2010, json2011, json2012, json2013, json2014, json2015, json2016, json2017 );
-				rgraph.loadJSON(json, index);
-				rgraph.refresh();
-				jsontext = JSON.stringify(json);
-				console.log(jsontext);
-				json = jsonleer;
+			else if (jahr2 == 2017) {				json = $.concat(json2008, json2009, json2010, json2011, json2012, json2013, json2014, json2015, json2016, json2017 );
 			}
-			else if (jahr2 == 2018) {
-				json = $.concat(json2008, json2009, json2010, json2011, json2012, json2013, json2014, json2015, json2016, json2017, json2018 );
-				rgraph.loadJSON(json, index);
-				rgraph.refresh();
-				jsontext = JSON.stringify(json);
-				console.log(jsontext);
-				json = jsonleer;
+			else if (jahr2 == 2018) {				json = $.concat(json2008, json2009, json2010, json2011, json2012, json2013, json2014, json2015, json2016, json2017, json2018 );
 			}
-			else if (jahr2 == 2019) {
-				json = $.concat(json2008, json2009, json2010, json2011, json2012, json2013, json2014, json2015, json2016, json2017, json2018, json2019 );
-				rgraph.loadJSON(json, index);
-				rgraph.refresh();
-				jsontext = JSON.stringify(json);
-				console.log(jsontext);
-				json = jsonleer;
+			else if (jahr2 == 2019) {				json = $.concat(json2008, json2009, json2010, json2011, json2012, json2013, json2014, json2015, json2016, json2017, json2018, json2019 );
 			}
-			else if (jahr2 == 2020) {
-				json = $.concat(json2008, json2009, json2010, json2011, json2012, json2013, json2014, json2015, json2016, json2017, json2018, json2019, json2020 );
-				rgraph.loadJSON(json, index);
-				rgraph.refresh();
-				jsontext = JSON.stringify(json);
-				console.log(jsontext);
-				json = jsonleer;
+			else if (jahr2 == 2020) {				json = $.concat(json2008, json2009, json2010, json2011, json2012, json2013, json2014, json2015, json2016, json2017, json2018, json2019, json2020 );
 			}
 		}
 		else if (jahr1 == 2009) {
 			if (jahr2 == 2009) {
 				json = json2009;
-				rgraph.loadJSON(json, index);
-				rgraph.refresh();
-				jsontext = JSON.stringify(json);
-				console.log(jsontext);
-				json = jsonleer;
 			}
-			else if (jahr2 == 2010) {
-				json = $.concat(json2009, json2010 );
-				rgraph.loadJSON(json, index);
-				rgraph.refresh();
-				jsontext = JSON.stringify(json);
-				console.log(jsontext);
-				json = jsonleer;
+			else if (jahr2 == 2010) {				json = $.concat(json2009, json2010 );
 			}
-			else if (jahr2 == 2011) {
-				json = $.concat(json2009, json2010, json2011 );
-				rgraph.loadJSON(json, index);
-				rgraph.refresh();
-				jsontext = JSON.stringify(json);
-				console.log(jsontext);
-				json = jsonleer;
+			else if (jahr2 == 2011) {				json = $.concat(json2009, json2010, json2011 );
 			}
-			else if (jahr2 == 2012) {
-				json = $.concat(json2009, json2010, json2011, json2012 );
-				rgraph.loadJSON(json, index);
-				rgraph.refresh();
-				jsontext = JSON.stringify(json);
-				console.log(jsontext);
-				json = jsonleer;
+			else if (jahr2 == 2012) {				json = $.concat(json2009, json2010, json2011, json2012 );
 			}
-			else if (jahr2 == 2013) {
-				json = $.concat(json2009, json2010, json2011, json2012, json2013 );
-				rgraph.loadJSON(json, index);
-				rgraph.refresh();
-				jsontext = JSON.stringify(json);
-				console.log(jsontext);
-				json = jsonleer;
+			else if (jahr2 == 2013) {				json = $.concat(json2009, json2010, json2011, json2012, json2013 );
 			}
-			else if (jahr2 == 2014) {
-				json = $.concat(json2009, json2010, json2011, json2012, json2013, json2014 );
-				rgraph.loadJSON(json, index);
-				rgraph.refresh();
-				jsontext = JSON.stringify(json);
-				console.log(jsontext);
-				json = jsonleer;
+			else if (jahr2 == 2014) {				json = $.concat(json2009, json2010, json2011, json2012, json2013, json2014 );
 			}
-			else if (jahr2 == 2015) {
-				json = $.concat(json2009, json2010, json2011, json2012, json2013, json2014, json2015 );
-				rgraph.loadJSON(json, index);
-				rgraph.refresh();
-				jsontext = JSON.stringify(json);
-				console.log(jsontext);
-				json = jsonleer;
+			else if (jahr2 == 2015) {				json = $.concat(json2009, json2010, json2011, json2012, json2013, json2014, json2015 );
 			}
-			else if (jahr2 == 2016) {
-				json = $.concat(json2009, json2010, json2011, json2012, json2013, json2014, json2015, json2016 );
-				rgraph.loadJSON(json, index);
-				rgraph.refresh();
-				jsontext = JSON.stringify(json);
-				console.log(jsontext);
-				json = jsonleer;
+			else if (jahr2 == 2016) {				json = $.concat(json2009, json2010, json2011, json2012, json2013, json2014, json2015, json2016 );
 			}
-			else if (jahr2 == 2017) {
-				json = $.concat(json2009, json2010, json2011, json2012, json2013, json2014, json2015, json2016, json2017 );
-				rgraph.loadJSON(json, index);
-				rgraph.refresh();
-				jsontext = JSON.stringify(json);
-				console.log(jsontext);
-				json = jsonleer;
+			else if (jahr2 == 2017) {				json = $.concat(json2009, json2010, json2011, json2012, json2013, json2014, json2015, json2016, json2017 );
 			}
-			else if (jahr2 == 2018) {
-				json = $.concat(json2009, json2010, json2011, json2012, json2013, json2014, json2015, json2016, json2017, json2018 );
-				rgraph.loadJSON(json, index);
-				rgraph.refresh();
-				jsontext = JSON.stringify(json);
-				console.log(jsontext);
-				json = jsonleer;
+			else if (jahr2 == 2018) {				json = $.concat(json2009, json2010, json2011, json2012, json2013, json2014, json2015, json2016, json2017, json2018 );
 			}
-			else if (jahr2 == 2019) {
-				json = $.concat(json2009, json2010, json2011, json2012, json2013, json2014, json2015, json2016, json2017, json2018, json2019 );
-				rgraph.loadJSON(json, index);
-				rgraph.refresh();
-				jsontext = JSON.stringify(json);
-				console.log(jsontext);
-				json = jsonleer;
+			else if (jahr2 == 2019) {				json = $.concat(json2009, json2010, json2011, json2012, json2013, json2014, json2015, json2016, json2017, json2018, json2019 );
 			}
-			else if (jahr2 == 2020) {
-				json = $.concat(json2009, json2010, json2011, json2012, json2013, json2014, json2015, json2016, json2017, json2018, json2019, json2020 );
-				rgraph.loadJSON(json, index);
-				rgraph.refresh();
-				jsontext = JSON.stringify(json);
-				console.log(jsontext);
-				json = jsonleer;
+			else if (jahr2 == 2020) {				json = $.concat(json2009, json2010, json2011, json2012, json2013, json2014, json2015, json2016, json2017, json2018, json2019, json2020 );
 			}
 		}
 		else if (jahr1 == 2010) {
 			if (jahr2 == 2010) {
 				json = json2010;
-				rgraph.loadJSON(json, index);
-				rgraph.refresh();
-				jsontext = JSON.stringify(json);
-				console.log(jsontext);
-				json = jsonleer;
 			}
-			else if (jahr2 == 2011) {
-				json = $.concat(json2010, json2011 );
-				rgraph.loadJSON(json, index);
-				rgraph.refresh();
-				jsontext = JSON.stringify(json);
-				console.log(jsontext);
-				json = jsonleer;
+			else if (jahr2 == 2011) {				json = $.concat(json2010, json2011 );
 			}
-			else if (jahr2 == 2012) {
-				json = $.concat(json2010, json2011, json2012 );
-				rgraph.loadJSON(json, index);
-				rgraph.refresh();
-				jsontext = JSON.stringify(json);
-				console.log(jsontext);
-				json = jsonleer;
+			else if (jahr2 == 2012) {				json = $.concat(json2010, json2011, json2012 );
 			}
-			else if (jahr2 == 2013) {
-				json = $.concat(json2010, json2011, json2012, json2013 );
-				rgraph.loadJSON(json, index);
-				rgraph.refresh();
-				jsontext = JSON.stringify(json);
-				console.log(jsontext);
-				json = jsonleer;
+			else if (jahr2 == 2013) {				json = $.concat(json2010, json2011, json2012, json2013 );
 			}
-			else if (jahr2 == 2014) {
-				json = $.concat(json2010, json2011, json2012, json2013, json2014 );
-				rgraph.loadJSON(json, index);
-				rgraph.refresh();
-				jsontext = JSON.stringify(json);
-				console.log(jsontext);
-				json = jsonleer;
+			else if (jahr2 == 2014) {				json = $.concat(json2010, json2011, json2012, json2013, json2014 );
 			}
-			else if (jahr2 == 2015) {
-				json = $.concat(json2010, json2011, json2012, json2013, json2014, json2015 );
-				rgraph.loadJSON(json, index);
-				rgraph.refresh();
-				jsontext = JSON.stringify(json);
-				console.log(jsontext);
-				json = jsonleer;
+			else if (jahr2 == 2015) {				json = $.concat(json2010, json2011, json2012, json2013, json2014, json2015 );
 			}
-			else if (jahr2 == 2016) {
-				json = $.concat(json2010, json2011, json2012, json2013, json2014, json2015, json2016 );
-				rgraph.loadJSON(json, index);
-				rgraph.refresh();
-				jsontext = JSON.stringify(json);
-				console.log(jsontext);
-				json = jsonleer;
+			else if (jahr2 == 2016) {				json = $.concat(json2010, json2011, json2012, json2013, json2014, json2015, json2016 );
 			}
-			else if (jahr2 == 2017) {
-				json = $.concat(json2010, json2011, json2012, json2013, json2014, json2015, json2016, json2017 );
-				rgraph.loadJSON(json, index);
-				rgraph.refresh();
-				jsontext = JSON.stringify(json);
-				console.log(jsontext);
-				json = jsonleer;
+			else if (jahr2 == 2017) {				json = $.concat(json2010, json2011, json2012, json2013, json2014, json2015, json2016, json2017 );
 			}
-			else if (jahr2 == 2018) {
-				json = $.concat(json2010, json2011, json2012, json2013, json2014, json2015, json2016, json2017, json2018 );
-				rgraph.loadJSON(json, index);
-				rgraph.refresh();
-				jsontext = JSON.stringify(json);
-				console.log(jsontext);
-				json = jsonleer;
+			else if (jahr2 == 2018) {				json = $.concat(json2010, json2011, json2012, json2013, json2014, json2015, json2016, json2017, json2018 );
 			}
-			else if (jahr2 == 2019) {
-				json = $.concat(json2010, json2011, json2012, json2013, json2014, json2015, json2016, json2017, json2018, json2019 );
-				rgraph.loadJSON(json, index);
-				rgraph.refresh();
-				jsontext = JSON.stringify(json);
-				console.log(jsontext);
-				json = jsonleer;
+			else if (jahr2 == 2019) {				json = $.concat(json2010, json2011, json2012, json2013, json2014, json2015, json2016, json2017, json2018, json2019 );
 			}
-			else if (jahr2 == 2020) {
-				json = $.concat(json2010, json2011, json2012, json2013, json2014, json2015, json2016, json2017, json2018, json2019, json2020 );
-				rgraph.loadJSON(json, index);
-				rgraph.refresh();
-				jsontext = JSON.stringify(json);
-				console.log(jsontext);
-				json = jsonleer;
+			else if (jahr2 == 2020) {				json = $.concat(json2010, json2011, json2012, json2013, json2014, json2015, json2016, json2017, json2018, json2019, json2020 );
 			}
 		}
 		else if (jahr1 == 2011) {
 			if (jahr2 == 2011) {
 				json = json2011;
-				rgraph.loadJSON(json, index);
-				rgraph.refresh();
-				jsontext = JSON.stringify(json);
-				console.log(jsontext);
-				json = jsonleer;
 			}
-			else if (jahr2 == 2012) {
-				json = $.concat(json2011, json2012 );
-				rgraph.loadJSON(json, index);
-				rgraph.refresh();
-				jsontext = JSON.stringify(json);
-				console.log(jsontext);
-				json = jsonleer;
+			else if (jahr2 == 2012) {				json = $.concat(json2011, json2012 );
 			}
-			else if (jahr2 == 2013) {
-				json = $.concat(json2011, json2012, json2013 );
-				rgraph.loadJSON(json, index);
-				rgraph.refresh();
-				jsontext = JSON.stringify(json);
-				console.log(jsontext);
-				json = jsonleer;
+			else if (jahr2 == 2013) {				json = $.concat(json2011, json2012, json2013 );
 			}
-			else if (jahr2 == 2014) {
-				json = $.concat(json2011, json2012, json2013, json2014 );
-				rgraph.loadJSON(json, index);
-				rgraph.refresh();
-				jsontext = JSON.stringify(json);
-				console.log(jsontext);
-				json = jsonleer;
+			else if (jahr2 == 2014) {				json = $.concat(json2011, json2012, json2013, json2014 );
 			}
-			else if (jahr2 == 2015) {
-				json = $.concat(json2011, json2012, json2013, json2014, json2015 );
-				rgraph.loadJSON(json, index);
-				rgraph.refresh();
-				jsontext = JSON.stringify(json);
-				console.log(jsontext);
-				json = jsonleer;
+			else if (jahr2 == 2015) {				json = $.concat(json2011, json2012, json2013, json2014, json2015 );
 			}
-			else if (jahr2 == 2016) {
-				json = $.concat(json2011, json2012, json2013, json2014, json2015, json2016 );
-				rgraph.loadJSON(json, index);
-				rgraph.refresh();
-				jsontext = JSON.stringify(json);
-				console.log(jsontext);
-				json = jsonleer;
+			else if (jahr2 == 2016) {				json = $.concat(json2011, json2012, json2013, json2014, json2015, json2016 );
 			}
-			else if (jahr2 == 2017) {
-				json = $.concat(json2011, json2012, json2013, json2014, json2015, json2016, json2017 );
-				rgraph.loadJSON(json, index);
-				rgraph.refresh();
-				jsontext = JSON.stringify(json);
-				console.log(jsontext);
-				json = jsonleer;
+			else if (jahr2 == 2017) {				json = $.concat(json2011, json2012, json2013, json2014, json2015, json2016, json2017 );
 			}
-			else if (jahr2 == 2018) {
-				json = $.concat(json2011, json2012, json2013, json2014, json2015, json2016, json2017, json2018 );
-				rgraph.loadJSON(json, index);
-				rgraph.refresh();
-				jsontext = JSON.stringify(json);
-				console.log(jsontext);
-				json = jsonleer;
+			else if (jahr2 == 2018) {				json = $.concat(json2011, json2012, json2013, json2014, json2015, json2016, json2017, json2018 );
 			}
-			else if (jahr2 == 2019) {
-				json = $.concat(json2011, json2012, json2013, json2014, json2015, json2016, json2017, json2018, json2019 );
-				rgraph.loadJSON(json, index);
-				rgraph.refresh();
-				jsontext = JSON.stringify(json);
-				console.log(jsontext);
-				json = jsonleer;
+			else if (jahr2 == 2019) {				json = $.concat(json2011, json2012, json2013, json2014, json2015, json2016, json2017, json2018, json2019 );
 			}
-			else if (jahr2 == 2020) {
-				json = $.concat(json2011, json2012, json2013, json2014, json2015, json2016, json2017, json2018, json2019, json2020 );
-				rgraph.loadJSON(json, index);
-				rgraph.refresh();
-				jsontext = JSON.stringify(json);
-				console.log(jsontext);
-				json = jsonleer;
+			else if (jahr2 == 2020) {				json = $.concat(json2011, json2012, json2013, json2014, json2015, json2016, json2017, json2018, json2019, json2020 );
 			}
 		}
 		else if (jahr1 == 2012) {
 			if (jahr2 == 2012) {
 				json = json2012;
-				rgraph.loadJSON(json, index);
-				rgraph.refresh();
-				jsontext = JSON.stringify(json);
-				console.log(jsontext);
-				json = jsonleer;
 			}
-			else if (jahr2 == 2013) {
-				json = $.concat(json2012, json2013 );
-				rgraph.loadJSON(json, index);
-				rgraph.refresh();
-				jsontext = JSON.stringify(json);
-				console.log(jsontext);
-				json = jsonleer;
+			else if (jahr2 == 2013) {				json = $.concat(json2012, json2013 );
 			}
-			else if (jahr2 == 2014) {
-				json = $.concat(json2012, json2013, json2014 );
-				rgraph.loadJSON(json, index);
-				rgraph.refresh();
-				jsontext = JSON.stringify(json);
-				console.log(jsontext);
-				json = jsonleer;
+			else if (jahr2 == 2014) {				json = $.concat(json2012, json2013, json2014 );
 			}
-			else if (jahr2 == 2015) {
-				json = $.concat(json2012, json2013, json2014, json2015 );
-				rgraph.loadJSON(json, index);
-				rgraph.refresh();
-				jsontext = JSON.stringify(json);
-				console.log(jsontext);
-				json = jsonleer;
+			else if (jahr2 == 2015) {				json = $.concat(json2012, json2013, json2014, json2015 );
 			}
-			else if (jahr2 == 2016) {
-				json = $.concat(json2012, json2013, json2014, json2015, json2016 );
-				rgraph.loadJSON(json, index);
-				rgraph.refresh();
-				jsontext = JSON.stringify(json);
-				console.log(jsontext);
-				json = jsonleer;
+			else if (jahr2 == 2016) {				json = $.concat(json2012, json2013, json2014, json2015, json2016 );
 			}
-			else if (jahr2 == 2017) {
-				json = $.concat(json2012, json2013, json2014, json2015, json2016, json2017 );
-				rgraph.loadJSON(json, index);
-				rgraph.refresh();
-				jsontext = JSON.stringify(json);
-				console.log(jsontext);
-				json = jsonleer;
+			else if (jahr2 == 2017) {				json = $.concat(json2012, json2013, json2014, json2015, json2016, json2017 );
 			}
-			else if (jahr2 == 2018) {
-				json = $.concat(json2012, json2013, json2014, json2015, json2016, json2017, json2018 );
-				rgraph.loadJSON(json, index);
-				rgraph.refresh();
-				jsontext = JSON.stringify(json);
-				console.log(jsontext);
-				json = jsonleer;
+			else if (jahr2 == 2018) {				json = $.concat(json2012, json2013, json2014, json2015, json2016, json2017, json2018 );
 			}
-			else if (jahr2 == 2019) {
-				json = $.concat(json2012, json2013, json2014, json2015, json2016, json2017, json2018, json2019 );
-				rgraph.loadJSON(json, index);
-				rgraph.refresh();
-				jsontext = JSON.stringify(json);
-				console.log(jsontext);
-				json = jsonleer;
+			else if (jahr2 == 2019) {				json = $.concat(json2012, json2013, json2014, json2015, json2016, json2017, json2018, json2019 );
 			}
-			else if (jahr2 == 2020) {
-				json = $.concat(json2012, json2013, json2014, json2015, json2016, json2017, json2018, json2019, json2020 );
-				rgraph.loadJSON(json, index);
-				rgraph.refresh();
-				jsontext = JSON.stringify(json);
-				console.log(jsontext);
-				json = jsonleer;
+			else if (jahr2 == 2020) {				json = $.concat(json2012, json2013, json2014, json2015, json2016, json2017, json2018, json2019, json2020 );
 			}
 		}
 		else if (jahr1 == 2013) {
 			if (jahr2 == 2013) {
 				json = json2013;
-				rgraph.loadJSON(json, index);
-				rgraph.refresh();
-				jsontext = JSON.stringify(json);
-				console.log(jsontext);
-				json = jsonleer;
 			}
-			else if (jahr2 == 2014) {
-				json = $.concat(json2013, json2014 );
-				rgraph.loadJSON(json, index);
-				rgraph.refresh();
-				jsontext = JSON.stringify(json);
-				console.log(jsontext);
-				json = jsonleer;
+			else if (jahr2 == 2014) {				json = $.concat(json2013, json2014 );
 			}
-			else if (jahr2 == 2015) {
-				json = $.concat(json2013, json2014, json2015 );
-				rgraph.loadJSON(json, index);
-				rgraph.refresh();
-				jsontext = JSON.stringify(json);
-				console.log(jsontext);
-				json = jsonleer;
+			else if (jahr2 == 2015) {				json = $.concat(json2013, json2014, json2015 );
 			}
-			else if (jahr2 == 2016) {
-				json = $.concat(json2013, json2014, json2015, json2016 );
-				rgraph.loadJSON(json, index);
-				rgraph.refresh();
-				jsontext = JSON.stringify(json);
-				console.log(jsontext);
-				json = jsonleer;
+			else if (jahr2 == 2016) {				json = $.concat(json2013, json2014, json2015, json2016 );
 			}
-			else if (jahr2 == 2017) {
-				json = $.concat(json2013, json2014, json2015, json2016, json2017 );
-				rgraph.loadJSON(json, index);
-				rgraph.refresh();
-				jsontext = JSON.stringify(json);
-				console.log(jsontext);
-				json = jsonleer;
+			else if (jahr2 == 2017) {				json = $.concat(json2013, json2014, json2015, json2016, json2017 );
 			}
-			else if (jahr2 == 2018) {
-				json = $.concat(json2013, json2014, json2015, json2016, json2017, json2018 );
-				rgraph.loadJSON(json, index);
-				rgraph.refresh();
-				jsontext = JSON.stringify(json);
-				console.log(jsontext);
-				json = jsonleer;
+			else if (jahr2 == 2018) {				json = $.concat(json2013, json2014, json2015, json2016, json2017, json2018 );
 			}
-			else if (jahr2 == 2019) {
-				json = $.concat(json2013, json2014, json2015, json2016, json2017, json2018, json2019 );
-				rgraph.loadJSON(json, index);
-				rgraph.refresh();
-				jsontext = JSON.stringify(json);
-				console.log(jsontext);
-				json = jsonleer;
+			else if (jahr2 == 2019) {				json = $.concat(json2013, json2014, json2015, json2016, json2017, json2018, json2019 );
 			}
-			else if (jahr2 == 2020) {
-				json = $.concat(json2013, json2014, json2015, json2016, json2017, json2018, json2019, json2020 );
-				rgraph.loadJSON(json, index);
-				rgraph.refresh();
-				jsontext = JSON.stringify(json);
-				console.log(jsontext);
-				json = jsonleer;
+			else if (jahr2 == 2020) {				json = $.concat(json2013, json2014, json2015, json2016, json2017, json2018, json2019, json2020 );
 			}
 		}
 		else if (jahr1 == 2014) {
 			if (jahr2 == 2014) {
 				json = json2014;
-				rgraph.loadJSON(json, index);
-				rgraph.refresh();
-				jsontext = JSON.stringify(json);
-				console.log(jsontext);
-				json = jsonleer;
 			}
-			else if (jahr2 == 2015) {
-				json = $.concat(json2014, json2015 );
-				rgraph.loadJSON(json, index);
-				rgraph.refresh();
-				jsontext = JSON.stringify(json);
-				console.log(jsontext);
-				json = jsonleer;
+			else if (jahr2 == 2015) {				json = $.concat(json2014, json2015 );
 			}
-			else if (jahr2 == 2016) {
-				json = $.concat(json2014, json2015, json2016 );
-				rgraph.loadJSON(json, index);
-				rgraph.refresh();
-				jsontext = JSON.stringify(json);
-				console.log(jsontext);
-				json = jsonleer;
+			else if (jahr2 == 2016) {				json = $.concat(json2014, json2015, json2016 );
 			}
-			else if (jahr2 == 2017) {
-				json = $.concat(json2014, json2015, json2016, json2017 );
-				rgraph.loadJSON(json, index);
-				rgraph.refresh();
-				jsontext = JSON.stringify(json);
-				console.log(jsontext);
-				json = jsonleer;
+			else if (jahr2 == 2017) {				json = $.concat(json2014, json2015, json2016, json2017 );
 			}
-			else if (jahr2 == 2018) {
-				json = $.concat(json2014, json2015, json2016, json2017, json2018 );
-				rgraph.loadJSON(json, index);
-				rgraph.refresh();
-				jsontext = JSON.stringify(json);
-				console.log(jsontext);
-				json = jsonleer;
+			else if (jahr2 == 2018) {				json = $.concat(json2014, json2015, json2016, json2017, json2018 );
 			}
-			else if (jahr2 == 2019) {
-				json = $.concat(json2014, json2015, json2016, json2017, json2018, json2019 );
-				rgraph.loadJSON(json, index);
-				rgraph.refresh();
-				jsontext = JSON.stringify(json);
-				console.log(jsontext);
-				json = jsonleer;
+			else if (jahr2 == 2019) {				json = $.concat(json2014, json2015, json2016, json2017, json2018, json2019 );
 			}
-			else if (jahr2 == 2020) {
-				json = $.concat(json2014, json2015, json2016, json2017, json2018, json2019, json2020 );
-				rgraph.loadJSON(json, index);
-				rgraph.refresh();
-				jsontext = JSON.stringify(json);
-				console.log(jsontext);
-				json = jsonleer;
+			else if (jahr2 == 2020) {				json = $.concat(json2014, json2015, json2016, json2017, json2018, json2019, json2020 );
 			}
 		}
 		else if (jahr1 == 2015) {
 			if (jahr2 == 2015) {
 				json = json2015;
-				rgraph.loadJSON(json, index);
-				rgraph.refresh();
-				jsontext = JSON.stringify(json);
-				console.log(jsontext);
-				json = jsonleer;
 			}
-			else if (jahr2 == 2016) {
-				json = $.concat(json2015, json2016 );
-				rgraph.loadJSON(json, index);
-				rgraph.refresh();
-				jsontext = JSON.stringify(json);
-				console.log(jsontext);
-				json = jsonleer;
+			else if (jahr2 == 2016) {				json = $.concat(json2015, json2016 );
 			}
-			else if (jahr2 == 2017) {
-				json = $.concat(json2015, json2016, json2017 );
-				rgraph.loadJSON(json, index);
-				rgraph.refresh();
-				jsontext = JSON.stringify(json);
-				console.log(jsontext);
-				json = jsonleer;
+			else if (jahr2 == 2017) {				json = $.concat(json2015, json2016, json2017 );
 			}
-			else if (jahr2 == 2018) {
-				json = $.concat(json2015, json2016, json2017, json2018 );
-				rgraph.loadJSON(json, index);
-				rgraph.refresh();
-				jsontext = JSON.stringify(json);
-				console.log(jsontext);
-				json = jsonleer;
+			else if (jahr2 == 2018) {				json = $.concat(json2015, json2016, json2017, json2018 );
 			}
-			else if (jahr2 == 2019) {
-				json = $.concat(json2015, json2016, json2017, json2018, json2019 );
-				rgraph.loadJSON(json, index);
-				rgraph.refresh();
-				jsontext = JSON.stringify(json);
-				console.log(jsontext);
-				json = jsonleer;
+			else if (jahr2 == 2019) {				json = $.concat(json2015, json2016, json2017, json2018, json2019 );
 			}
-			else if (jahr2 == 2020) {
-				json = $.concat(json2015, json2016, json2017, json2018, json2019, json2020 );
-				rgraph.loadJSON(json, index);
-				rgraph.refresh();
-				jsontext = JSON.stringify(json);
-				console.log(jsontext);
-				json = jsonleer;
+			else if (jahr2 == 2020) {				json = $.concat(json2015, json2016, json2017, json2018, json2019, json2020 );
 			}
 		}
 		else if (jahr1 == 2016) {
 			if (jahr2 == 2016) {
 				json = json2016;
-				rgraph.loadJSON(json, index);
-				rgraph.refresh();
-				jsontext = JSON.stringify(json);
-				console.log(jsontext);
-				json = jsonleer;
 			}
-			else if (jahr2 == 2017) {
-				json = $.concat(json2016, json2017 );
-				rgraph.loadJSON(json, index);
-				rgraph.refresh();
-				jsontext = JSON.stringify(json);
-				console.log(jsontext);
-				json = jsonleer;
+			else if (jahr2 == 2017) {				json = $.concat(json2016, json2017 );
 			}
-			else if (jahr2 == 2018) {
-				json = $.concat(json2016, json2017, json2018 );
-				rgraph.loadJSON(json, index);
-				rgraph.refresh();
-				jsontext = JSON.stringify(json);
-				console.log(jsontext);
-				json = jsonleer;
+			else if (jahr2 == 2018) {				json = $.concat(json2016, json2017, json2018 );
 			}
-			else if (jahr2 == 2019) {
-				json = $.concat(json2016, json2017, json2018, json2019 );
-				rgraph.loadJSON(json, index);
-				rgraph.refresh();
-				jsontext = JSON.stringify(json);
-				console.log(jsontext);
-				json = jsonleer;
+			else if (jahr2 == 2019) {				json = $.concat(json2016, json2017, json2018, json2019 );
 			}
-			else if (jahr2 == 2020) {
-				json = $.concat(json2016, json2017, json2018, json2019, json2020 );
-				rgraph.loadJSON(json, index);
-				rgraph.refresh();
-				jsontext = JSON.stringify(json);
-				console.log(jsontext);
-				json = jsonleer;
+			else if (jahr2 == 2020) {				json = $.concat(json2016, json2017, json2018, json2019, json2020 );
 			}
 		}
 		else if (jahr1 == 2017) {
 			if (jahr2 == 2017) {
 				json = json2017;
-				rgraph.loadJSON(json, index);
-				rgraph.refresh();
-				jsontext = JSON.stringify(json);
-				console.log(jsontext);
-				json = jsonleer;
 			}
-			else if (jahr2 == 2018) {
-				json = $.concat(json2017, json2018 );
-				rgraph.loadJSON(json, index);
-				rgraph.refresh();
-				jsontext = JSON.stringify(json);
-				console.log(jsontext);
-				json = jsonleer;
+			else if (jahr2 == 2018) {				json = $.concat(json2017, json2018 );
 			}
-			else if (jahr2 == 2019) {
-				json = $.concat(json2017, json2018, json2019 );
-				rgraph.loadJSON(json, index);
-				rgraph.refresh();
-				jsontext = JSON.stringify(json);
-				console.log(jsontext);
-				json = jsonleer;
+			else if (jahr2 == 2019) {				json = $.concat(json2017, json2018, json2019 );
 			}
-			else if (jahr2 == 2020) {
-				json = $.concat(json2017, json2018, json2019, json2020 );
-				rgraph.loadJSON(json, index);
-				rgraph.refresh();
-				jsontext = JSON.stringify(json);
-				console.log(jsontext);
-				json = jsonleer;
+			else if (jahr2 == 2020) {				json = $.concat(json2017, json2018, json2019, json2020 );
 			}
 		}
 		else if (jahr1 == 2018) {
 			if (jahr2 == 2018) {
 				json = json2018;
-				rgraph.loadJSON(json, index);
-				rgraph.refresh();
-				jsontext = JSON.stringify(json);
-				console.log(jsontext);
-				json = jsonleer;
 			}
-			else if (jahr2 == 2019) {
-				json = $.concat(json2018, json2019 );
-				rgraph.loadJSON(json, index);
-				rgraph.refresh();
-				jsontext = JSON.stringify(json);
-				console.log(jsontext);
-				json = jsonleer;
+			else if (jahr2 == 2019) {				json = $.concat(json2018, json2019 );
 			}
-			else if (jahr2 == 2020) {
-				json = $.concat(json2018, json2019, json2020 );
-				rgraph.loadJSON(json, index);
-				rgraph.refresh();
-				jsontext = JSON.stringify(json);
-				console.log(jsontext);
-				json = jsonleer;
+			else if (jahr2 == 2020) {				json = $.concat(json2018, json2019, json2020 );
 			}
 		}
 		else if (jahr1 == 2019) {
 			if (jahr2 == 2019) {
 				json = json2019;
-				rgraph.loadJSON(json, index);
-				rgraph.refresh();
-				jsontext = JSON.stringify(json);
-				console.log(jsontext);
-				json = jsonleer;
 			}
-			else if (jahr2 == 2020) {
-				json = $.concat(json2019, json2020 );
-				rgraph.loadJSON(json, index);
-				rgraph.refresh();
-				jsontext = JSON.stringify(json);
-				console.log(jsontext);
-				json = jsonleer;
+			else if (jahr2 == 2020) {				json = $.concat(json2019, json2020 );
 			}
 		}
 		else if (jahr1 == 2020) {
 			if (jahr2 == 2020) {
 				json = json2020;
-				rgraph.loadJSON(json, index);
-				rgraph.refresh();
-				jsontext = JSON.stringify(json);
-				console.log(jsontext);
-				json = jsonleer;
 			}
 		}
+		rgraph.loadJSON(json, index);
+		rgraph.refresh();
+		jsontext = JSON.stringify(json);
+		console.log(jsontext);
+		json = jsonleer;
+		rgraph.controller.onBeforePlotNode(rgraph.graph.getNode(rgraph.root));
+		list();
 	});
     
 	//init data
@@ -15391,23 +13321,39 @@ function init(){
 		
 		},
 		onBeforePlotNode: function(node){  
-			//add some color to the nodes in the path between the  
-			//root node and the selected node.  
-			if (node.selected) {  
-				node.data.$color = "#ff7";  
-			}  
-			else {  
-				delete node.data.$color;  
-				//if the node belongs to the last plotted level  
-				if(!node.anySubnode("exist")) {  
-					//count children number  
-					var count = 0;  
-					node.eachSubnode(function(n) { count++; });  
-					//assign a node color based on  
-					//how many children it has  
-					node.data.$color = ['#aaa', '#baa', '#caa', '#daa', '#eaa', '#faa'][count];
-				}  
-			}  
+			list = function(){
+				html = "<img style='width: 100px;' src='" + imageurl + "'></img>";
+				html += "<h4 id='title'>" + nodename + "</h4><b>Kollaborationen (" + jahr1 + " - " + jahr2 + "):</b>";
+				html += "<ul id='myUL' style='margin-left: -20px;'>";
+				node.eachAdjacency(function(adj){
+					var child = adj.nodeTo;
+					html += "<li>" + child.name + "</li>";
+				});
+				html += "</ul>";
+				$jit.id('inner-details').innerHTML = html;
+				
+				mylist = $('#myUL');
+				listitems = mylist.children('li').get();
+				listitems.sort(function(a, b) {
+				   return $(a).text().toUpperCase().localeCompare($(b).text().toUpperCase());
+				})
+				$.each(listitems, function(idx, itm) { mylist.append(itm); });
+				
+				var liText = '', liList = $('#myUL li'), listForRemove = [];
+
+				$(liList).each(function () {
+					
+				  var text = $(this).text();
+
+				  if (liText.indexOf('|'+ text + '|') == -1)
+					liText += '|'+ text + '|';
+				  else
+					listForRemove.push($(this));
+					
+				});
+					
+				$(listForRemove).each(function () { $(this).remove(); });
+			};
 		}, 
         onBeforeCompute: function(node){
             Log.write("alpha log: centering " + node.name + "...");
@@ -15425,57 +13371,68 @@ function init(){
 			
 			index = findWithAttr(jsonall, "id", node.id);
 			//--------------------------------------------------
-            
 			
             //Make right column relations list.
-			$.getJSON("https://ws.audioscrobbler.com/2.0/?method=artist.getinfo&artist=" + node.id + "&api_key=0abb7713ef6b0a0c0779a17cfa615281&format=json", function(response) {
-				jsonObj = JSON.stringify(response);
-				pos1 = jsonObj.indexOf('/34s/');
-				pos2 = jsonObj.indexOf('","size"');
-				part = jsonObj.slice((pos1 + 4),pos2);
-				imageurl = "https://secure-img2.last.fm/i/u/174s" + part;
-				var html = "<img style='width: 100px;' src='" + imageurl + "'></img>";
-				html += "<h4 id='title'>" + node.name + "</h4><b>Kollaborationen:</b>";
-				html += "<ul id='myUL' style='margin-left: -20px;'>";
-				node.eachAdjacency(function(adj){
-					var child = adj.nodeTo;
-					html += "<li>" + child.name + "</li>";
-				});
-				html += "</ul>";
-				$jit.id('inner-details').innerHTML = html;
-				
-				var mylist = $('#myUL');
-				var listitems = mylist.children('li').get();
-				listitems.sort(function(a, b) {
-				   return $(a).text().toUpperCase().localeCompare($(b).text().toUpperCase());
-				})
-				$.each(listitems, function(idx, itm) { mylist.append(itm); });
-				$.getJSON("http://ws.audioscrobbler.com/2.0/?method=artist.getinfo&artist=" + node.id + "&api_key=0abb7713ef6b0a0c0779a17cfa615281&format=json", function(response) {
+			// $.getJSON("https://ws.audioscrobbler.com/2.0/?method=artist.getinfo&artist=" + node.id + "&api_key=0abb7713ef6b0a0c0779a17cfa615281&format=json", response);
+			list = function(){
+			$.ajax({
+				url: "https://ws.audioscrobbler.com/2.0/?method=artist.getinfo&artist=" + node.id + "&api_key=0abb7713ef6b0a0c0779a17cfa615281&format=json",
+				type:'get',
+				async: false,
+				dataType: 'json',
+				success: function(response) {
 					jsonObj = JSON.stringify(response);
 					pos1 = jsonObj.indexOf('/34s/');
 					pos2 = jsonObj.indexOf('","size"');
 					part = jsonObj.slice((pos1 + 4),pos2);
-					imageurl = "https://secure-img2.last.fm/i/u/174s" + part;
-					var html = "<img style='width: 100px;' src='" + imageurl + "'></img>";
-					html += "<h4 id='title'>" + node.name + "</h4><b>Kollaborationen:</b>";
-					html += "<ul id='myUL' style='margin-left: -20px;'>";
-					node.eachAdjacency(function(adj){
-						var child = adj.nodeTo;
-						html += "<li>" + child.name + "</li>";
-					});
-					html += "</ul>";
-					$jit.id('inner-details').innerHTML = html;
-					
-					var mylist = $('#myUL');
-					var listitems = mylist.children('li').get();
-					listitems.sort(function(a, b) {
-					   return $(a).text().toUpperCase().localeCompare($(b).text().toUpperCase());
-					})
-					$.each(listitems, function(idx, itm) { mylist.append(itm); });
-				});
+					imageurl = "https://lastfm-img2.akamaized.net/i/u/174s" + part;
+				}
 			});
-			
+				
+				html = "<img style='width: 100px;' src='" + imageurl + "'></img>";
+				html += "<h4 id='title'>" + node.name + "</h4><b>Kollaborationen (" + jahr1 + " - " + jahr2 + "):</b>";
+				html += "<ul id='myUL' style='margin-left: -20px;'>";
+				node.eachAdjacency(function(adj){
+					var child = adj.nodeTo;
+					html += "<li>" + child.name + "</li>";
+					
+					obenadj = adj;
+					obenchild = child;
+					obenadjnodeTo = adj.nodeTo;
+					obenchildname = child.name;
+					obenfunction = node.eachAdjacency(function(obenadj){var obenchild = obenadjnodeTo; html += "<li>" + obenchildname + "</li>";});
+				});
+				html += "</ul>";
+				$jit.id('inner-details').innerHTML = html;
+				
+				mylist = $('#myUL');
+				listitems = mylist.children('li').get();
+				listitems.sort(function(a, b) {
+				   return $(a).text().toUpperCase().localeCompare($(b).text().toUpperCase());
+				})
+				$.each(listitems, function(idx, itm) { mylist.append(itm); });
+				
+				var liText = '', liList = $('#myUL li'), listForRemove = [];
+
+				$(liList).each(function () {
+					
+				  var text = $(this).text();
+
+				  if (liText.indexOf('|'+ text + '|') == -1)
+					liText += '|'+ text + '|';
+				  else
+					listForRemove.push($(this));
+					
+				});
+					
+				$(listForRemove).each(function () { $(this).remove(); });
+
+			};
+			list();
+			nodename = node.name;
+			nodeeachAdjacency = node.eachAdjacency;
         },
+			
         //Add node click handler and some styles.
         //This method is called only once for each node/label crated.
 		onCreateLabel: function(domElement, node){
