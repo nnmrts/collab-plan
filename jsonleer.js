@@ -81,4 +81,13 @@
 			},
 			"adjacencies": []
 		},
+		// KOLLEGAH
+		{
+			"id": "Kollegah",
+			"name": "Kollegah",
+			"data": {
+				"some other key": "some other value"
+			},
+			"adjacencies": []
+		},
 	]

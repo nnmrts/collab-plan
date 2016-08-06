@@ -1,5 +1,17 @@
 /*
 CHANGELOG:
+alpha 6
+danke owen! (http://stackoverflow.com/users/2833161/owen)
+dieser owen hat mir hier: (http://stackoverflow.com/questions/38780840/refactoring-if-else-statement-for-time-span-between-two-years) gezeigt, wie ich das riesige if/else statement für den zeitraum slider verkürzen kann und es klappt jetzt einfach, yaaay
+owen kriegt ein cookie und everything :*
+das geile daran ist halt, das jetzt alles viel viel flüssiger läuft mit dem slider, weil der browser jetzt nicht mehr durch 1105 sondern durch 8 zeilen code gehen muss...als obbi obbi in mein mundi, das ist ja geil
+und unser lieber crackar kriegt natürlich auch ein cookie und zwar für die arbeit an kollegah! oder warte, noch besser, er kriegt kein cookie, er kriegt einen cracker (höhöhö)
+naja egal, jedenfalls ist kollegah jetzt hinzugefügt, dankö! :)
+außerdem hab ich helvetica jetzt richtig auf der website installiert und die ganze website sollte jetzt insgesamt einfach schöner und schneller für jeden sein
+impressum wurde auch hinzugefügt, von der website kommt man aber noch nicht direkt hin...sheesh, gangsterlife halt
+uuund jetzt wurden auch noch links da in der liste rechts hinzugefügt, wie es gewünscht wurde...man kann jetzt automatisch auf genius nach features suchen oder den artist selbst anklicken und auf seine artistpage kommen, yaaay :3
+- 20.7.16 - 6.8.16
+
 alpha 5.3
 endliiiiich sind die features auf der rechten seite auch dynamisch, wenn man den slider bewegt, nice
 es läuft halt jetzt nur bissl langsamer, da muss ich noch schauen, wie ich das mach...vielleicht auch einfach mal die jit library minifien
@@ -217,781 +229,15 @@ function init(){
 	jahr2 = 2016;
 	zeitraum.noUiSlider.on('slide', function(){
 		jahr1 = zeitraum.noUiSlider.get()[0];
+		jahr1 = parseInt(jahr1);
 		jahr2 = zeitraum.noUiSlider.get()[1];
-		
-		if (jahr1 == 1995) {
-			if (jahr2 == 1995) {				json = json1995;
-			}
-			else if (jahr2 == 1996) {				json = $.concat(json1995, json1996 );
-			}
-			else if (jahr2 == 1997) {				json = $.concat(json1995, json1996, json1997 );
-			}
-			else if (jahr2 == 1998) {				json = $.concat(json1995, json1996, json1997, json1998 );
-			}
-			else if (jahr2 == 1999) {				json = $.concat(json1995, json1996, json1997, json1998, json1999 );
-			}
-			else if (jahr2 == 2000) {				json = $.concat(json1995, json1996, json1997, json1998, json1999, json2000 );
-			}
-			else if (jahr2 == 2001) {				json = $.concat(json1995, json1996, json1997, json1998, json1999, json2000, json2001 );
-			}
-			else if (jahr2 == 2002) {				json = $.concat(json1995, json1996, json1997, json1998, json1999, json2000, json2001, json2002 );
-			}
-			else if (jahr2 == 2003) {				json = $.concat(json1995, json1996, json1997, json1998, json1999, json2000, json2001, json2002, json2003 );
-			}
-			else if (jahr2 == 2004) {				json = $.concat(json1995, json1996, json1997, json1998, json1999, json2000, json2001, json2002, json2003, json2004 );
-			}
-			else if (jahr2 == 2005) {				json = $.concat(json1995, json1996, json1997, json1998, json1999, json2000, json2001, json2002, json2003, json2004, json2005 );
-			}
-			else if (jahr2 == 2006) {				json = $.concat(json1995, json1996, json1997, json1998, json1999, json2000, json2001, json2002, json2003, json2004, json2005, json2006 );
-			}
-			else if (jahr2 == 2007) {				json = $.concat(json1995, json1996, json1997, json1998, json1999, json2000, json2001, json2002, json2003, json2004, json2005, json2006, json2007 );
-			}
-			else if (jahr2 == 2008) {				json = $.concat(json1995, json1996, json1997, json1998, json1999, json2000, json2001, json2002, json2003, json2004, json2005, json2006, json2007, json2008 );
-			}
-			else if (jahr2 == 2009) {				json = $.concat(json1995, json1996, json1997, json1998, json1999, json2000, json2001, json2002, json2003, json2004, json2005, json2006, json2007, json2008, json2009 );
-			}
-			else if (jahr2 == 2010) {				json = $.concat(json1995, json1996, json1997, json1998, json1999, json2000, json2001, json2002, json2003, json2004, json2005, json2006, json2007, json2008, json2009, json2010 );
-			}
-			else if (jahr2 == 2011) {				json = $.concat(json1995, json1996, json1997, json1998, json1999, json2000, json2001, json2002, json2003, json2004, json2005, json2006, json2007, json2008, json2009, json2010, json2011 );
-			}
-			else if (jahr2 == 2012) {				json = $.concat(json1995, json1996, json1997, json1998, json1999, json2000, json2001, json2002, json2003, json2004, json2005, json2006, json2007, json2008, json2009, json2010, json2011, json2012 );
-			}
-			else if (jahr2 == 2013) {				json = $.concat(json1995, json1996, json1997, json1998, json1999, json2000, json2001, json2002, json2003, json2004, json2005, json2006, json2007, json2008, json2009, json2010, json2011, json2012, json2013 );
-			}
-			else if (jahr2 == 2014) {				json = $.concat(json1995, json1996, json1997, json1998, json1999, json2000, json2001, json2002, json2003, json2004, json2005, json2006, json2007, json2008, json2009, json2010, json2011, json2012, json2013, json2014 );
-			}
-			else if (jahr2 == 2015) {				json = $.concat(json1995, json1996, json1997, json1998, json1999, json2000, json2001, json2002, json2003, json2004, json2005, json2006, json2007, json2008, json2009, json2010, json2011, json2012, json2013, json2014, json2015 );
-			}
-			else if (jahr2 == 2016) {				json = $.concat(json1995, json1996, json1997, json1998, json1999, json2000, json2001, json2002, json2003, json2004, json2005, json2006, json2007, json2008, json2009, json2010, json2011, json2012, json2013, json2014, json2015, json2016 );
-			}
-			else if (jahr2 == 2017) {				json = $.concat(json1995, json1996, json1997, json1998, json1999, json2000, json2001, json2002, json2003, json2004, json2005, json2006, json2007, json2008, json2009, json2010, json2011, json2012, json2013, json2014, json2015, json2016, json2017 );
-			}
-			else if (jahr2 == 2018) {				json = $.concat(json1995, json1996, json1997, json1998, json1999, json2000, json2001, json2002, json2003, json2004, json2005, json2006, json2007, json2008, json2009, json2010, json2011, json2012, json2013, json2014, json2015, json2016, json2017, json2018 );
-			}
-			else if (jahr2 == 2019) {				json = $.concat(json1995, json1996, json1997, json1998, json1999, json2000, json2001, json2002, json2003, json2004, json2005, json2006, json2007, json2008, json2009, json2010, json2011, json2012, json2013, json2014, json2015, json2016, json2017, json2018, json2019 );
-			}
-			else if (jahr2 == 2020) {				json = $.concat(json1995, json1996, json1997, json1998, json1999, json2000, json2001, json2002, json2003, json2004, json2005, json2006, json2007, json2008, json2009, json2010, json2011, json2012, json2013, json2014, json2015, json2016, json2017, json2018, json2019, json2020 );
-			}
-		}
-		else if (jahr1 == 1996) {
-			if (jahr2 == 1996) {
-				json = json1996;
-			}
-			else if (jahr2 == 1997) {				json = $.concat(json1996, json1997 );
-			}
-			else if (jahr2 == 1998) {				json = $.concat(json1996, json1997, json1998 );
-			}
-			else if (jahr2 == 1999) {				json = $.concat(json1996, json1997, json1998, json1999 );
-			}
-			else if (jahr2 == 2000) {				json = $.concat(json1996, json1997, json1998, json1999, json2000 );
-			}
-			else if (jahr2 == 2001) {				json = $.concat(json1996, json1997, json1998, json1999, json2000, json2001 );
-			}
-			else if (jahr2 == 2002) {				json = $.concat(json1996, json1997, json1998, json1999, json2000, json2001, json2002 );
-			}
-			else if (jahr2 == 2003) {				json = $.concat(json1996, json1997, json1998, json1999, json2000, json2001, json2002, json2003 );
-			}
-			else if (jahr2 == 2004) {				json = $.concat(json1996, json1997, json1998, json1999, json2000, json2001, json2002, json2003, json2004 );
-			}
-			else if (jahr2 == 2005) {				json = $.concat(json1996, json1997, json1998, json1999, json2000, json2001, json2002, json2003, json2004, json2005 );
-			}
-			else if (jahr2 == 2006) {				json = $.concat(json1996, json1997, json1998, json1999, json2000, json2001, json2002, json2003, json2004, json2005, json2006 );
-			}
-			else if (jahr2 == 2007) {				json = $.concat(json1996, json1997, json1998, json1999, json2000, json2001, json2002, json2003, json2004, json2005, json2006, json2007 );
-			}
-			else if (jahr2 == 2008) {				json = $.concat(json1996, json1997, json1998, json1999, json2000, json2001, json2002, json2003, json2004, json2005, json2006, json2007, json2008 );
-			}
-			else if (jahr2 == 2009) {				json = $.concat(json1996, json1997, json1998, json1999, json2000, json2001, json2002, json2003, json2004, json2005, json2006, json2007, json2008, json2009 );
-			}
-			else if (jahr2 == 2010) {				json = $.concat(json1996, json1997, json1998, json1999, json2000, json2001, json2002, json2003, json2004, json2005, json2006, json2007, json2008, json2009, json2010 );
-			}
-			else if (jahr2 == 2011) {				json = $.concat(json1996, json1997, json1998, json1999, json2000, json2001, json2002, json2003, json2004, json2005, json2006, json2007, json2008, json2009, json2010, json2011 );
-			}
-			else if (jahr2 == 2012) {				json = $.concat(json1996, json1997, json1998, json1999, json2000, json2001, json2002, json2003, json2004, json2005, json2006, json2007, json2008, json2009, json2010, json2011, json2012 );
-			}
-			else if (jahr2 == 2013) {				json = $.concat(json1996, json1997, json1998, json1999, json2000, json2001, json2002, json2003, json2004, json2005, json2006, json2007, json2008, json2009, json2010, json2011, json2012, json2013 );
-			}
-			else if (jahr2 == 2014) {				json = $.concat(json1996, json1997, json1998, json1999, json2000, json2001, json2002, json2003, json2004, json2005, json2006, json2007, json2008, json2009, json2010, json2011, json2012, json2013, json2014 );
-			}
-			else if (jahr2 == 2015) {				json = $.concat(json1996, json1997, json1998, json1999, json2000, json2001, json2002, json2003, json2004, json2005, json2006, json2007, json2008, json2009, json2010, json2011, json2012, json2013, json2014, json2015 );
-			}
-			else if (jahr2 == 2016) {				json = $.concat(json1996, json1997, json1998, json1999, json2000, json2001, json2002, json2003, json2004, json2005, json2006, json2007, json2008, json2009, json2010, json2011, json2012, json2013, json2014, json2015, json2016 );
-			}
-			else if (jahr2 == 2017) {				json = $.concat(json1996, json1997, json1998, json1999, json2000, json2001, json2002, json2003, json2004, json2005, json2006, json2007, json2008, json2009, json2010, json2011, json2012, json2013, json2014, json2015, json2016, json2017 );
-			}
-			else if (jahr2 == 2018) {				json = $.concat(json1996, json1997, json1998, json1999, json2000, json2001, json2002, json2003, json2004, json2005, json2006, json2007, json2008, json2009, json2010, json2011, json2012, json2013, json2014, json2015, json2016, json2017, json2018 );
-			}
-			else if (jahr2 == 2019) {				json = $.concat(json1996, json1997, json1998, json1999, json2000, json2001, json2002, json2003, json2004, json2005, json2006, json2007, json2008, json2009, json2010, json2011, json2012, json2013, json2014, json2015, json2016, json2017, json2018, json2019 );
-			}
-			else if (jahr2 == 2020) {				json = $.concat(json1996, json1997, json1998, json1999, json2000, json2001, json2002, json2003, json2004, json2005, json2006, json2007, json2008, json2009, json2010, json2011, json2012, json2013, json2014, json2015, json2016, json2017, json2018, json2019, json2020 );
-			}
-		}
-		else if (jahr1 == 1997) {
-			if (jahr2 == 1997) {				json = json1997;
-			}
-			else if (jahr2 == 1998) {				json = $.concat(json1997, json1998 );
-			}
-			else if (jahr2 == 1999) {				json = $.concat(json1997, json1998, json1999 );
-			}
-			else if (jahr2 == 2000) {				json = $.concat(json1997, json1998, json1999, json2000 );
-			}
-			else if (jahr2 == 2001) {				json = $.concat(json1997, json1998, json1999, json2000, json2001 );
-			}
-			else if (jahr2 == 2002) {				json = $.concat(json1997, json1998, json1999, json2000, json2001, json2002 );
-			}
-			else if (jahr2 == 2003) {				json = $.concat(json1997, json1998, json1999, json2000, json2001, json2002, json2003 );
-			}
-			else if (jahr2 == 2004) {				json = $.concat(json1997, json1998, json1999, json2000, json2001, json2002, json2003, json2004 );
-			}
-			else if (jahr2 == 2005) {				json = $.concat(json1997, json1998, json1999, json2000, json2001, json2002, json2003, json2004, json2005 );
-			}
-			else if (jahr2 == 2006) {				json = $.concat(json1997, json1998, json1999, json2000, json2001, json2002, json2003, json2004, json2005, json2006 );
-			}
-			else if (jahr2 == 2007) {				json = $.concat(json1997, json1998, json1999, json2000, json2001, json2002, json2003, json2004, json2005, json2006, json2007 );
-			}
-			else if (jahr2 == 2008) {				json = $.concat( json1997, json1998, json1999, json2000, json2001, json2002, json2003, json2004, json2005, json2006, json2007, json2008 );
-			}
-			else if (jahr2 == 2009) {				json = $.concat(json1997, json1998, json1999, json2000, json2001, json2002, json2003, json2004, json2005, json2006, json2007, json2008, json2009 );
-			}
-			else if (jahr2 == 2010) {				json = $.concat(json1997, json1998, json1999, json2000, json2001, json2002, json2003, json2004, json2005, json2006, json2007, json2008, json2009, json2010 );
-			}
-			else if (jahr2 == 2011) {				json = $.concat(json1997, json1998, json1999, json2000, json2001, json2002, json2003, json2004, json2005, json2006, json2007, json2008, json2009, json2010, json2011 );
-			}
-			else if (jahr2 == 2012) {				json = $.concat(json1997, json1998, json1999, json2000, json2001, json2002, json2003, json2004, json2005, json2006, json2007, json2008, json2009, json2010, json2011, json2012 );
-			}
-			else if (jahr2 == 2013) {				json = $.concat(json1997, json1998, json1999, json2000, json2001, json2002, json2003, json2004, json2005, json2006, json2007, json2008, json2009, json2010, json2011, json2012, json2013 );
-			}
-			else if (jahr2 == 2014) {				json = $.concat(json1997, json1998, json1999, json2000, json2001, json2002, json2003, json2004, json2005, json2006, json2007, json2008, json2009, json2010, json2011, json2012, json2013, json2014 );
-			}
-			else if (jahr2 == 2015) {				json = $.concat(json1997, json1998, json1999, json2000, json2001, json2002, json2003, json2004, json2005, json2006, json2007, json2008, json2009, json2010, json2011, json2012, json2013, json2014, json2015 );
-			}
-			else if (jahr2 == 2016) {				json = $.concat(json1997, json1998, json1999, json2000, json2001, json2002, json2003, json2004, json2005, json2006, json2007, json2008, json2009, json2010, json2011, json2012, json2013, json2014, json2015, json2016 );
-			}
-			else if (jahr2 == 2017) {				json = $.concat(json1997, json1998, json1999, json2000, json2001, json2002, json2003, json2004, json2005, json2006, json2007, json2008, json2009, json2010, json2011, json2012, json2013, json2014, json2015, json2016, json2017 );
-			}
-			else if (jahr2 == 2018) {				json = $.concat(json1997, json1998, json1999, json2000, json2001, json2002, json2003, json2004, json2005, json2006, json2007, json2008, json2009, json2010, json2011, json2012, json2013, json2014, json2015, json2016, json2017, json2018 );
-			}
-			else if (jahr2 == 2019) {				json = $.concat(json1997, json1998, json1999, json2000, json2001, json2002, json2003, json2004, json2005, json2006, json2007, json2008, json2009, json2010, json2011, json2012, json2013, json2014, json2015, json2016, json2017, json2018, json2019 );
-			}
-			else if (jahr2 == 2020) {				json = $.concat(json1997, json1998, json1999, json2000, json2001, json2002, json2003, json2004, json2005, json2006, json2007, json2008, json2009, json2010, json2011, json2012, json2013, json2014, json2015, json2016, json2017, json2018, json2019, json2020 );
-			}
-		}
-		else if (jahr1 == 1998) {
-			if (jahr2 == 1998) {				json = json1998;
-			}
-			else if (jahr2 == 1999) {				json = $.concat(json1998, json1999 );
-			}
-			else if (jahr2 == 2000) {				json = $.concat(json1998, json1999, json2000 );
-			}
-			else if (jahr2 == 2001) {				json = $.concat(json1998, json1999, json2000, json2001 );
-			}
-			else if (jahr2 == 2002) {				json = $.concat(json1998, json1999, json2000, json2001, json2002 );
-			}
-			else if (jahr2 == 2003) {				json = $.concat(json1998, json1999, json2000, json2001, json2002, json2003 );
-			}
-			else if (jahr2 == 2004) {				json = $.concat(json1998, json1999, json2000, json2001, json2002, json2003, json2004 );
-			}
-			else if (jahr2 == 2005) {				json = $.concat(json1998, json1999, json2000, json2001, json2002, json2003, json2004, json2005 );
-			}
-			else if (jahr2 == 2006) {				json = $.concat(json1998, json1999, json2000, json2001, json2002, json2003, json2004, json2005, json2006 );
-			}
-			else if (jahr2 == 2007) {				json = $.concat(json1998, json1999, json2000, json2001, json2002, json2003, json2004, json2005, json2006, json2007 );
-			}
-			else if (jahr2 == 2008) {				json = $.concat(json1998, json1999, json2000, json2001, json2002, json2003, json2004, json2005, json2006, json2007, json2008 );
-			}
-			else if (jahr2 == 2009) {				json = $.concat(json1998, json1999, json2000, json2001, json2002, json2003, json2004, json2005, json2006, json2007, json2008, json2009 );
-			}
-			else if (jahr2 == 2010) {				json = $.concat(json1998, json1999, json2000, json2001, json2002, json2003, json2004, json2005, json2006, json2007, json2008, json2009, json2010 );
-			}
-			else if (jahr2 == 2011) {				json = $.concat(json1998, json1999, json2000, json2001, json2002, json2003, json2004, json2005, json2006, json2007, json2008, json2009, json2010, json2011 );
-			}
-			else if (jahr2 == 2012) {				json = $.concat(json1998, json1999, json2000, json2001, json2002, json2003, json2004, json2005, json2006, json2007, json2008, json2009, json2010, json2011, json2012 );
-			}
-			else if (jahr2 == 2013) {				json = $.concat(json1998, json1999, json2000, json2001, json2002, json2003, json2004, json2005, json2006, json2007, json2008, json2009, json2010, json2011, json2012, json2013 );
-			}
-			else if (jahr2 == 2014) {				json = $.concat(json1998, json1999, json2000, json2001, json2002, json2003, json2004, json2005, json2006, json2007, json2008, json2009, json2010, json2011, json2012, json2013, json2014 );
-			}
-			else if (jahr2 == 2015) {				json = $.concat(json1998, json1999, json2000, json2001, json2002, json2003, json2004, json2005, json2006, json2007, json2008, json2009, json2010, json2011, json2012, json2013, json2014, json2015 );
-			}
-			else if (jahr2 == 2016) {				json = $.concat(json1998, json1999, json2000, json2001, json2002, json2003, json2004, json2005, json2006, json2007, json2008, json2009, json2010, json2011, json2012, json2013, json2014, json2015, json2016 );
-			}
-			else if (jahr2 == 2017) {				json = $.concat(json1998, json1999, json2000, json2001, json2002, json2003, json2004, json2005, json2006, json2007, json2008, json2009, json2010, json2011, json2012, json2013, json2014, json2015, json2016, json2017 );
-			}
-			else if (jahr2 == 2018) {				json = $.concat(json1998, json1999, json2000, json2001, json2002, json2003, json2004, json2005, json2006, json2007, json2008, json2009, json2010, json2011, json2012, json2013, json2014, json2015, json2016, json2017, json2018 );
-			}
-			else if (jahr2 == 2019) {				json = $.concat(json1998, json1999, json2000, json2001, json2002, json2003, json2004, json2005, json2006, json2007, json2008, json2009, json2010, json2011, json2012, json2013, json2014, json2015, json2016, json2017, json2018, json2019 );
-			}
-			else if (jahr2 == 2020) {				json = $.concat(json1998, json1999, json2000, json2001, json2002, json2003, json2004, json2005, json2006, json2007, json2008, json2009, json2010, json2011, json2012, json2013, json2014, json2015, json2016, json2017, json2018, json2019, json2020 );
-			}
-		}
-		else if (jahr1 == 1999) {
-			if (jahr2 == 1999) {				json = json1999;
-			}
-			else if (jahr2 == 2000) {				json = $.concat(json1999, json2000 );
-			}
-			else if (jahr2 == 2001) {				json = $.concat(json1999, json2000, json2001 );
-			}
-			else if (jahr2 == 2002) {				json = $.concat(json1999, json2000, json2001, json2002 );
-			}
-			else if (jahr2 == 2003) {				json = $.concat(json1999, json2000, json2001, json2002, json2003 );
-			}
-			else if (jahr2 == 2004) {				json = $.concat(json1999, json2000, json2001, json2002, json2003, json2004 );
-			}
-			else if (jahr2 == 2005) {				json = $.concat(json1999, json2000, json2001, json2002, json2003, json2004, json2005 );
-			}
-			else if (jahr2 == 2006) {				json = $.concat(json1999, json2000, json2001, json2002, json2003, json2004, json2005, json2006 );
-			}
-			else if (jahr2 == 2007) {				json = $.concat(json1999, json2000, json2001, json2002, json2003, json2004, json2005, json2006, json2007 );
-			}
-			else if (jahr2 == 2008) {				json = $.concat(json1999, json2000, json2001, json2002, json2003, json2004, json2005, json2006, json2007, json2008 );
-			}
-			else if (jahr2 == 2009) {				json = $.concat(json1999, json2000, json2001, json2002, json2003, json2004, json2005, json2006, json2007, json2008, json2009 );
-			}
-			else if (jahr2 == 2010) {				json = $.concat(json1999, json2000, json2001, json2002, json2003, json2004, json2005, json2006, json2007, json2008, json2009, json2010 );
-			}
-			else if (jahr2 == 2011) {				json = $.concat(json1999, json2000, json2001, json2002, json2003, json2004, json2005, json2006, json2007, json2008, json2009, json2010, json2011 );
-			}
-			else if (jahr2 == 2012) {				json = $.concat(json1999, json2000, json2001, json2002, json2003, json2004, json2005, json2006, json2007, json2008, json2009, json2010, json2011, json2012 );
-			}
-			else if (jahr2 == 2013) {				json = $.concat(json1999, json2000, json2001, json2002, json2003, json2004, json2005, json2006, json2007, json2008, json2009, json2010, json2011, json2012, json2013 );
-			}
-			else if (jahr2 == 2014) {				json = $.concat(json1999, json2000, json2001, json2002, json2003, json2004, json2005, json2006, json2007, json2008, json2009, json2010, json2011, json2012, json2013, json2014 );
-			}
-			else if (jahr2 == 2015) {				json = $.concat(json1999, json2000, json2001, json2002, json2003, json2004, json2005, json2006, json2007, json2008, json2009, json2010, json2011, json2012, json2013, json2014, json2015 );
-			}
-			else if (jahr2 == 2016) {				json = $.concat(json1999, json2000, json2001, json2002, json2003, json2004, json2005, json2006, json2007, json2008, json2009, json2010, json2011, json2012, json2013, json2014, json2015, json2016 );
-			}
-			else if (jahr2 == 2017) {				json = $.concat(json1999, json2000, json2001, json2002, json2003, json2004, json2005, json2006, json2007, json2008, json2009, json2010, json2011, json2012, json2013, json2014, json2015, json2016, json2017 );
-			}
-			else if (jahr2 == 2018) {				json = $.concat(json1999, json2000, json2001, json2002, json2003, json2004, json2005, json2006, json2007, json2008, json2009, json2010, json2011, json2012, json2013, json2014, json2015, json2016, json2017, json2018 );
-			}
-			else if (jahr2 == 2019) {				json = $.concat(json1999, json2000, json2001, json2002, json2003, json2004, json2005, json2006, json2007, json2008, json2009, json2010, json2011, json2012, json2013, json2014, json2015, json2016, json2017, json2018, json2019 );
-			}
-			else if (jahr2 == 2020) {				json = $.concat(json1999, json2000, json2001, json2002, json2003, json2004, json2005, json2006, json2007, json2008, json2009, json2010, json2011, json2012, json2013, json2014, json2015, json2016, json2017, json2018, json2019, json2020 );
-			}
-		}
-		else if (jahr1 == 2000) {
-			if (jahr2 == 2000) {				json = json2000;
-			}
-			else if (jahr2 == 2001) {				json = $.concat(json2000, json2001 );
-			}
-			else if (jahr2 == 2002) {				json = $.concat(json2000, json2001, json2002 );
-			}
-			else if (jahr2 == 2003) {				json = $.concat(json2000, json2001, json2002, json2003 );
-			}
-			else if (jahr2 == 2004) {				json = $.concat(json2000, json2001, json2002, json2003, json2004 );
-			}
-			else if (jahr2 == 2005) {				json = $.concat(json2000, json2001, json2002, json2003, json2004, json2005 );
-			}
-			else if (jahr2 == 2006) {				json = $.concat(json2000, json2001, json2002, json2003, json2004, json2005, json2006 );
-			}
-			else if (jahr2 == 2007) {				json = $.concat(json2000, json2001, json2002, json2003, json2004, json2005, json2006, json2007 );
-			}
-			else if (jahr2 == 2008) {				json = $.concat(json2000, json2001, json2002, json2003, json2004, json2005, json2006, json2007, json2008 );
-			}
-			else if (jahr2 == 2009) {				json = $.concat(json2000, json2001, json2002, json2003, json2004, json2005, json2006, json2007, json2008, json2009 );
-			}
-			else if (jahr2 == 2010) {				json = $.concat(json2000, json2001, json2002, json2003, json2004, json2005, json2006, json2007, json2008, json2009, json2010 );
-			}
-			else if (jahr2 == 2011) {				json = $.concat(json2000, json2001, json2002, json2003, json2004, json2005, json2006, json2007, json2008, json2009, json2010, json2011 );
-			}
-			else if (jahr2 == 2012) {				json = $.concat(json2000, json2001, json2002, json2003, json2004, json2005, json2006, json2007, json2008, json2009, json2010, json2011, json2012 );
-			}
-			else if (jahr2 == 2013) {				json = $.concat(json2000, json2001, json2002, json2003, json2004, json2005, json2006, json2007, json2008, json2009, json2010, json2011, json2012, json2013 );
-			}
-			else if (jahr2 == 2014) {				json = $.concat(json2000, json2001, json2002, json2003, json2004, json2005, json2006, json2007, json2008, json2009, json2010, json2011, json2012, json2013, json2014 );
-			}
-			else if (jahr2 == 2015) {				json = $.concat(json2000, json2001, json2002, json2003, json2004, json2005, json2006, json2007, json2008, json2009, json2010, json2011, json2012, json2013, json2014, json2015 );
-			}
-			else if (jahr2 == 2016) {				json = $.concat(json2000, json2001, json2002, json2003, json2004, json2005, json2006, json2007, json2008, json2009, json2010, json2011, json2012, json2013, json2014, json2015, json2016 );
-			}
-			else if (jahr2 == 2017) {				json = $.concat(json2000, json2001, json2002, json2003, json2004, json2005, json2006, json2007, json2008, json2009, json2010, json2011, json2012, json2013, json2014, json2015, json2016, json2017 );
-			}
-			else if (jahr2 == 2018) {				json = $.concat(json2000, json2001, json2002, json2003, json2004, json2005, json2006, json2007, json2008, json2009, json2010, json2011, json2012, json2013, json2014, json2015, json2016, json2017, json2018 );
-			}
-			else if (jahr2 == 2019) {				json = $.concat(json2000, json2001, json2002, json2003, json2004, json2005, json2006, json2007, json2008, json2009, json2010, json2011, json2012, json2013, json2014, json2015, json2016, json2017, json2018, json2019 );
-			}
-			else if (jahr2 == 2020) {				json = $.concat(json2000, json2001, json2002, json2003, json2004, json2005, json2006, json2007, json2008, json2009, json2010, json2011, json2012, json2013, json2014, json2015, json2016, json2017, json2018, json2019, json2020 );
-			}
-		}
-		else if (jahr1 == 2001) {
-			if (jahr2 == 2001) {
-				json = json2001;
-			}
-			else if (jahr2 == 2002) {				json = $.concat(json2001, json2002 );
-			}
-			else if (jahr2 == 2003) {				json = $.concat(json2001, json2002, json2003 );
-			}
-			else if (jahr2 == 2004) {				json = $.concat(json2001, json2002, json2003, json2004 );
-			}
-			else if (jahr2 == 2005) {				json = $.concat(json2001, json2002, json2003, json2004, json2005 );
-			}
-			else if (jahr2 == 2006) {				json = $.concat(json2001, json2002, json2003, json2004, json2005, json2006 );
-			}
-			else if (jahr2 == 2007) {				json = $.concat(json2001, json2002, json2003, json2004, json2005, json2006, json2007 );
-			}
-			else if (jahr2 == 2008) {				json = $.concat(json2001, json2002, json2003, json2004, json2005, json2006, json2007, json2008 );
-			}
-			else if (jahr2 == 2009) {				json = $.concat(json2001, json2002, json2003, json2004, json2005, json2006, json2007, json2008, json2009 );
-			}
-			else if (jahr2 == 2010) {				json = $.concat(json2001, json2002, json2003, json2004, json2005, json2006, json2007, json2008, json2009, json2010 );
-			}
-			else if (jahr2 == 2011) {				json = $.concat(json2001, json2002, json2003, json2004, json2005, json2006, json2007, json2008, json2009, json2010, json2011 );
-			}
-			else if (jahr2 == 2012) {				json = $.concat(json2001, json2002, json2003, json2004, json2005, json2006, json2007, json2008, json2009, json2010, json2011, json2012 );
-			}
-			else if (jahr2 == 2013) {				json = $.concat(json2001, json2002, json2003, json2004, json2005, json2006, json2007, json2008, json2009, json2010, json2011, json2012, json2013 );
-			}
-			else if (jahr2 == 2014) {				json = $.concat(json2001, json2002, json2003, json2004, json2005, json2006, json2007, json2008, json2009, json2010, json2011, json2012, json2013, json2014 );
-			}
-			else if (jahr2 == 2015) {				json = $.concat(json2001, json2002, json2003, json2004, json2005, json2006, json2007, json2008, json2009, json2010, json2011, json2012, json2013, json2014, json2015 );
-			}
-			else if (jahr2 == 2016) {				json = $.concat(json2001, json2002, json2003, json2004, json2005, json2006, json2007, json2008, json2009, json2010, json2011, json2012, json2013, json2014, json2015, json2016 );
-			}
-			else if (jahr2 == 2017) {				json = $.concat(json2001, json2002, json2003, json2004, json2005, json2006, json2007, json2008, json2009, json2010, json2011, json2012, json2013, json2014, json2015, json2016, json2017 );
-			}
-			else if (jahr2 == 2018) {				json = $.concat(json2001, json2002, json2003, json2004, json2005, json2006, json2007, json2008, json2009, json2010, json2011, json2012, json2013, json2014, json2015, json2016, json2017, json2018 );
-			}
-			else if (jahr2 == 2019) {				json = $.concat(json2001, json2002, json2003, json2004, json2005, json2006, json2007, json2008, json2009, json2010, json2011, json2012, json2013, json2014, json2015, json2016, json2017, json2018, json2019 );
-			}
-			else if (jahr2 == 2020) {				json = $.concat(json2001, json2002, json2003, json2004, json2005, json2006, json2007, json2008, json2009, json2010, json2011, json2012, json2013, json2014, json2015, json2016, json2017, json2018, json2019, json2020 );
-			}
-		}
-		else if (jahr1 == 2002) {
-			if (jahr2 == 2002) {
-				json = json2002;
-			}
-			else if (jahr2 == 2003) {				json = $.concat(json2002, json2003 );
-			}
-			else if (jahr2 == 2004) {				json = $.concat(json2002, json2003, json2004 );
-			}
-			else if (jahr2 == 2005) {				json = $.concat(json2002, json2003, json2004, json2005 );
-			}
-			else if (jahr2 == 2006) {				json = $.concat(json2002, json2003, json2004, json2005, json2006 );
-			}
-			else if (jahr2 == 2007) {				json = $.concat(json2002, json2003, json2004, json2005, json2006, json2007 );
-			}
-			else if (jahr2 == 2008) {				json = $.concat(json2002, json2003, json2004, json2005, json2006, json2007, json2008 );
-			}
-			else if (jahr2 == 2009) {				json = $.concat(json2002, json2003, json2004, json2005, json2006, json2007, json2008, json2009 );
-			}
-			else if (jahr2 == 2010) {				json = $.concat(json2002, json2003, json2004, json2005, json2006, json2007, json2008, json2009, json2010 );
-			}
-			else if (jahr2 == 2011) {				json = $.concat(json2002, json2003, json2004, json2005, json2006, json2007, json2008, json2009, json2010, json2011 );
-			}
-			else if (jahr2 == 2012) {				json = $.concat(json2002, json2003, json2004, json2005, json2006, json2007, json2008, json2009, json2010, json2011, json2012 );
-			}
-			else if (jahr2 == 2013) {				json = $.concat(json2002, json2003, json2004, json2005, json2006, json2007, json2008, json2009, json2010, json2011, json2012, json2013 );
-			}
-			else if (jahr2 == 2014) {				json = $.concat(json2002, json2003, json2004, json2005, json2006, json2007, json2008, json2009, json2010, json2011, json2012, json2013, json2014 );
-			}
-			else if (jahr2 == 2015) {				json = $.concat(json2002, json2003, json2004, json2005, json2006, json2007, json2008, json2009, json2010, json2011, json2012, json2013, json2014, json2015 );
-			}
-			else if (jahr2 == 2016) {				json = $.concat(json2002, json2003, json2004, json2005, json2006, json2007, json2008, json2009, json2010, json2011, json2012, json2013, json2014, json2015, json2016 );
-			}
-			else if (jahr2 == 2017) {				json = $.concat(json2002, json2003, json2004, json2005, json2006, json2007, json2008, json2009, json2010, json2011, json2012, json2013, json2014, json2015, json2016, json2017 );
-			}
-			else if (jahr2 == 2018) {				json = $.concat(json2002, json2003, json2004, json2005, json2006, json2007, json2008, json2009, json2010, json2011, json2012, json2013, json2014, json2015, json2016, json2017, json2018 );
-			}
-			else if (jahr2 == 2019) {				json = $.concat(json2002, json2003, json2004, json2005, json2006, json2007, json2008, json2009, json2010, json2011, json2012, json2013, json2014, json2015, json2016, json2017, json2018, json2019 );
-			}
-			else if (jahr2 == 2020) {				json = $.concat(json2002, json2003, json2004, json2005, json2006, json2007, json2008, json2009, json2010, json2011, json2012, json2013, json2014, json2015, json2016, json2017, json2018, json2019, json2020 );
-			}
-		}
-		else if (jahr1 == 2003) {
-			if (jahr2 == 2003) {
-				json = json2003;
-			}
-			else if (jahr2 == 2004) {				json = $.concat(json2003, json2004 );
-			}
-			else if (jahr2 == 2005) {				json = $.concat(json2003, json2004, json2005 );
-			}
-			else if (jahr2 == 2006) {				json = $.concat(json2003, json2004, json2005, json2006 );
-			}
-			else if (jahr2 == 2007) {				json = $.concat(json2003, json2004, json2005, json2006, json2007 );
-			}
-			else if (jahr2 == 2008) {				json = $.concat(json2003, json2004, json2005, json2006, json2007, json2008 );
-			}
-			else if (jahr2 == 2009) {				json = $.concat(json2003, json2004, json2005, json2006, json2007, json2008, json2009 );
-			}
-			else if (jahr2 == 2010) {				json = $.concat(json2003, json2004, json2005, json2006, json2007, json2008, json2009, json2010 );
-			}
-			else if (jahr2 == 2011) {				json = $.concat(json2003, json2004, json2005, json2006, json2007, json2008, json2009, json2010, json2011 );
-			}
-			else if (jahr2 == 2012) {				json = $.concat(json2003, json2004, json2005, json2006, json2007, json2008, json2009, json2010, json2011, json2012 );
-			}
-			else if (jahr2 == 2013) {				json = $.concat(json2003, json2004, json2005, json2006, json2007, json2008, json2009, json2010, json2011, json2012, json2013 );
-			}
-			else if (jahr2 == 2014) {				json = $.concat(json2003, json2004, json2005, json2006, json2007, json2008, json2009, json2010, json2011, json2012, json2013, json2014 );
-			}
-			else if (jahr2 == 2015) {				json = $.concat(json2003, json2004, json2005, json2006, json2007, json2008, json2009, json2010, json2011, json2012, json2013, json2014, json2015 );
-			}
-			else if (jahr2 == 2016) {				json = $.concat(json2003, json2004, json2005, json2006, json2007, json2008, json2009, json2010, json2011, json2012, json2013, json2014, json2015, json2016 );
-			}
-			else if (jahr2 == 2017) {				json = $.concat(json2003, json2004, json2005, json2006, json2007, json2008, json2009, json2010, json2011, json2012, json2013, json2014, json2015, json2016, json2017 );
-			}
-			else if (jahr2 == 2018) {				json = $.concat(json2003, json2004, json2005, json2006, json2007, json2008, json2009, json2010, json2011, json2012, json2013, json2014, json2015, json2016, json2017, json2018 );
-			}
-			else if (jahr2 == 2019) {				json = $.concat(json2003, json2004, json2005, json2006, json2007, json2008, json2009, json2010, json2011, json2012, json2013, json2014, json2015, json2016, json2017, json2018, json2019 );
-			}
-			else if (jahr2 == 2020) {				json = $.concat(json2003, json2004, json2005, json2006, json2007, json2008, json2009, json2010, json2011, json2012, json2013, json2014, json2015, json2016, json2017, json2018, json2019, json2020 );
-			}
-		}
-		else if (jahr1 == 2004) {
-			if (jahr2 == 2004) {
-				json = json2004;
-			}
-			else if (jahr2 == 2005) {				json = $.concat(json2004, json2005 );
-			}
-			else if (jahr2 == 2006) {				json = $.concat(json2004, json2005, json2006 );
-			}
-			else if (jahr2 == 2007) {				json = $.concat(json2004, json2005, json2006, json2007 );
-			}
-			else if (jahr2 == 2008) {				json = $.concat(json2004, json2005, json2006, json2007, json2008 );
-			}
-			else if (jahr2 == 2009) {				json = $.concat(json2004, json2005, json2006, json2007, json2008, json2009 );
-			}
-			else if (jahr2 == 2010) {				json = $.concat(json2004, json2005, json2006, json2007, json2008, json2009, json2010 );
-			}
-			else if (jahr2 == 2011) {				json = $.concat(json2004, json2005, json2006, json2007, json2008, json2009, json2010, json2011 );
-			}
-			else if (jahr2 == 2012) {				json = $.concat(json2004, json2005, json2006, json2007, json2008, json2009, json2010, json2011, json2012 );
-			}
-			else if (jahr2 == 2013) {				json = $.concat(json2004, json2005, json2006, json2007, json2008, json2009, json2010, json2011, json2012, json2013 );
-			}
-			else if (jahr2 == 2014) {				json = $.concat(json2004, json2005, json2006, json2007, json2008, json2009, json2010, json2011, json2012, json2013, json2014 );
-			}
-			else if (jahr2 == 2015) {				json = $.concat(json2004, json2005, json2006, json2007, json2008, json2009, json2010, json2011, json2012, json2013, json2014, json2015 );
-			}
-			else if (jahr2 == 2016) {				json = $.concat(json2004, json2005, json2006, json2007, json2008, json2009, json2010, json2011, json2012, json2013, json2014, json2015, json2016 );
-			}
-			else if (jahr2 == 2017) {				json = $.concat(json2004, json2005, json2006, json2007, json2008, json2009, json2010, json2011, json2012, json2013, json2014, json2015, json2016, json2017 );
-			}
-			else if (jahr2 == 2018) {				json = $.concat(json2004, json2005, json2006, json2007, json2008, json2009, json2010, json2011, json2012, json2013, json2014, json2015, json2016, json2017, json2018 );
-			}
-			else if (jahr2 == 2019) {				json = $.concat(json2004, json2005, json2006, json2007, json2008, json2009, json2010, json2011, json2012, json2013, json2014, json2015, json2016, json2017, json2018, json2019 );
-			}
-			else if (jahr2 == 2020) {				json = $.concat(json2004, json2005, json2006, json2007, json2008, json2009, json2010, json2011, json2012, json2013, json2014, json2015, json2016, json2017, json2018, json2019, json2020 );
-			}
-		}
-		else if (jahr1 == 2005) {
-			if (jahr2 == 2005) {
-				json = json2005;
-			}
-			else if (jahr2 == 2006) {				json = $.concat(json2005, json2006 );
-			}
-			else if (jahr2 == 2007) {				json = $.concat(json2005, json2006, json2007 );
-			}
-			else if (jahr2 == 2008) {				json = $.concat(json2005, json2006, json2007, json2008 );
-			}
-			else if (jahr2 == 2009) {				json = $.concat(json2005, json2006, json2007, json2008, json2009 );
-			}
-			else if (jahr2 == 2010) {				json = $.concat(json2005, json2006, json2007, json2008, json2009, json2010 );
-			}
-			else if (jahr2 == 2011) {				json = $.concat(json2005, json2006, json2007, json2008, json2009, json2010, json2011 );
-			}
-			else if (jahr2 == 2012) {				json = $.concat(json2005, json2006, json2007, json2008, json2009, json2010, json2011, json2012 );
-			}
-			else if (jahr2 == 2013) {				json = $.concat(json2005, json2006, json2007, json2008, json2009, json2010, json2011, json2012, json2013 );
-			}
-			else if (jahr2 == 2014) {				json = $.concat(json2005, json2006, json2007, json2008, json2009, json2010, json2011, json2012, json2013, json2014 );
-			}
-			else if (jahr2 == 2015) {				json = $.concat(json2005, json2006, json2007, json2008, json2009, json2010, json2011, json2012, json2013, json2014, json2015 );
-			}
-			else if (jahr2 == 2016) {				json = $.concat(json2005, json2006, json2007, json2008, json2009, json2010, json2011, json2012, json2013, json2014, json2015, json2016 );
-			}
-			else if (jahr2 == 2017) {				json = $.concat(json2005, json2006, json2007, json2008, json2009, json2010, json2011, json2012, json2013, json2014, json2015, json2016, json2017 );
-			}
-			else if (jahr2 == 2018) {				json = $.concat(json2005, json2006, json2007, json2008, json2009, json2010, json2011, json2012, json2013, json2014, json2015, json2016, json2017, json2018 );
-			}
-			else if (jahr2 == 2019) {				json = $.concat(json2005, json2006, json2007, json2008, json2009, json2010, json2011, json2012, json2013, json2014, json2015, json2016, json2017, json2018, json2019 );
-			}
-			else if (jahr2 == 2020) {				json = $.concat(json2005, json2006, json2007, json2008, json2009, json2010, json2011, json2012, json2013, json2014, json2015, json2016, json2017, json2018, json2019, json2020 );
-			}
-		}
-		else if (jahr1 == 2006) {
-			if (jahr2 == 2006) {
-				json = json2006;
-			}
-			else if (jahr2 == 2007) {				json = $.concat(json2006, json2007 );
-			}
-			else if (jahr2 == 2008) {				json = $.concat(json2006, json2007, json2008 );
-			}
-			else if (jahr2 == 2009) {				json = $.concat(json2006, json2007, json2008, json2009 );
-			}
-			else if (jahr2 == 2010) {				json = $.concat(json2006, json2007, json2008, json2009, json2010 );
-			}
-			else if (jahr2 == 2011) {				json = $.concat(json2006, json2007, json2008, json2009, json2010, json2011 );
-			}
-			else if (jahr2 == 2012) {				json = $.concat(json2006, json2007, json2008, json2009, json2010, json2011, json2012 );
-			}
-			else if (jahr2 == 2013) {				json = $.concat(json2006, json2007, json2008, json2009, json2010, json2011, json2012, json2013 );
-			}
-			else if (jahr2 == 2014) {				json = $.concat(json2006, json2007, json2008, json2009, json2010, json2011, json2012, json2013, json2014 );
-			}
-			else if (jahr2 == 2015) {				json = $.concat(json2006, json2007, json2008, json2009, json2010, json2011, json2012, json2013, json2014, json2015 );
-			}
-			else if (jahr2 == 2016) {				json = $.concat(json2006, json2007, json2008, json2009, json2010, json2011, json2012, json2013, json2014, json2015, json2016 );
-			}
-			else if (jahr2 == 2017) {				json = $.concat(json2006, json2007, json2008, json2009, json2010, json2011, json2012, json2013, json2014, json2015, json2016, json2017 );
-			}
-			else if (jahr2 == 2018) {				json = $.concat(json2006, json2007, json2008, json2009, json2010, json2011, json2012, json2013, json2014, json2015, json2016, json2017, json2018 );
-			}
-			else if (jahr2 == 2019) {				json = $.concat(json2006, json2007, json2008, json2009, json2010, json2011, json2012, json2013, json2014, json2015, json2016, json2017, json2018, json2019 );
-			}
-			else if (jahr2 == 2020) {				json = $.concat(json2006, json2007, json2008, json2009, json2010, json2011, json2012, json2013, json2014, json2015, json2016, json2017, json2018, json2019, json2020 );
-			}
-		}
-		else if (jahr1 == 2007) {
-			if (jahr2 == 2007) {
-				json = json2007;
-			}
-			else if (jahr2 == 2008) {				json = $.concat(json2007, json2008 );
-			}
-			else if (jahr2 == 2009) {				json = $.concat(json2007, json2008, json2009 );
-			}
-			else if (jahr2 == 2010) {				json = $.concat(json2007, json2008, json2009, json2010 );
-			}
-			else if (jahr2 == 2011) {				json = $.concat(json2007, json2008, json2009, json2010, json2011 );
-			}
-			else if (jahr2 == 2012) {				json = $.concat(json2007, json2008, json2009, json2010, json2011, json2012 );
-			}
-			else if (jahr2 == 2013) {				json = $.concat(json2007, json2008, json2009, json2010, json2011, json2012, json2013 );
-			}
-			else if (jahr2 == 2014) {				json = $.concat(json2007, json2008, json2009, json2010, json2011, json2012, json2013, json2014 );
-			}
-			else if (jahr2 == 2015) {				json = $.concat(json2007, json2008, json2009, json2010, json2011, json2012, json2013, json2014, json2015 );
-			}
-			else if (jahr2 == 2016) {				json = $.concat(json2007, json2008, json2009, json2010, json2011, json2012, json2013, json2014, json2015, json2016 );
-			}
-			else if (jahr2 == 2017) {				json = $.concat(json2007, json2008, json2009, json2010, json2011, json2012, json2013, json2014, json2015, json2016, json2017 );
-			}
-			else if (jahr2 == 2018) {				json = $.concat(json2007, json2008, json2009, json2010, json2011, json2012, json2013, json2014, json2015, json2016, json2017, json2018 );
-			}
-			else if (jahr2 == 2019) {				json = $.concat(json2007, json2008, json2009, json2010, json2011, json2012, json2013, json2014, json2015, json2016, json2017, json2018, json2019 );
-			}
-			else if (jahr2 == 2020) {				json = $.concat(json2007, json2008, json2009, json2010, json2011, json2012, json2013, json2014, json2015, json2016, json2017, json2018, json2019, json2020 );
-			}
-		}
-		else if (jahr1 == 2008) {
-			if (jahr2 == 2008) {
-				json = json2008;
-			}
-			else if (jahr2 == 2009) {				json = $.concat(json2008, json2009 );
-			}
-			else if (jahr2 == 2010) {				json = $.concat(json2008, json2009, json2010 );
-			}
-			else if (jahr2 == 2011) {				json = $.concat(json2008, json2009, json2010, json2011 );
-			}
-			else if (jahr2 == 2012) {				json = $.concat(json2008, json2009, json2010, json2011, json2012 );
-			}
-			else if (jahr2 == 2013) {				json = $.concat(json2008, json2009, json2010, json2011, json2012, json2013 );
-			}
-			else if (jahr2 == 2014) {				json = $.concat(json2008, json2009, json2010, json2011, json2012, json2013, json2014 );
-			}
-			else if (jahr2 == 2015) {				json = $.concat(json2008, json2009, json2010, json2011, json2012, json2013, json2014, json2015 );
-			}
-			else if (jahr2 == 2016) {				json = $.concat(json2008, json2009, json2010, json2011, json2012, json2013, json2014, json2015, json2016 );
-			}
-			else if (jahr2 == 2017) {				json = $.concat(json2008, json2009, json2010, json2011, json2012, json2013, json2014, json2015, json2016, json2017 );
-			}
-			else if (jahr2 == 2018) {				json = $.concat(json2008, json2009, json2010, json2011, json2012, json2013, json2014, json2015, json2016, json2017, json2018 );
-			}
-			else if (jahr2 == 2019) {				json = $.concat(json2008, json2009, json2010, json2011, json2012, json2013, json2014, json2015, json2016, json2017, json2018, json2019 );
-			}
-			else if (jahr2 == 2020) {				json = $.concat(json2008, json2009, json2010, json2011, json2012, json2013, json2014, json2015, json2016, json2017, json2018, json2019, json2020 );
-			}
-		}
-		else if (jahr1 == 2009) {
-			if (jahr2 == 2009) {
-				json = json2009;
-			}
-			else if (jahr2 == 2010) {				json = $.concat(json2009, json2010 );
-			}
-			else if (jahr2 == 2011) {				json = $.concat(json2009, json2010, json2011 );
-			}
-			else if (jahr2 == 2012) {				json = $.concat(json2009, json2010, json2011, json2012 );
-			}
-			else if (jahr2 == 2013) {				json = $.concat(json2009, json2010, json2011, json2012, json2013 );
-			}
-			else if (jahr2 == 2014) {				json = $.concat(json2009, json2010, json2011, json2012, json2013, json2014 );
-			}
-			else if (jahr2 == 2015) {				json = $.concat(json2009, json2010, json2011, json2012, json2013, json2014, json2015 );
-			}
-			else if (jahr2 == 2016) {				json = $.concat(json2009, json2010, json2011, json2012, json2013, json2014, json2015, json2016 );
-			}
-			else if (jahr2 == 2017) {				json = $.concat(json2009, json2010, json2011, json2012, json2013, json2014, json2015, json2016, json2017 );
-			}
-			else if (jahr2 == 2018) {				json = $.concat(json2009, json2010, json2011, json2012, json2013, json2014, json2015, json2016, json2017, json2018 );
-			}
-			else if (jahr2 == 2019) {				json = $.concat(json2009, json2010, json2011, json2012, json2013, json2014, json2015, json2016, json2017, json2018, json2019 );
-			}
-			else if (jahr2 == 2020) {				json = $.concat(json2009, json2010, json2011, json2012, json2013, json2014, json2015, json2016, json2017, json2018, json2019, json2020 );
-			}
-		}
-		else if (jahr1 == 2010) {
-			if (jahr2 == 2010) {
-				json = json2010;
-			}
-			else if (jahr2 == 2011) {				json = $.concat(json2010, json2011 );
-			}
-			else if (jahr2 == 2012) {				json = $.concat(json2010, json2011, json2012 );
-			}
-			else if (jahr2 == 2013) {				json = $.concat(json2010, json2011, json2012, json2013 );
-			}
-			else if (jahr2 == 2014) {				json = $.concat(json2010, json2011, json2012, json2013, json2014 );
-			}
-			else if (jahr2 == 2015) {				json = $.concat(json2010, json2011, json2012, json2013, json2014, json2015 );
-			}
-			else if (jahr2 == 2016) {				json = $.concat(json2010, json2011, json2012, json2013, json2014, json2015, json2016 );
-			}
-			else if (jahr2 == 2017) {				json = $.concat(json2010, json2011, json2012, json2013, json2014, json2015, json2016, json2017 );
-			}
-			else if (jahr2 == 2018) {				json = $.concat(json2010, json2011, json2012, json2013, json2014, json2015, json2016, json2017, json2018 );
-			}
-			else if (jahr2 == 2019) {				json = $.concat(json2010, json2011, json2012, json2013, json2014, json2015, json2016, json2017, json2018, json2019 );
-			}
-			else if (jahr2 == 2020) {				json = $.concat(json2010, json2011, json2012, json2013, json2014, json2015, json2016, json2017, json2018, json2019, json2020 );
-			}
-		}
-		else if (jahr1 == 2011) {
-			if (jahr2 == 2011) {
-				json = json2011;
-			}
-			else if (jahr2 == 2012) {				json = $.concat(json2011, json2012 );
-			}
-			else if (jahr2 == 2013) {				json = $.concat(json2011, json2012, json2013 );
-			}
-			else if (jahr2 == 2014) {				json = $.concat(json2011, json2012, json2013, json2014 );
-			}
-			else if (jahr2 == 2015) {				json = $.concat(json2011, json2012, json2013, json2014, json2015 );
-			}
-			else if (jahr2 == 2016) {				json = $.concat(json2011, json2012, json2013, json2014, json2015, json2016 );
-			}
-			else if (jahr2 == 2017) {				json = $.concat(json2011, json2012, json2013, json2014, json2015, json2016, json2017 );
-			}
-			else if (jahr2 == 2018) {				json = $.concat(json2011, json2012, json2013, json2014, json2015, json2016, json2017, json2018 );
-			}
-			else if (jahr2 == 2019) {				json = $.concat(json2011, json2012, json2013, json2014, json2015, json2016, json2017, json2018, json2019 );
-			}
-			else if (jahr2 == 2020) {				json = $.concat(json2011, json2012, json2013, json2014, json2015, json2016, json2017, json2018, json2019, json2020 );
-			}
-		}
-		else if (jahr1 == 2012) {
-			if (jahr2 == 2012) {
-				json = json2012;
-			}
-			else if (jahr2 == 2013) {				json = $.concat(json2012, json2013 );
-			}
-			else if (jahr2 == 2014) {				json = $.concat(json2012, json2013, json2014 );
-			}
-			else if (jahr2 == 2015) {				json = $.concat(json2012, json2013, json2014, json2015 );
-			}
-			else if (jahr2 == 2016) {				json = $.concat(json2012, json2013, json2014, json2015, json2016 );
-			}
-			else if (jahr2 == 2017) {				json = $.concat(json2012, json2013, json2014, json2015, json2016, json2017 );
-			}
-			else if (jahr2 == 2018) {				json = $.concat(json2012, json2013, json2014, json2015, json2016, json2017, json2018 );
-			}
-			else if (jahr2 == 2019) {				json = $.concat(json2012, json2013, json2014, json2015, json2016, json2017, json2018, json2019 );
-			}
-			else if (jahr2 == 2020) {				json = $.concat(json2012, json2013, json2014, json2015, json2016, json2017, json2018, json2019, json2020 );
-			}
-		}
-		else if (jahr1 == 2013) {
-			if (jahr2 == 2013) {
-				json = json2013;
-			}
-			else if (jahr2 == 2014) {				json = $.concat(json2013, json2014 );
-			}
-			else if (jahr2 == 2015) {				json = $.concat(json2013, json2014, json2015 );
-			}
-			else if (jahr2 == 2016) {				json = $.concat(json2013, json2014, json2015, json2016 );
-			}
-			else if (jahr2 == 2017) {				json = $.concat(json2013, json2014, json2015, json2016, json2017 );
-			}
-			else if (jahr2 == 2018) {				json = $.concat(json2013, json2014, json2015, json2016, json2017, json2018 );
-			}
-			else if (jahr2 == 2019) {				json = $.concat(json2013, json2014, json2015, json2016, json2017, json2018, json2019 );
-			}
-			else if (jahr2 == 2020) {				json = $.concat(json2013, json2014, json2015, json2016, json2017, json2018, json2019, json2020 );
-			}
-		}
-		else if (jahr1 == 2014) {
-			if (jahr2 == 2014) {
-				json = json2014;
-			}
-			else if (jahr2 == 2015) {				json = $.concat(json2014, json2015 );
-			}
-			else if (jahr2 == 2016) {				json = $.concat(json2014, json2015, json2016 );
-			}
-			else if (jahr2 == 2017) {				json = $.concat(json2014, json2015, json2016, json2017 );
-			}
-			else if (jahr2 == 2018) {				json = $.concat(json2014, json2015, json2016, json2017, json2018 );
-			}
-			else if (jahr2 == 2019) {				json = $.concat(json2014, json2015, json2016, json2017, json2018, json2019 );
-			}
-			else if (jahr2 == 2020) {				json = $.concat(json2014, json2015, json2016, json2017, json2018, json2019, json2020 );
-			}
-		}
-		else if (jahr1 == 2015) {
-			if (jahr2 == 2015) {
-				json = json2015;
-			}
-			else if (jahr2 == 2016) {				json = $.concat(json2015, json2016 );
-			}
-			else if (jahr2 == 2017) {				json = $.concat(json2015, json2016, json2017 );
-			}
-			else if (jahr2 == 2018) {				json = $.concat(json2015, json2016, json2017, json2018 );
-			}
-			else if (jahr2 == 2019) {				json = $.concat(json2015, json2016, json2017, json2018, json2019 );
-			}
-			else if (jahr2 == 2020) {				json = $.concat(json2015, json2016, json2017, json2018, json2019, json2020 );
-			}
-		}
-		else if (jahr1 == 2016) {
-			if (jahr2 == 2016) {
-				json = json2016;
-			}
-			else if (jahr2 == 2017) {				json = $.concat(json2016, json2017 );
-			}
-			else if (jahr2 == 2018) {				json = $.concat(json2016, json2017, json2018 );
-			}
-			else if (jahr2 == 2019) {				json = $.concat(json2016, json2017, json2018, json2019 );
-			}
-			else if (jahr2 == 2020) {				json = $.concat(json2016, json2017, json2018, json2019, json2020 );
-			}
-		}
-		else if (jahr1 == 2017) {
-			if (jahr2 == 2017) {
-				json = json2017;
-			}
-			else if (jahr2 == 2018) {				json = $.concat(json2017, json2018 );
-			}
-			else if (jahr2 == 2019) {				json = $.concat(json2017, json2018, json2019 );
-			}
-			else if (jahr2 == 2020) {				json = $.concat(json2017, json2018, json2019, json2020 );
-			}
-		}
-		else if (jahr1 == 2018) {
-			if (jahr2 == 2018) {
-				json = json2018;
-			}
-			else if (jahr2 == 2019) {				json = $.concat(json2018, json2019 );
-			}
-			else if (jahr2 == 2020) {				json = $.concat(json2018, json2019, json2020 );
-			}
-		}
-		else if (jahr1 == 2019) {
-			if (jahr2 == 2019) {
-				json = json2019;
-			}
-			else if (jahr2 == 2020) {				json = $.concat(json2019, json2020 );
-			}
-		}
-		else if (jahr1 == 2020) {
-			if (jahr2 == 2020) {
-				json = json2020;
+		jahr2 = parseInt(jahr2);
+		this_year = jahr1 + 1;
+		if (this_year <= 2016) {
+			json = window["json" + jahr1];
+			while(this_year <= jahr2) {
+				json = $.concat(json, window["json" + this_year]);
+				this_year = this_year + 1;
 			}
 		}
 		rgraph.loadJSON(json, index);
@@ -1010,7 +256,6 @@ function init(){
     //"dim" parameters globally defined in the
     //RGraph constructor.
 	
-
 	$.get("json1995.js", function(response) {
 		json1995 = eval ("(" + response + ")");
 	}, "script");
@@ -11126,7 +10371,7 @@ function init(){
 				},
 			]
 		},
-		/*// KOLLEGAH
+		// KOLLEGAH
 		{
 			"id": "Kollegah",
 			"name": "Kollegah",
@@ -13182,7 +12427,7 @@ function init(){
 				},
 			]
 		},
-		// ALPA GUN
+		/*// ALPA GUN
 		{
 			"id": "Alpa Gun",
 			"name": "Alpa Gun",
@@ -13323,21 +12568,14 @@ function init(){
 		onBeforePlotNode: function(node){  
 			list = function(){
 				html = "<img style='width: 100px;' src='" + imageurl + "'></img>";
-				html += "<h4 id='title'>" + nodename + "</h4><b>Kollaborationen (" + jahr1 + " - " + jahr2 + "):</b>";
+				html += "<h4 id='title'><a href='http://genius.com/artists/" + node.name + "'>" + node.name + "</a></h4><b>Kollaborationen (" + jahr1 + " - " + jahr2 + "):</b>";
 				html += "<ul id='myUL' style='margin-left: -20px;'>";
 				node.eachAdjacency(function(adj){
 					var child = adj.nodeTo;
-					html += "<li>" + child.name + "</li>";
+					html += "<li id='" + child.name + "listitem'><a href='http://genius.com/search?q=" + node.id + "+" + child.name + "'>" + child.name + "</a></li>";
 				});
 				html += "</ul>";
 				$jit.id('inner-details').innerHTML = html;
-				
-				mylist = $('#myUL');
-				listitems = mylist.children('li').get();
-				listitems.sort(function(a, b) {
-				   return $(a).text().toUpperCase().localeCompare($(b).text().toUpperCase());
-				})
-				$.each(listitems, function(idx, itm) { mylist.append(itm); });
 				
 				var liText = '', liList = $('#myUL li'), listForRemove = [];
 
@@ -13353,6 +12591,13 @@ function init(){
 				});
 					
 				$(listForRemove).each(function () { $(this).remove(); });
+				
+				mylist = $('#myUL');
+				listitems = mylist.children('li').get();
+				listitems.sort(function(a, b) {
+				   return $(a).text().toUpperCase().localeCompare($(b).text().toUpperCase());
+				})
+				$.each(listitems, function(idx, itm) { mylist.append(itm); });
 			};
 		}, 
         onBeforeCompute: function(node){
@@ -13390,11 +12635,11 @@ function init(){
 			});
 				
 				html = "<img style='width: 100px;' src='" + imageurl + "'></img>";
-				html += "<h4 id='title'>" + node.name + "</h4><b>Kollaborationen (" + jahr1 + " - " + jahr2 + "):</b>";
+				html += "<h4 id='title'><a href='http://genius.com/artists/" + node.name + "'>" + node.name + "</a></h4><b>Kollaborationen (" + jahr1 + " - " + jahr2 + "):</b>";
 				html += "<ul id='myUL' style='margin-left: -20px;'>";
 				node.eachAdjacency(function(adj){
 					var child = adj.nodeTo;
-					html += "<li>" + child.name + "</li>";
+					html += "<li id='" + child.name + "listitem'><a href='http://genius.com/search?q=" + node.id + "+" + child.name + "'>" + child.name + "</a></li>";
 					
 					obenadj = adj;
 					obenchild = child;
@@ -13405,13 +12650,9 @@ function init(){
 				html += "</ul>";
 				$jit.id('inner-details').innerHTML = html;
 				
-				mylist = $('#myUL');
-				listitems = mylist.children('li').get();
-				listitems.sort(function(a, b) {
-				   return $(a).text().toUpperCase().localeCompare($(b).text().toUpperCase());
-				})
-				$.each(listitems, function(idx, itm) { mylist.append(itm); });
+				/*
 				
+				*/
 				var liText = '', liList = $('#myUL li'), listForRemove = [];
 
 				$(liList).each(function () {
@@ -13426,7 +12667,13 @@ function init(){
 				});
 					
 				$(listForRemove).each(function () { $(this).remove(); });
-
+				
+				mylist = $('#myUL');
+				listitems = mylist.children('li').get();
+				listitems.sort(function(a, b) {
+				   return $(a).text().toUpperCase().localeCompare($(b).text().toUpperCase());
+				})
+				$.each(listitems, function(idx, itm) { mylist.append(itm); });
 			};
 			list();
 			nodename = node.name;
