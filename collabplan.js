@@ -1,5 +1,10 @@
 /*
 CHANGELOG:
+alpha 6.1
+bild rechts oben etwas größer gemacht
+die anzahl der features ist jetzt unter jeder liste rechts sichtbar @frogg09
+- 6.8.16
+
 alpha 6
 danke owen! (http://stackoverflow.com/users/2833161/owen)
 dieser owen hat mir hier: (http://stackoverflow.com/questions/38780840/refactoring-if-else-statement-for-time-span-between-two-years) gezeigt, wie ich das riesige if/else statement für den zeitraum slider verkürzen kann und es klappt jetzt einfach, yaaay
@@ -174,7 +179,6 @@ function init(){
 	logger.disableLogger();
 	
 	// logger.enableLogger();
-	
 	
 	// --------------------------------------------
 	
@@ -12567,7 +12571,7 @@ function init(){
 		},
 		onBeforePlotNode: function(node){  
 			list = function(){
-				html = "<img style='width: 100px;' src='" + imageurl + "'></img>";
+				html = "<img style='width: 100%;' src='" + imageurl + "'></img>";
 				html += "<h4 id='title'><a href='http://genius.com/artists/" + node.name + "'>" + node.name + "</a></h4><b>Kollaborationen (" + jahr1 + " - " + jahr2 + "):</b>";
 				html += "<ul id='myUL' style='margin-left: -20px;'>";
 				node.eachAdjacency(function(adj){
@@ -12575,29 +12579,52 @@ function init(){
 					html += "<li id='" + child.name + "listitem'><a href='http://genius.com/search?q=" + node.id + "+" + child.name + "'>" + child.name + "</a></li>";
 				});
 				html += "</ul>";
+
+				listsorter = function() {
+					var liText = '', liList = $('#myUL li'), listForRemove = [];
+
+					$(liList).each(function () {
+						
+					  var text = $(this).text();
+
+					  if (liText.indexOf('|'+ text + '|') == -1)
+						liText += '|'+ text + '|';
+					  else
+						listForRemove.push($(this));
+						
+					});
+						
+					$(listForRemove).each(function () { $(this).remove(); });
+					
+					mylist = $('#myUL');
+					listitems = mylist.children('li').get();
+					listitems.sort(function(a, b) {
+					   return $(a).text().toUpperCase().localeCompare($(b).text().toUpperCase());
+					})
+					$.each(listitems, function(idx, itm) { mylist.append(itm); });
+				};
+				listsorter();
+				
 				$jit.id('inner-details').innerHTML = html;
 				
-				var liText = '', liList = $('#myUL li'), listForRemove = [];
-
-				$(liList).each(function () {
-					
-				  var text = $(this).text();
-
-				  if (liText.indexOf('|'+ text + '|') == -1)
-					liText += '|'+ text + '|';
-				  else
-					listForRemove.push($(this));
-					
-				});
-					
-				$(listForRemove).each(function () { $(this).remove(); });
+				listsorter();
 				
-				mylist = $('#myUL');
-				listitems = mylist.children('li').get();
-				listitems.sort(function(a, b) {
-				   return $(a).text().toUpperCase().localeCompare($(b).text().toUpperCase());
-				})
-				$.each(listitems, function(idx, itm) { mylist.append(itm); });
+				childrenlist = []
+				$jit.Graph.Util.eachAdjacency(node, function(adj) {  
+					childrenlist += "!" + adj.nodeTo.name;
+				});
+				numberofitems = (childrenlist.match(/!/g) || []).length;
+				numberofitemstext = numberofitems + " Kollaborationen";
+				numberofitemsnode = document.createElement("b");
+				numberofitemstextnode = document.createTextNode(numberofitemstext);
+				numberofitemsnode.appendChild(numberofitemstextnode); 
+				document.getElementById("inner-details").appendChild(numberofitemsnode);
+				numberofitemsnode.setAttribute("class", "collab-number");
+				$('#right-container').each(function(){
+					if ($(this)[0].scrollHeight > $(this).height()) {
+						$(".collab-number").addClass('scroll');
+					}
+				});
 			};
 		}, 
         onBeforeCompute: function(node){
@@ -12619,6 +12646,7 @@ function init(){
 			
             //Make right column relations list.
 			// $.getJSON("https://ws.audioscrobbler.com/2.0/?method=artist.getinfo&artist=" + node.id + "&api_key=0abb7713ef6b0a0c0779a17cfa615281&format=json", response);
+			
 			list = function(){
 			$.ajax({
 				url: "https://ws.audioscrobbler.com/2.0/?method=artist.getinfo&artist=" + node.id + "&api_key=0abb7713ef6b0a0c0779a17cfa615281&format=json",
@@ -12627,14 +12655,14 @@ function init(){
 				dataType: 'json',
 				success: function(response) {
 					jsonObj = JSON.stringify(response);
-					pos1 = jsonObj.indexOf('/34s/');
-					pos2 = jsonObj.indexOf('","size"');
-					part = jsonObj.slice((pos1 + 4),pos2);
-					imageurl = "https://lastfm-img2.akamaized.net/i/u/174s" + part;
+					pos1 = jsonObj.indexOf('/300x300/');
+					pos2 = jsonObj.indexOf('","size":"extralarge"');
+					part = jsonObj.slice((pos1 + 8),pos2);
+					imageurl = "https://lastfm-img2.akamaized.net/i/u/300x300" + part;
 				}
 			});
 				
-				html = "<img style='width: 100px;' src='" + imageurl + "'></img>";
+				html = "<img style='width: 100%;' src='" + imageurl + "'></img>";
 				html += "<h4 id='title'><a href='http://genius.com/artists/" + node.name + "'>" + node.name + "</a></h4><b>Kollaborationen (" + jahr1 + " - " + jahr2 + "):</b>";
 				html += "<ul id='myUL' style='margin-left: -20px;'>";
 				node.eachAdjacency(function(adj){
@@ -12653,31 +12681,55 @@ function init(){
 				/*
 				
 				*/
-				var liText = '', liList = $('#myUL li'), listForRemove = [];
+				listsorter = function() {
+					var liText = '', liList = $('#myUL li'), listForRemove = [];
 
-				$(liList).each(function () {
-					
-				  var text = $(this).text();
+					$(liList).each(function () {
+						
+					  var text = $(this).text();
 
-				  if (liText.indexOf('|'+ text + '|') == -1)
-					liText += '|'+ text + '|';
-				  else
-					listForRemove.push($(this));
+					  if (liText.indexOf('|'+ text + '|') == -1)
+						liText += '|'+ text + '|';
+					  else
+						listForRemove.push($(this));
+						
+					});
+						
+					$(listForRemove).each(function () { $(this).remove(); });
 					
-				});
-					
-				$(listForRemove).each(function () { $(this).remove(); });
+					mylist = $('#myUL');
+					listitems = mylist.children('li').get();
+					listitems.sort(function(a, b) {
+					   return $(a).text().toUpperCase().localeCompare($(b).text().toUpperCase());
+					})
+					$.each(listitems, function(idx, itm) { mylist.append(itm); });
+				};
+				listsorter();
 				
-				mylist = $('#myUL');
-				listitems = mylist.children('li').get();
-				listitems.sort(function(a, b) {
-				   return $(a).text().toUpperCase().localeCompare($(b).text().toUpperCase());
-				})
-				$.each(listitems, function(idx, itm) { mylist.append(itm); });
+				$jit.id('inner-details').innerHTML = html;
+				
+				listsorter();
 			};
 			list();
 			nodename = node.name;
 			nodeeachAdjacency = node.eachAdjacency;
+			
+			childrenlist = []
+			$jit.Graph.Util.eachAdjacency(node, function(adj) {  
+				childrenlist += "!" + adj.nodeTo.name;
+			});
+			numberofitems = (childrenlist.match(/!/g) || []).length;
+			numberofitemstext = numberofitems + " Kollaborationen";
+			numberofitemsnode = document.createElement("b");
+			numberofitemstextnode = document.createTextNode(numberofitemstext);
+			numberofitemsnode.appendChild(numberofitemstextnode); 
+			document.getElementById("inner-details").appendChild(numberofitemsnode);
+			numberofitemsnode.setAttribute("class", "collab-number");
+			$('#right-container').each(function(){
+				if ($(this)[0].scrollHeight > $(this).height()) {
+					$(".collab-number").addClass('scroll');
+				}
+			});
         },
 			
         //Add node click handler and some styles.
