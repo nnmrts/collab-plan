@@ -1,5 +1,9 @@
 /*
 CHANGELOG:
+alpha 6.1.1
+less deaktiviert
+- 6.8.16 - 12.8.16
+
 alpha 6.1
 bild rechts oben etwas größer gemacht
 die anzahl der features ist jetzt unter jeder liste rechts sichtbar @frogg09
