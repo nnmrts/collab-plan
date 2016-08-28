@@ -1,10 +1,16 @@
 /*
 CHANGELOG:
+alpha6.2.1
+den letzten changelog-eintrag aktualisiert :D
+- 29.8.16
+
 alpha 6.2
 farbe der zeitraumanzeige dünkler gemacht
 logo designt und favicon eingefügt
 min-width (123px) für den rechten container implementiert
 versionsnummer in der index.html wieder aktualisiert...haha...
+farben ein bisschen geniusgerechter gemacht und "About" in "Über" und "Help" in "Hilfe" übersetzt
+- 12.8.16 - 29.8.16
 
 alpha 6.1.1
 less deaktiviert
