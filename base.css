@@ -6,6 +6,10 @@ html, body {
     text-align: center;
 }
 
+* {
+	outline:none
+}
+
 input, select {
     font-size:0.9em;
 }
@@ -64,6 +68,7 @@ a {
     background-image:url('images/col1.png');
     background-position:center left;
     border-right:1px solid #ddd;
+	min-width: 123px;
 }
 
 #center-container {
@@ -99,7 +104,7 @@ a {
     top:50px;
     font-size:1.7em;
     font-weight:bold;
-    color:#23A4FF;
+    color:#7d8fe8;
 }
 
 #about {
@@ -114,6 +119,14 @@ a {
     font-size:1.7em;
     font-weight:bold;
     color:#292929;
+}
+
+#logo {
+    position: fixed;
+    right: 10%;
+    width: 50px;
+    margin: 10px;
+    opacity: 0.5;
 }
 
 #infovis {
@@ -180,6 +193,7 @@ a {
     bottom: 10px;
 	left: 10px;
 	font-size: 17px;
+	color: #292929;
 }
 #jahr2 {
 	display: block;
@@ -189,6 +203,7 @@ a {
     bottom: 10px;
 	left: 52px;
 	font-size: 17px;
+	color: #292929;
 }
 
 .noUi-value-vertical {
