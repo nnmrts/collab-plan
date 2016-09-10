@@ -1,10 +1,10 @@
 # collab-plan
 interactive overview of german rap collaborations
 
-here: http://s448350928.online.de/pumpn/mag/collabplan
+here: http://pumpn.net/mag/collabplan
 
-shortlink: http://bit.ly/collab-plan
+shortlink: http://pumpn.net/cp
 
 <hr>
 
-current version: alpha 6.2.1
+current version: alpha 6.2.2

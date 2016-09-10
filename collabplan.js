@@ -1,5 +1,10 @@
 /*
 CHANGELOG:
+alpha6.2.2
+auf neuen server umgezogen (pumpn.net)
+shortlink erstellt (pumpn.net/cp)
+- 29.8.16 - 11.9.16
+
 alpha6.2.1
 den letzten changelog-eintrag aktualisiert :D
 - 29.8.16
@@ -120,8 +125,10 @@ client id: kAjNJtTCUmTV-qipyJ9IzpX-REgHXoESC3LLOu0uSi81EbHJjZYknp531YveHyS3
 
 client secret: jqulhYs8ex2qsVRvQmwoRReMyUPlfXrIO_0S8Jfva4mChkqxusXvnY-cgplNshfOstQSwB1Th69taCSE7IaJXQ
 
-example url: api.genius.com/artists/237/&access_token=0abb7713ef6b0a0c0779a17cfa615281
+example url: api.genius.com/search?q=Tua&access_token=p5R_ZUuCbLU-nzWro2EAmQH0YscsPSz9WmMFtVWWKgkasRz6TSp3bx_ezbZ3E4yu
 */
+
+// api.genius.com/search?q=Tua&access_token=p5R_ZUuCbLU-nzWro2EAmQH0YscsPSz9WmMFtVWWKgkasRz6TSp3bx_ezbZ3E4yu
 
 var labelType, useGradients, nativeTextSupport, animate;
 
@@ -204,9 +211,9 @@ function init(){
 		return pub;
 	}();
 
-	logger.disableLogger();
+	// logger.disableLogger();
 	
-	// logger.enableLogger();
+	logger.enableLogger();
 	
 	// --------------------------------------------
 	
@@ -598,7 +605,26 @@ function init(){
 					imageurl = "https://lastfm-img2.akamaized.net/i/u/300x300" + part;
 				}
 			});
-				
+			/*$.ajax({
+				url: "https://api.genius.com/search?q=" + node.id + "&access_token=p5R_ZUuCbLU-nzWro2EAmQH0YscsPSz9WmMFtVWWKgkasRz6TSp3bx_ezbZ3E4yu",
+				type:'get',
+				async: false,
+				dataType: 'json',
+				success: function(response) {
+					jsonObj = JSON.stringify(response);
+					pos1 = jsonObj.indexOf('"primary_artist"');
+					pos2 = jsonObj.lastIndexOf('"is_meme_verified"');
+					part1 = jsonObj.slice(pos1,pos2);
+					pos3 = part1.indexOf(node.id);
+					pos4 = part1.lastIndexOf('"is_meme_verified"');
+					part2 = part1.slice((pos3),(pos4));
+					pos5 = part2.indexOf('"image_url"');
+					pos6 = part2.indexOf('"is_meme_verified"');
+					part3 = part2.slice((pos5 + 13),(pos6 - 2));
+					imageurl = part3;
+				}
+			});
+			*/
 				html = "<img style='width: 100%;' src='" + imageurl + "'></img>";
 				html += "<h4 id='title'><a href='http://genius.com/artists/" + node.name + "'>" + node.name + "</a></h4><b>Kollaborationen (" + jahr1 + " - " + jahr2 + "):</b>";
 				html += "<ul id='myUL' style='margin-left: -20px;'>";
